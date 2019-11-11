@@ -1,0 +1,3 @@
+Smite 30
+IQCheck 40
+MightyBrain 50

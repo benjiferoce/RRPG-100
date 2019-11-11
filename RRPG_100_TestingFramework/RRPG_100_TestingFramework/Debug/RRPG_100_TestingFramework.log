@@ -1,0 +1,5 @@
+﻿  main.cpp
+C:\Users\Ben Weaver\source\repos\RRPG_100_TestingFramework\RRPG_100_TestingFramework\main.cpp(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Ben Weaver\source\repos\RRPG_100_TestingFramework\RRPG_100_TestingFramework\Character_Class.cpp(36,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Ben Weaver\source\repos\RRPG_100_TestingFramework\RRPG_100_TestingFramework\main.cpp(150,21): warning C4018: '<': signed/unsigned mismatch
+  RRPG_100_TestingFramework.vcxproj -> C:\Users\Ben Weaver\source\repos\RRPG_100_TestingFramework\Debug\RRPG_100_TestingFramework.exe

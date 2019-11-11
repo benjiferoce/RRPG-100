@@ -1,0 +1,4 @@
+Hit 10
+Kick 12
+Shoot 15
+SpeakingTrees 25
