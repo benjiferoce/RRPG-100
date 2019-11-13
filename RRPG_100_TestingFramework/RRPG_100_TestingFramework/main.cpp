@@ -7,10 +7,6 @@
 
 using namespace std;
 
-void statsTagsMods(Character partyMember, string fileName);
-
-void setBasePower(Turn turn, string fileName);
-
 int main() {
 	
 	ifstream inFile;
@@ -48,15 +44,18 @@ int main() {
 	Character partyMember, partyMember1, partyMember2;
 
 	partyMember.setName(fileName);
-	statsTagsMods(partyMember, fileName);
+	partyMember.statsTagsMods(partyMember, fileName);
+	partyMember.printStats();
 
 	partyMember1.setName(fileName1);
-	statsTagsMods(partyMember1, fileName1);
+	partyMember1.statsTagsMods(partyMember1, fileName1);
+	partyMember1.printStats();
 
 	partyMember2.setName(fileName2);
-	statsTagsMods(partyMember2, fileName2);
+	partyMember2.statsTagsMods(partyMember2, fileName2);
+	partyMember2.printStats();
 
-	cout << endl << "Select a boos from the list bellow, and type it exactly as you see it" << endl;
+	cout << endl << "Select a boss from the list bellow, and type it exactly as you see it" << endl;
 
 	inFile.open("Boss_List.txt");
 
@@ -80,85 +79,12 @@ int main() {
 	Character boss;
 
 	boss.setName(bossFile);
-	statsTagsMods(boss, bossFile);
+	boss.statsTagsMods(boss, bossFile);
+	boss.printStats();
 
-	Turn turn;
-	turn.setPartyMember(partyMember);
-	turn.printPartyMember(partyMember);
-
-}
-
-void statsTagsMods(Character partyMember, string fileName) {
-	ifstream inFile;
-	string openFile;
-	int attack, speed, defense, block, hp;
-	openFile = fileName + "_stats.txt";
-	inFile.open(openFile);
-	int arr1[5];
-	if (inFile.is_open()) {
-		for (int i = 0; i < 5; ++i) {
-			inFile >> arr1[i];
-		}
-	}
-	else {
-		cout << "unable to open " + openFile << endl;
-		exit(1);
-	}
-	inFile.close();
-
-	attack = arr1[0];
-	speed = arr1[1];
-	defense = arr1[2];
-	block = arr1[3];
-	hp = arr1[4];
-
-	partyMember.setAttack(attack);
-	partyMember.setSpeed(speed);
-	partyMember.setDefense(defense);
-	partyMember.setBlock(block);
-	partyMember.setHp(hp);
-	vector<string> tags;
-	openFile = fileName + "_Tags.txt";
-	inFile.open(openFile);
-	if (inFile.is_open()) {
-		string line;
-		while (getline(inFile, line)) {
-			if (line.size() == 0) {
-				break;
-			}
-			tags.push_back(line);
-		}
-		inFile.close();
-	}
-	else {
-		cout << "unable to open " + openFile << endl;
-		exit(1);
-	}
-	vector<pair<string, int>> tagsAndMods;
-	inFile.open("mods.txt");
-	if (inFile.is_open()) {
-		pair<string, int> input;
-		while (inFile >> input.first >> input.second) {
-			tagsAndMods.push_back(input);
-		}
-		inFile.close();
-	}
-	partyMember.setTags(tags);
-
-	int totalModVal = 0;
-	for (auto d : tagsAndMods) {
-		for (int i = 0; i < tags.size(); ++i) {
-			if (tags[i] == d.first) {
-				totalModVal += d.second;
-
-			}
-		}
-	}
-	partyMember.setMod(totalModVal);
+	string attacksFile;
+	partyMember.setAttacksAndBp(partyMember, attacksFile);
 	partyMember.printStats();
 }
 
-void setBasePower(Turn turn, string fileName) {
-	ifstream inFile;
-	string openFile;
-}
+
