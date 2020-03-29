@@ -20,10 +20,13 @@ public class BattleSystem : MonoBehaviour
     public Transform enemyBattleStation;
 
     public BattleHUD playerHUD;
+    public BattleHUD playerHUD2;
+    public BattleHUD playerHUD3;
     public BattleHUD enemyHUD;
     public Text turnText;
 
     public int turn = 0;
+    public int nextTurn;
 
     public List<GameObject> characterList = new List<GameObject>();
 
@@ -40,17 +43,30 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator SetupBattle()
     {
+        playerPrefab.GetComponent<Unit>().currentHP =  playerPrefab.GetComponent<Unit>().maxHP;
         GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
         playerUnit = playerGO.GetComponent<Unit>();
+
+        player2Prefab.GetComponent<Unit>().currentHP =  player2Prefab.GetComponent<Unit>().maxHP;
         GameObject player2GO = Instantiate(player2Prefab, player2BattleStation);
         playerUnit = playerGO.GetComponent<Unit>();
+
+        player3Prefab.GetComponent<Unit>().currentHP =  player3Prefab.GetComponent<Unit>().maxHP;
         GameObject player3GO = Instantiate(player3Prefab, player3BattleStation);
         playerUnit = playerGO.GetComponent<Unit>();
+
         GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
         enemyUnit = enemyGO.GetComponent<Unit>();
 
+        playerHUD.SetHUD(playerPrefab.GetComponent<Unit>());
+        
+        playerHUD2.SetHUD(player2Prefab.GetComponent<Unit>());
+       
+        playerHUD3.SetHUD(player3Prefab.GetComponent<Unit>());
+        
         SortTurns();
-        SetTurn();
+        
+        
         
         enemyHUD.SetHUD(enemyUnit);
 
@@ -60,11 +76,11 @@ public class BattleSystem : MonoBehaviour
 
     void Update()
     {
-        if(turn == 5)
-        {
+        SetTurn();
+        Debug.Log(turn);
+        if(turn == 4){
             turn = 0;
         }
-        Debug.Log(turn);
     }
 
     void SortTurns()
@@ -87,33 +103,82 @@ public class BattleSystem : MonoBehaviour
         for(int i = 0; i < characterList.Count; ++i)
         {
             characterList[i].GetComponent<Unit>().turnNum = i;
+
+            if(characterList[i].GetComponent<Unit>().turnNum == 0){
+                characterList[i].tag = "First";
+            }
+            if(characterList[i].GetComponent<Unit>().turnNum == 1){
+                characterList[i].tag = "Second";
+            }
+            if(characterList[i].GetComponent<Unit>().turnNum == 2){
+                characterList[i].tag = "Third";
+            }
+            if(characterList[i].GetComponent<Unit>().turnNum == 3){
+                characterList[i].tag = "Fourth";
+            }
         }
     }
 
     void SetTurn()
     {
-        for(int i = 0; i <= characterList.Count + 1; ++i)
-        {
-            if (turn == characterList[i].GetComponent<Unit>().turnNum && characterList[i].GetComponent<Unit>().charType == "Player")
-            {
-                state = BattleState.PLAYERTURN;
-                playerHUD.SetHUD(characterList[i].GetComponent<Unit>());
-                characterList[i].GetComponent<Unit>().isTurn = true;
-
-            }
+        if(turn == 0){
+            GameObject currentTurnPlayer = GameObject.FindGameObjectWithTag("First");
+            if(currentTurnPlayer.GetComponent<Unit>().charType == "Player"){
+            state = BattleState.PLAYERTURN;
             
-            if(turn == characterList[i].GetComponent<Unit>().turnNum && characterList[i].GetComponent<Unit>().charType == "Enemy")
-            {
-                state = BattleState.ENEMYTURN;
-                enemyHUD.SetHUD(characterList[i].GetComponent<Unit>());
-                StartCoroutine(EnemyTurn());
-            }
-              
             
-           
-            turnText.text = characterList[i].GetComponent<Unit>().unitName + "'s Turn";
+        }else if(currentTurnPlayer.GetComponent<Unit>().charType == "Enemy"){
+            state = BattleState.ENEMYTURN;
+            EnemyTurn();
+            
         }
-        
+        turnText.text = currentTurnPlayer.GetComponent<Unit>().unitName + "'s Turn!";
+            Debug.Log(currentTurnPlayer.GetComponent<Unit>().unitName);
+
+        }
+        if(turn == 1){
+            GameObject currentTurnPlayer = GameObject.FindGameObjectWithTag("Second");
+            if(currentTurnPlayer.GetComponent<Unit>().charType == "Player"){
+            state = BattleState.PLAYERTURN;
+            
+            
+        }else if(currentTurnPlayer.GetComponent<Unit>().charType == "Enemy"){
+            state = BattleState.ENEMYTURN;
+            EnemyTurn();
+            
+        }
+        turnText.text = currentTurnPlayer.GetComponent<Unit>().unitName + "'s Turn!";
+            Debug.Log(currentTurnPlayer.GetComponent<Unit>().unitName);
+
+        }
+        if(turn == 2){
+            GameObject currentTurnPlayer = GameObject.FindGameObjectWithTag("Third");
+            if(currentTurnPlayer.GetComponent<Unit>().charType == "Player"){
+            state = BattleState.PLAYERTURN;
+           
+            
+        }else if(currentTurnPlayer.GetComponent<Unit>().charType == "Enemy"){
+            state = BattleState.ENEMYTURN;
+            EnemyTurn();
+            
+        }
+        turnText.text = currentTurnPlayer.GetComponent<Unit>().unitName + "'s Turn!";
+            Debug.Log(currentTurnPlayer.GetComponent<Unit>().unitName);
+        }
+        if(turn == 3){
+            GameObject currentTurnPlayer = GameObject.FindGameObjectWithTag("Fourth");
+            if(currentTurnPlayer.GetComponent<Unit>().charType == "Player"){
+            state = BattleState.PLAYERTURN;
+            
+        }else if(currentTurnPlayer.GetComponent<Unit>().charType == "Enemy"){
+            state = BattleState.ENEMYTURN;
+            EnemyTurn();
+            
+        }
+        turnText.text = currentTurnPlayer.GetComponent<Unit>().unitName + "'s Turn!";
+        Debug.Log(currentTurnPlayer.GetComponent<Unit>().unitName);
+
+        }
     }
 
     IEnumerator PlayerAttack()
@@ -129,10 +194,6 @@ public class BattleSystem : MonoBehaviour
         {
             state = BattleState.WON;
             EndBattle();
-        }
-        else
-        {
-            ++turn;
         }
     }
 
@@ -152,25 +213,34 @@ public class BattleSystem : MonoBehaviour
         
     }
 
-    IEnumerator EnemyTurn()
+    void EnemyTurn()
     {
-        yield return new WaitForSeconds(1f);
+        turnText.text = enemyPrefab.GetComponent<Unit>().unitName + "'s Turn!";
+        
+        int playerToAttack = UnityEngine.Random.Range(0, 3);
+        Debug.Log("Random Number is" + playerToAttack);
 
-        bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
-
-        playerHUD.SetHP(playerUnit.currentHP);
-
-        yield return new WaitForSeconds(1f);
-
-        if (isDead)
-        {
-            state = BattleState.LOST;
-            EndBattle();
+        if(playerToAttack == 0){
+            playerPrefab.GetComponent<Unit>().TakeDamage(enemyUnit.damage);
+            playerHUD.SetHP(playerPrefab.GetComponent<Unit>().currentHP);
+            
+            turn = turn + 1;
         }
-        else
-        {
-            ++turn;
+
+        if(playerToAttack == 1){
+            player2Prefab.GetComponent<Unit>().TakeDamage(enemyUnit.damage);
+            playerHUD2.SetHP(playerPrefab.GetComponent<Unit>().currentHP);
+            
+            turn = turn + 1;
         }
+
+        if(playerToAttack == 2){
+            player3Prefab.GetComponent<Unit>().TakeDamage(enemyUnit.damage);
+            playerHUD3.SetHP(playerPrefab.GetComponent<Unit>().currentHP);
+            
+            turn = turn + 1;
+        }
+        
     }
 
     public void OnAttackButton()
@@ -178,5 +248,10 @@ public class BattleSystem : MonoBehaviour
         if (state != BattleState.PLAYERTURN) return;
 
         StartCoroutine(PlayerAttack());
+    }
+
+    public void OnEndTurnButton(){
+        if (state != BattleState.PLAYERTURN) return;
+        turn = turn + 1;
     }
 }
