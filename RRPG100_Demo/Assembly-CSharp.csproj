@@ -71,9 +71,11 @@
      <Compile Include="Assets\Scripts\BattleHUD.cs" />
      <Compile Include="Assets\Scripts\BattleSystem.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
-     <Compile Include="Assets\Scripts\EnemySpawn.cs" />
+     <Compile Include="Assets\Scripts\CombatPointSpawn.cs" />
      <Compile Include="Assets\Scripts\ItemsSpawn.cs" />
+     <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\OverworldMovement.cs" />
+     <Compile Include="Assets\Scripts\PartyScript.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\ShopSpawn.cs" />
      <Compile Include="Assets\Scripts\Unit.cs" />

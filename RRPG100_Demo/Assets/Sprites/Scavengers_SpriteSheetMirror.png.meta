@@ -1,0 +1,1741 @@
+fileFormatVersion: 2
+guid: 3985325d5b8e5b4429a001711651f6ee
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2294268803194525432
+    second: Scavengers_SpriteSheetMirror_0
+  - first:
+      213: -8414801110065728950
+    second: Scavengers_SpriteSheetMirror_1
+  - first:
+      213: 7358232193726148147
+    second: Scavengers_SpriteSheetMirror_2
+  - first:
+      213: 4488055974784314665
+    second: Scavengers_SpriteSheetMirror_3
+  - first:
+      213: 1105689291999825608
+    second: Scavengers_SpriteSheetMirror_4
+  - first:
+      213: 3331969013688840614
+    second: Scavengers_SpriteSheetMirror_5
+  - first:
+      213: -7661667576444230347
+    second: Scavengers_SpriteSheetMirror_6
+  - first:
+      213: 6483395664263913329
+    second: Scavengers_SpriteSheetMirror_7
+  - first:
+      213: -5450195117417741627
+    second: Scavengers_SpriteSheetMirror_8
+  - first:
+      213: 8364290552847840000
+    second: Scavengers_SpriteSheetMirror_9
+  - first:
+      213: 6436745798074847385
+    second: Scavengers_SpriteSheetMirror_10
+  - first:
+      213: -4827327786712007949
+    second: Scavengers_SpriteSheetMirror_11
+  - first:
+      213: 3924255759083300158
+    second: Scavengers_SpriteSheetMirror_12
+  - first:
+      213: 2021440240694468916
+    second: Scavengers_SpriteSheetMirror_13
+  - first:
+      213: -5033161513928007163
+    second: Scavengers_SpriteSheetMirror_14
+  - first:
+      213: -227122775430020854
+    second: Scavengers_SpriteSheetMirror_15
+  - first:
+      213: 2749097652883884265
+    second: Scavengers_SpriteSheetMirror_16
+  - first:
+      213: -8971721069310234605
+    second: Scavengers_SpriteSheetMirror_17
+  - first:
+      213: 5394061677398863985
+    second: Scavengers_SpriteSheetMirror_18
+  - first:
+      213: -7743533882115194071
+    second: Scavengers_SpriteSheetMirror_19
+  - first:
+      213: 3343856627271047492
+    second: Scavengers_SpriteSheetMirror_20
+  - first:
+      213: 7040431689655279607
+    second: Scavengers_SpriteSheetMirror_21
+  - first:
+      213: 7473798386220922201
+    second: Scavengers_SpriteSheetMirror_22
+  - first:
+      213: -4339149253749012509
+    second: Scavengers_SpriteSheetMirror_23
+  - first:
+      213: -7533725937182164011
+    second: Scavengers_SpriteSheetMirror_24
+  - first:
+      213: -8179181860417700914
+    second: Scavengers_SpriteSheetMirror_25
+  - first:
+      213: 220896279174816237
+    second: Scavengers_SpriteSheetMirror_26
+  - first:
+      213: 6685997350870882946
+    second: Scavengers_SpriteSheetMirror_27
+  - first:
+      213: -6394289381728965667
+    second: Scavengers_SpriteSheetMirror_28
+  - first:
+      213: -7834522815389045341
+    second: Scavengers_SpriteSheetMirror_29
+  - first:
+      213: -483088404586088009
+    second: Scavengers_SpriteSheetMirror_30
+  - first:
+      213: 3681950401606302567
+    second: Scavengers_SpriteSheetMirror_31
+  - first:
+      213: 2484987753495570007
+    second: Scavengers_SpriteSheetMirror_32
+  - first:
+      213: 4559355980516563537
+    second: Scavengers_SpriteSheetMirror_33
+  - first:
+      213: -9208131159651450698
+    second: Scavengers_SpriteSheetMirror_34
+  - first:
+      213: -5788205579190934986
+    second: Scavengers_SpriteSheetMirror_35
+  - first:
+      213: 8853088628221124439
+    second: Scavengers_SpriteSheetMirror_36
+  - first:
+      213: 8894643995449193840
+    second: Scavengers_SpriteSheetMirror_37
+  - first:
+      213: 3644676631520503919
+    second: Scavengers_SpriteSheetMirror_38
+  - first:
+      213: 2668096115156090125
+    second: Scavengers_SpriteSheetMirror_39
+  - first:
+      213: -1550531555535353964
+    second: Scavengers_SpriteSheetMirror_40
+  - first:
+      213: 839092483508944244
+    second: Scavengers_SpriteSheetMirror_41
+  - first:
+      213: 6795522738873077274
+    second: Scavengers_SpriteSheetMirror_42
+  - first:
+      213: 5435799530230177285
+    second: Scavengers_SpriteSheetMirror_43
+  - first:
+      213: 9048666992320237878
+    second: Scavengers_SpriteSheetMirror_44
+  - first:
+      213: 7970493380656176226
+    second: Scavengers_SpriteSheetMirror_45
+  - first:
+      213: 8697583445381699011
+    second: Scavengers_SpriteSheetMirror_46
+  - first:
+      213: 2956142872814017724
+    second: Scavengers_SpriteSheetMirror_47
+  - first:
+      213: -6226422400809652675
+    second: Scavengers_SpriteSheetMirror_48
+  - first:
+      213: 3722905335475737024
+    second: Scavengers_SpriteSheetMirror_49
+  - first:
+      213: -4447801102333129979
+    second: Scavengers_SpriteSheetMirror_50
+  - first:
+      213: -106556561550392952
+    second: Scavengers_SpriteSheetMirror_51
+  - first:
+      213: 7872073479948208220
+    second: Scavengers_SpriteSheetMirror_52
+  - first:
+      213: 5663942111122644899
+    second: Scavengers_SpriteSheetMirror_53
+  - first:
+      213: -6915960309357501544
+    second: Scavengers_SpriteSheetMirror_54
+  - first:
+      213: -592248972483476670
+    second: Scavengers_SpriteSheetMirror_55
+  - first:
+      213: 7578107666272819409
+    second: Scavengers_SpriteSheetMirror_56
+  - first:
+      213: -7695763676360090134
+    second: Scavengers_SpriteSheetMirror_57
+  - first:
+      213: 3907837470051862188
+    second: Scavengers_SpriteSheetMirror_58
+  - first:
+      213: -3025143883024793875
+    second: Scavengers_SpriteSheetMirror_59
+  - first:
+      213: -9219512170842719465
+    second: Scavengers_SpriteSheetMirror_60
+  - first:
+      213: 1667489161840495744
+    second: Scavengers_SpriteSheetMirror_61
+  - first:
+      213: 263564978372893034
+    second: Scavengers_SpriteSheetMirror_62
+  - first:
+      213: 3386097478996247841
+    second: Scavengers_SpriteSheetMirror_63
+  - first:
+      213: 6839910457812615090
+    second: Scavengers_SpriteSheetMirror_64
+  - first:
+      213: 3831095601897254829
+    second: Scavengers_SpriteSheetMirror_65
+  - first:
+      213: 955703411554999361
+    second: Scavengers_SpriteSheetMirror_66
+  - first:
+      213: 5123304693054025062
+    second: Scavengers_SpriteSheetMirror_67
+  - first:
+      213: 5036788570165481876
+    second: Scavengers_SpriteSheetMirror_68
+  - first:
+      213: -2903516358855047038
+    second: Scavengers_SpriteSheetMirror_69
+  - first:
+      213: 1994157434697145371
+    second: Scavengers_SpriteSheetMirror_70
+  - first:
+      213: -7805573594538187983
+    second: Scavengers_SpriteSheetMirror_71
+  - first:
+      213: -5372622970623898772
+    second: Scavengers_SpriteSheetMirror_72
+  - first:
+      213: 7411439761019580973
+    second: Scavengers_SpriteSheetMirror_73
+  - first:
+      213: -5946401264168716758
+    second: Scavengers_SpriteSheetMirror_74
+  - first:
+      213: 5579601238448048024
+    second: Scavengers_SpriteSheetMirror_75
+  - first:
+      213: -7206173227455324092
+    second: Scavengers_SpriteSheetMirror_76
+  - first:
+      213: 2989171477266346861
+    second: Scavengers_SpriteSheetMirror_77
+  - first:
+      213: -5155536212100538634
+    second: Scavengers_SpriteSheetMirror_78
+  - first:
+      213: 8157821718648067192
+    second: Scavengers_SpriteSheetMirror_79
+  - first:
+      213: 2577909889241685089
+    second: Scavengers_SpriteSheetMirror_80
+  - first:
+      213: 6122142939368308696
+    second: Scavengers_SpriteSheetMirror_81
+  - first:
+      213: 1636669381352642263
+    second: Scavengers_SpriteSheetMirror_82
+  - first:
+      213: 3569474468915297210
+    second: Scavengers_SpriteSheetMirror_83
+  - first:
+      213: -8947954403327144762
+    second: Scavengers_SpriteSheetMirror_84
+  - first:
+      213: 8987558114880024346
+    second: Scavengers_SpriteSheetMirror_85
+  - first:
+      213: 2043110467617978100
+    second: Scavengers_SpriteSheetMirror_86
+  - first:
+      213: -5461057641642922325
+    second: Scavengers_SpriteSheetMirror_87
+  - first:
+      213: -5437469969746656375
+    second: Scavengers_SpriteSheetMirror_88
+  - first:
+      213: 813174780985247745
+    second: Scavengers_SpriteSheetMirror_89
+  - first:
+      213: -323589331824589818
+    second: Scavengers_SpriteSheetMirror_90
+  - first:
+      213: -4482959666994079227
+    second: Scavengers_SpriteSheetMirror_91
+  - first:
+      213: 5411706022598264678
+    second: Scavengers_SpriteSheetMirror_92
+  - first:
+      213: 5772024809739132454
+    second: Scavengers_SpriteSheetMirror_93
+  - first:
+      213: -5243059514366662489
+    second: Scavengers_SpriteSheetMirror_94
+  - first:
+      213: -4066465137051067509
+    second: Scavengers_SpriteSheetMirror_95
+  - first:
+      213: -6679332133593783956
+    second: Scavengers_SpriteSheetMirror_96
+  - first:
+      213: -7529227808585579215
+    second: Scavengers_SpriteSheetMirror_97
+  - first:
+      213: -4553828556797828074
+    second: Scavengers_SpriteSheetMirror_98
+  - first:
+      213: 3455612614180726287
+    second: Scavengers_SpriteSheetMirror_99
+  - first:
+      213: 3484715449206934967
+    second: Scavengers_SpriteSheetMirror_100
+  - first:
+      213: 5962499237702705458
+    second: Scavengers_SpriteSheetMirror_101
+  - first:
+      213: 1287462467584760011
+    second: Scavengers_SpriteSheetMirror_102
+  - first:
+      213: -6482511565924979022
+    second: Scavengers_SpriteSheetMirror_103
+  - first:
+      213: 6934076148672685857
+    second: Scavengers_SpriteSheetMirror_104
+  - first:
+      213: 3193247888886331695
+    second: Scavengers_SpriteSheetMirror_105
+  - first:
+      213: -7653762280387457057
+    second: Scavengers_SpriteSheetMirror_106
+  - first:
+      213: -5187017238976635270
+    second: Scavengers_SpriteSheetMirror_107
+  - first:
+      213: 296310211439439619
+    second: Scavengers_SpriteSheetMirror_108
+  - first:
+      213: -641026681491323821
+    second: Scavengers_SpriteSheetMirror_109
+  - first:
+      213: 3741887720855118590
+    second: Scavengers_SpriteSheetMirror_110
+  - first:
+      213: -6687782822957408952
+    second: Scavengers_SpriteSheetMirror_111
+  - first:
+      213: 3782475620941390674
+    second: Scavengers_SpriteSheetMirror_112
+  - first:
+      213: 4199359456404730297
+    second: Scavengers_SpriteSheetMirror_113
+  - first:
+      213: 707990606236440012
+    second: Scavengers_SpriteSheetMirror_114
+  - first:
+      213: 5504272446186794035
+    second: Scavengers_SpriteSheetMirror_115
+  - first:
+      213: -230471124273869115
+    second: Scavengers_SpriteSheetMirror_116
+  - first:
+      213: 1038827128500801809
+    second: Scavengers_SpriteSheetMirror_117
+  - first:
+      213: 7686084843426470148
+    second: Scavengers_SpriteSheetMirror_118
+  - first:
+      213: 1725248306180828699
+    second: Scavengers_SpriteSheetMirror_119
+  - first:
+      213: 8371655306870788129
+    second: Scavengers_SpriteSheetMirror_120
+  - first:
+      213: 7679939500453593533
+    second: Scavengers_SpriteSheetMirror_121
+  - first:
+      213: 1927613530164470189
+    second: Scavengers_SpriteSheetMirror_122
+  - first:
+      213: 2001479819314042356
+    second: Scavengers_SpriteSheetMirror_123
+  - first:
+      213: -6714674219976044418
+    second: Scavengers_SpriteSheetMirror_124
+  - first:
+      213: -9002675429182234817
+    second: Scavengers_SpriteSheetMirror_125
+  - first:
+      213: -2218957176538617876
+    second: Scavengers_SpriteSheetMirror_126
+  - first:
+      213: 5089583250081216372
+    second: Scavengers_SpriteSheetMirror_127
+  - first:
+      213: -3916125578418976872
+    second: Scavengers_SpriteSheetMirror_128
+  - first:
+      213: 8618633294831267125
+    second: Scavengers_SpriteSheetMirror_129
+  - first:
+      213: 8584079355191603112
+    second: Scavengers_SpriteSheetMirror_130
+  - first:
+      213: -6836017242079075503
+    second: Scavengers_SpriteSheetMirror_131
+  - first:
+      213: -7135782315982312901
+    second: Scavengers_SpriteSheetMirror_132
+  - first:
+      213: 6356630662593654770
+    second: Scavengers_SpriteSheetMirror_133
+  - first:
+      213: 7825094073860031978
+    second: Scavengers_SpriteSheetMirror_134
+  - first:
+      213: 4497106628827444500
+    second: Scavengers_SpriteSheetMirror_135
+  - first:
+      213: -5635789088866017703
+    second: Scavengers_SpriteSheetMirror_136
+  - first:
+      213: -8298066147523903812
+    second: Scavengers_SpriteSheetMirror_137
+  - first:
+      213: 9125240207929157586
+    second: Scavengers_SpriteSheetMirror_138
+  - first:
+      213: -1982371853111305671
+    second: Scavengers_SpriteSheetMirror_139
+  - first:
+      213: -7303092327604452222
+    second: Scavengers_SpriteSheetMirror_140
+  - first:
+      213: -157719157571751143
+    second: Scavengers_SpriteSheetMirror_141
+  - first:
+      213: -6567750164895632337
+    second: Scavengers_SpriteSheetMirror_142
+  - first:
+      213: -5970429186249626207
+    second: Scavengers_SpriteSheetMirror_143
+  - first:
+      213: -8048467626687024748
+    second: Scavengers_SpriteSheetMirror_144
+  - first:
+      213: 7238620823226423178
+    second: Scavengers_SpriteSheetMirror_145
+  - first:
+      213: -6164724473793378599
+    second: Scavengers_SpriteSheetMirror_146
+  - first:
+      213: -2904086415107370228
+    second: Scavengers_SpriteSheetMirror_147
+  - first:
+      213: -4832223404863664436
+    second: Scavengers_SpriteSheetMirror_148
+  - first:
+      213: -8457104653482925427
+    second: Scavengers_SpriteSheetMirror_149
+  - first:
+      213: 9121744985570004314
+    second: Scavengers_SpriteSheetMirror_150
+  - first:
+      213: -2084845589526254448
+    second: Scavengers_SpriteSheetMirror_151
+  - first:
+      213: -4821159046191065812
+    second: Scavengers_SpriteSheetMirror_152
+  - first:
+      213: -1062212757613829732
+    second: Scavengers_SpriteSheetMirror_153
+  - first:
+      213: -3179712330375507030
+    second: Scavengers_SpriteSheetMirror_154
+  - first:
+      213: 9100375227491417289
+    second: Scavengers_SpriteSheetMirror_155
+  - first:
+      213: 2127735875940131706
+    second: Scavengers_SpriteSheetMirror_156
+  - first:
+      213: 1200026222955040390
+    second: Scavengers_SpriteSheetMirror_157
+  - first:
+      213: 3913194098834722244
+    second: Scavengers_SpriteSheetMirror_158
+  - first:
+      213: -7842879844786866465
+    second: Scavengers_SpriteSheetMirror_159
+  - first:
+      213: 6025495054658672611
+    second: Scavengers_SpriteSheetMirror_160
+  - first:
+      213: -5709956587000182786
+    second: Scavengers_SpriteSheetMirror_161
+  - first:
+      213: 1884847045241286476
+    second: Scavengers_SpriteSheetMirror_162
+  - first:
+      213: -7118488402783711062
+    second: Scavengers_SpriteSheetMirror_163
+  - first:
+      213: 2657141571750293948
+    second: Scavengers_SpriteSheetMirror_164
+  - first:
+      213: 2252317953018768466
+    second: Scavengers_SpriteSheetMirror_165
+  - first:
+      213: 5126447642563439525
+    second: Scavengers_SpriteSheetMirror_166
+  - first:
+      213: 2474471253128846300
+    second: Scavengers_SpriteSheetMirror_167
+  - first:
+      213: -856675597975191589
+    second: Scavengers_SpriteSheetMirror_168
+  - first:
+      213: -5353682455093029624
+    second: Scavengers_SpriteSheetMirror_169
+  - first:
+      213: 5323773060128988492
+    second: Scavengers_SpriteSheetMirror_170
+  - first:
+      213: 398324367151274846
+    second: Scavengers_SpriteSheetMirror_171
+  - first:
+      213: -6075815225247859459
+    second: Scavengers_SpriteSheetMirror_172
+  - first:
+      213: -4441429865024283490
+    second: Scavengers_SpriteSheetMirror_173
+  - first:
+      213: -1156311529717647341
+    second: Scavengers_SpriteSheetMirror_174
+  - first:
+      213: -4735459686498328660
+    second: Scavengers_SpriteSheetMirror_175
+  - first:
+      213: -8803900000703365369
+    second: Scavengers_SpriteSheetMirror_176
+  - first:
+      213: -4719906141129718791
+    second: Scavengers_SpriteSheetMirror_177
+  - first:
+      213: 3504287959502466285
+    second: Scavengers_SpriteSheetMirror_178
+  - first:
+      213: 9179612986427698567
+    second: Scavengers_SpriteSheetMirror_179
+  - first:
+      213: -2403898314141048887
+    second: Scavengers_SpriteSheetMirror_180
+  - first:
+      213: -3092522786786946998
+    second: Scavengers_SpriteSheetMirror_181
+  - first:
+      213: -8313603871038423366
+    second: Scavengers_SpriteSheetMirror_182
+  - first:
+      213: -2542138352567774087
+    second: Scavengers_SpriteSheetMirror_183
+  - first:
+      213: 35599210276863713
+    second: Scavengers_SpriteSheetMirror_184
+  - first:
+      213: -5770436125771591419
+    second: Scavengers_SpriteSheetMirror_185
+  - first:
+      213: -460125905310807669
+    second: Scavengers_SpriteSheetMirror_186
+  - first:
+      213: -1740850200112527692
+    second: Scavengers_SpriteSheetMirror_187
+  - first:
+      213: -6400056850744212529
+    second: Scavengers_SpriteSheetMirror_188
+  - first:
+      213: 8156037368634820972
+    second: Scavengers_SpriteSheetMirror_189
+  - first:
+      213: 8620203607387657539
+    second: Scavengers_SpriteSheetMirror_190
+  - first:
+      213: 1646357345327951337
+    second: Scavengers_SpriteSheetMirror_191
+  - first:
+      213: 3077939488812971870
+    second: Scavengers_SpriteSheetMirror_192
+  - first:
+      213: -7057924410158671686
+    second: Scavengers_SpriteSheetMirror_193
+  - first:
+      213: -6361905972057217022
+    second: Scavengers_SpriteSheetMirror_194
+  - first:
+      213: 5454013407943407610
+    second: Scavengers_SpriteSheetMirror_195
+  - first:
+      213: -8191525139684247025
+    second: Scavengers_SpriteSheetMirror_196
+  - first:
+      213: 3965128349469407354
+    second: Scavengers_SpriteSheetMirror_197
+  - first:
+      213: 6915046857765927395
+    second: Scavengers_SpriteSheetMirror_198
+  - first:
+      213: -930639839872127843
+    second: Scavengers_SpriteSheetMirror_199
+  - first:
+      213: -1638103404861692399
+    second: Scavengers_SpriteSheetMirror_200
+  - first:
+      213: 5695690246462216592
+    second: Scavengers_SpriteSheetMirror_201
+  - first:
+      213: 2098359070127057608
+    second: Scavengers_SpriteSheetMirror_202
+  - first:
+      213: -4283861000753455992
+    second: Scavengers_SpriteSheetMirror_203
+  - first:
+      213: -2148362114998284811
+    second: Scavengers_SpriteSheetMirror_204
+  - first:
+      213: 346124119867004227
+    second: Scavengers_SpriteSheetMirror_205
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f69ba92251e6df10800000000000000
+      internalID: 2294268803194525432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4238f259fe983b80800000000000000
+      internalID: -8414801110065728950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ee3e1d131bd1660800000000000000
+      internalID: 7358232193726148147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92da61d5127c84e30800000000000000
+      internalID: 4488055974784314665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ce4a998d82385f00800000000000000
+      internalID: 1105689291999825608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a138871a288d3e20800000000000000
+      internalID: 3331969013688840614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 535e9e6bee94ca590800000000000000
+      internalID: -7661667576444230347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17f12c29106a9f950800000000000000
+      internalID: 6483395664263913329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_8
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c24fb5ca640d54b0800000000000000
+      internalID: -5450195117417741627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 003b6a021fde31470800000000000000
+      internalID: 8364290552847840000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_10
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9905db3333ae35950800000000000000
+      internalID: 6436745798074847385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_11
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa78aa44f2e10db0800000000000000
+      internalID: -4827327786712007949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_12
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e35e0ff32d1c57630800000000000000
+      internalID: 3924255759083300158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_13
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 431264950399d0c10800000000000000
+      internalID: 2021440240694468916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5026729154e962ab0800000000000000
+      internalID: -5033161513928007163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_15
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a01c7120a0919dcf0800000000000000
+      internalID: -227122775430020854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_16
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e8010dffb1c62620800000000000000
+      internalID: 2749097652883884265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_17
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31030efb83b0e7380800000000000000
+      internalID: -8971721069310234605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_18
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17038e1448e8bda40800000000000000
+      internalID: 5394061677398863985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_19
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 923825216f0798490800000000000000
+      internalID: -7743533882115194071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_20
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4499350d2e3c76e20800000000000000
+      internalID: 3343856627271047492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff5e47e153a4b160800000000000000
+      internalID: 7040431689655279607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_22
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 955f59dc80448b760800000000000000
+      internalID: 7473798386220922201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_23
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e783e65ebe38c3c0800000000000000
+      internalID: -4339149253749012509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_24
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5db3c1fec24d27790800000000000000
+      internalID: -7533725937182164011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_25
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecbfb70ee65bd7e80800000000000000
+      internalID: -8179181860417700914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_26
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de1ab6cdef7c01300800000000000000
+      internalID: 220896279174816237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_27
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28a9cdbaa2f69cc50800000000000000
+      internalID: 6685997350870882946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddb2efa8fabe247a0800000000000000
+      internalID: -6394289381728965667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_29
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3adea0c220f264390800000000000000
+      internalID: -7834522815389045341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_30
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b93981d7a9bb49f0800000000000000
+      internalID: -483088404586088009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_31
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76bb958e16ae81330800000000000000
+      internalID: 3681950401606302567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_32
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 756ac4e12337c7220800000000000000
+      internalID: 2484987753495570007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_33
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15a1e379b16164f30800000000000000
+      internalID: 4559355980516563537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_34
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b005cf3f75263080800000000000000
+      internalID: -9208131159651450698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 632e36561b92cafa0800000000000000
+      internalID: -5788205579190934986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_36
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f9b22a33d7cda70800000000000000
+      internalID: 8853088628221124439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_37
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0757f48869f107b70800000000000000
+      internalID: 8894643995449193840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_38
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6862f6061e749230800000000000000
+      internalID: 3644676631520503919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_39
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d7a72d74bf60520800000000000000
+      internalID: 2668096115156090125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_40
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 497084be3c76b7ae0800000000000000
+      internalID: -1550531555535353964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_41
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47d30450b2e05ab00800000000000000
+      internalID: 839092483508944244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_42
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1e8e914deb8e4e50800000000000000
+      internalID: 6795522738873077274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_43
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50eda956fd6df6b40800000000000000
+      internalID: 5435799530230177285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_44
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 631dc0800b2539d70800000000000000
+      internalID: 9048666992320237878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_45
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26c1d9e0081ec9e60800000000000000
+      internalID: 7970493380656176226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_46
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c55b42df0604b870800000000000000
+      internalID: 8697583445381699011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheetMirror_47
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbcd16fc744560920800000000000000
+      internalID: 2956142872814017724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

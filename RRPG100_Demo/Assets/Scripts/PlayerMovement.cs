@@ -25,16 +25,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetAxisRaw("Horizontal") < -.01)
         {
-            anim.Play("sideview");
+            anim.Play("partyWalkMirror");
         }
         if (Input.GetAxisRaw("Horizontal") > .01)
         {
-            anim.Play("sideview_mirror");
-        }
-
-        if (Input.GetAxisRaw("Horizontal") > -.01 && Input.GetAxisRaw("Horizontal") < .01)
-        {
-            anim.Play("Idle");
+            anim.Play("partyWalk");
         }
     }
 }
