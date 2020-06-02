@@ -12,7 +12,7 @@ public class CombatPointSpawn: MonoBehaviour
 
         for(int i = 0; i < spawnPoints; ++i)
         {
-            var position = new Vector3(Random.Range(-12, 12), 1, Random.Range(-12, 12));
+            var position = new Vector3(Random.Range(-100, 100), 1, Random.Range(-100, 100));
             Instantiate(CombatPointPrefab, position, Quaternion.identity);
         }
     }

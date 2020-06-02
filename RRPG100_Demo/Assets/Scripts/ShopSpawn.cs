@@ -8,7 +8,7 @@ public class ShopSpawn : MonoBehaviour
    
     void Start()
     {
-        var position = new Vector3(Random.Range(-12, 12), 1, Random.Range(-12, 12));
+        var position = new Vector3(Random.Range(-250, 250), 1, Random.Range(-250, 250));
         Instantiate(ShopPrefab, position, Quaternion.identity);
     }
 }
