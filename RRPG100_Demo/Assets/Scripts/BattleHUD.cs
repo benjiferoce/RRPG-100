@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿// email: benjiferoce@gmail.com | GitHub: https://github.com/benjiferoce
+// Copyright 2020, Benjamin Weaver, All rights reserved
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,13 +13,21 @@ public class BattleHUD : MonoBehaviour
     public Text secondAttackText;
     public Text thirdAttackText;
     public Text fourthAttackText;
-    public Slider hpSlider; 
+    public Sprite physicalIcon;
+    public Sprite rangedIcon;
+    public Sprite healIcon;
+    public Sprite magicIcon;
+
+    public Slider hpSlider;
+    public Slider apSlider;
 
     public void SetHUD(Unit unit)
     {
         nameText.text = unit.unitName;
         hpSlider.maxValue = unit.maxHP;
         hpSlider.value = unit.currentHP;
+        //apSlider.maxValue = unit.maxAP;
+        //apSlider.value = unit.currentAP;
     }
 
     public void SetAttackHUD(Unit unit)
@@ -28,7 +39,6 @@ public class BattleHUD : MonoBehaviour
     }
     public void SetHP(int hp)
     {
-        hpSlider.value = hp;
-        
+        hpSlider.value = hp; 
     }
 }
