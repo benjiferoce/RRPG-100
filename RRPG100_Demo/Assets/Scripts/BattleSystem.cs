@@ -29,6 +29,7 @@ public class BattleSystem : MonoBehaviour
     public BattleHUD enemyHUD;
     public BattleHUD playerAttacksHUD;
     public Text turnText;
+    public Text actionText; 
     public Slider apSlider; 
 
 
@@ -256,6 +257,7 @@ public class BattleSystem : MonoBehaviour
                     characterList[i].GetComponent<Unit>().SetDamage(characterList[i].GetComponent<Unit>().firstAttackBP,
                     enemyUnit.GetComponent<Unit>().defense);
                     bool isDead = enemyUnit.TakeDamage(characterList[i].GetComponent<Unit>().damage);
+                    actionText.text = characterList[i].GetComponent<Unit>().unitName + " used " + characterList[i].GetComponent<Unit>().firstAttackName + "!";
                     currentAP -= characterList[i].GetComponent<Unit>().firstAttackCost;
                     apSlider.value = currentAP;
                     Debug.Log(characterList[i].GetComponent<Unit>().damage);
@@ -289,6 +291,7 @@ public class BattleSystem : MonoBehaviour
                     characterList[i].GetComponent<Unit>().SetDamage(characterList[i].GetComponent<Unit>().secondAttackBP,
                     enemyUnit.GetComponent<Unit>().defense);
                     bool isDead = enemyUnit.TakeDamage(characterList[i].GetComponent<Unit>().damage);
+                    actionText.text = characterList[i].GetComponent<Unit>().unitName + "used " + characterList[i].GetComponent<Unit>().secondAttackName + "!";
                     currentAP -= characterList[i].GetComponent<Unit>().secondAttackCost;
                     apSlider.value = currentAP;
                     Debug.Log(characterList[i].GetComponent<Unit>().damage);
@@ -322,6 +325,7 @@ public class BattleSystem : MonoBehaviour
                     characterList[i].GetComponent<Unit>().SetDamage(characterList[i].GetComponent<Unit>().thirdAttackBP,
                     enemyUnit.GetComponent<Unit>().defense);
                     bool isDead = enemyUnit.TakeDamage(characterList[i].GetComponent<Unit>().damage);
+                    actionText.text = characterList[i].GetComponent<Unit>().unitName + "used " + characterList[i].GetComponent<Unit>().thirdAttackName + "!";
                     currentAP -= characterList[i].GetComponent<Unit>().thirdAttackCost;
                     apSlider.value = currentAP;
                     Debug.Log(characterList[i].GetComponent<Unit>().damage);
@@ -354,6 +358,7 @@ public class BattleSystem : MonoBehaviour
                     characterList[i].GetComponent<Unit>().SetDamage(characterList[i].GetComponent<Unit>().fourthAttackBP,
                     enemyUnit.GetComponent<Unit>().defense);
                     bool isDead = enemyUnit.TakeDamage(characterList[i].GetComponent<Unit>().damage);
+                    actionText.text = characterList[i].GetComponent<Unit>().unitName + "used " + characterList[i].GetComponent<Unit>().fourthAttackName + "!";
                     currentAP -= characterList[i].GetComponent<Unit>().fourthAttackCost;
                     apSlider.value = currentAP;
                     Debug.Log(characterList[i].GetComponent<Unit>().damage);
