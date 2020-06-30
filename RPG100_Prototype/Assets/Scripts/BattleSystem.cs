@@ -42,16 +42,22 @@ public class BattleSystem : MonoBehaviour
     public bool chooseAttack; 
 
     public int turn = 0;
+    public int turnCount;
 
     public List<GameObject> characterList = new List<GameObject>();
 
     Unit playerUnit;
     Unit enemyUnit;
 
+    public Unit SelectedEnemy;
+    public bool EnemySelected;
+
     public BattleState state;
+
     // Start is called before the first frame update
     void Start()
     {
+        turnCount = 0; 
         playerPrefab = Party.GetComponent<PartyScript>().Character1;
         player2Prefab = Party.GetComponent<PartyScript>().Character2;
         player3Prefab = Party.GetComponent<PartyScript>().Character3;
@@ -63,6 +69,7 @@ public class BattleSystem : MonoBehaviour
         apSlider.value = currentAP;
         APNum.text = currentAP.ToString();
         state = BattleState.START;
+        EnemySelected = false; 
         StartCoroutine(SetupBattle());
     }
 
@@ -263,16 +270,17 @@ public class BattleSystem : MonoBehaviour
             {
                 if (currentAP >= characterList[i].GetComponent<Unit>().firstAttackCost)
                 {
+                    
                     characterList[i].GetComponent<Unit>().SetDamage(characterList[i].GetComponent<Unit>().firstAttackBP,
                     enemyUnit.GetComponent<Unit>().defense);
-                    bool isDead = enemyUnit.TakeDamage(characterList[i].GetComponent<Unit>().damage);
+                    bool isDead = enemyUnit.GetComponent<Unit>().TakeDamage(characterList[i].GetComponent<Unit>().damage);
                     actionText.text = characterList[i].GetComponent<Unit>().unitName + " used " + characterList[i].GetComponent<Unit>().firstAttackName + "!";
                     currentAP -= characterList[i].GetComponent<Unit>().firstAttackCost;
                     apSlider.value = currentAP;
                     APNum.text = currentAP.ToString();
                     Debug.Log(characterList[i].GetComponent<Unit>().damage);
 
-                    enemyHUD.SetHP(enemyUnit.currentHP.ToString());
+                    enemyHUD.SetHP(enemyUnit.GetComponent<Unit>().currentHP.ToString());
 
                     yield return new WaitForSeconds(2f);
 
@@ -286,9 +294,10 @@ public class BattleSystem : MonoBehaviour
                 {
                     Debug.Log(characterList[i].GetComponent<Unit>().unitName + "Can't Afford " + characterList[i].GetComponent<Unit>().firstAttackName);
                 }
-            }
+            }  
         }
     }
+    
 
     IEnumerator PlayerSecondAttack()
     {
@@ -501,10 +510,7 @@ public class BattleSystem : MonoBehaviour
         }
         if (state != BattleState.PLAYERTURN) return;
         turn = turn + 1;
-        for (int i = 0; i < characterList.Count; ++i)
-        {
-            // characterList[i].GetComponent<Unit>().generateTurnAP();
-        }
+        turnCount = turnCount + 1;
     }
 
     public void setPartyAP()
@@ -534,5 +540,29 @@ public class BattleSystem : MonoBehaviour
     {
         chooseAttack = !chooseAttack;
         playerAttacksHUD.gameObject.SetActive(chooseAttack);
+    }
+
+    public void SelectEnemyToAttack()
+    {
+        Debug.Log("Hit");
+        if (Input.GetMouseButtonDown(0))
+        {
+            
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, 100))
+            {
+                if (hit.transform.gameObject.GetComponent<Unit>().charType == "Enemy")
+                {
+                    EnemySelected = true;
+                    SelectedEnemy = hit.transform.gameObject.GetComponent<Unit>();
+                }
+            }
+            else
+            {
+                Debug.Log("Invalid Target");
+            }
+            
+        }
     }
 }

@@ -29,6 +29,12 @@ public class BattleHUD : MonoBehaviour
     public Sprite magicIcon;
 
     public Text hpText;
+
+    public GameObject ActiveMenu;
+    public GameObject PassiveMenu;
+
+    public GameObject ItemMenuHUD;
+    public bool viewItems;
     //public Slider apSlider;
 
     public void SetHUD(Unit unit)
@@ -60,6 +66,22 @@ public class BattleHUD : MonoBehaviour
     public void SetHP(string hp)
     {
         hpText.text = hp;
+    }
+
+    public void activeItemTab()
+    {
+        ActiveMenu.GetComponent<SpriteRenderer>().sortingOrder = 0;
+    }
+
+    public void passiveItemTab()
+    {
+        ActiveMenu.GetComponent<SpriteRenderer>().sortingOrder = -1;
+    }
+
+    public void ItemMenuButton()
+    {
+        viewItems = !viewItems;
+        ItemMenuHUD.gameObject.SetActive(viewItems);
     }
 }
 

@@ -69,7 +69,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 565337359
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5a3ec5e997f7c964891bd3b0e1b6ec18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691a66f1a32b4674588e6c1e04ced080, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: Dr. Car Cola
+  unitName: Dr  Car Cola
   attack: 70
   defense: 30
   multiplier: 0
