@@ -36,6 +36,10 @@ public class BattleSystem : MonoBehaviour
     public Text APNum; 
     public Slider apSlider;
 
+    //public Text hpText1;
+    //public Text hpText2;
+    //public Text hpText3; 
+
     public int startingAP;
     public int currentAP;
     public int maxAP;
@@ -72,6 +76,9 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.START;
         EnemySelected = false; 
         StartCoroutine(SetupBattle());
+        UpdateTurnNumbers(playerPrefab);
+        UpdateTurnNumbers(player2Prefab);
+        UpdateTurnNumbers(player3Prefab);
     }
 
     // Update is called once per frame
@@ -109,6 +116,7 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator SetupBattle()       // Sets Starting HP, Instantiates players at battlestations, and sets the player HUDs
     {
+        
         playerPrefab.GetComponent<Unit>().currentHP = playerPrefab.GetComponent<Unit>().maxHP;
         GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
         playerUnit = playerGO.GetComponent<Unit>();
@@ -124,11 +132,11 @@ public class BattleSystem : MonoBehaviour
         GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
         enemyUnit = enemyGO.GetComponent<Unit>();
 
-        playerHUD.SetHUD(playerPrefab.GetComponent<Unit>());
+        //playerHUD.SetHUD(playerPrefab.GetComponent<Unit>());
 
-        playerHUD2.SetHUD(player2Prefab.GetComponent<Unit>());
+        //playerHUD2.SetHUD(player2Prefab.GetComponent<Unit>());
 
-        playerHUD3.SetHUD(player3Prefab.GetComponent<Unit>());
+        //playerHUD3.SetHUD(player3Prefab.GetComponent<Unit>());
 
         SortTurns();
 
@@ -198,7 +206,7 @@ public class BattleSystem : MonoBehaviour
                 EnemyTurn();
             }
             turnText.text = currentTurnPlayer.GetComponent<Unit>().unitName + "'s Turn!";
-            Debug.Log(currentTurnPlayer.GetComponent<Unit>().unitName);
+            //Debug.Log(currentTurnPlayer.GetComponent<Unit>().unitName);
 
         }
         if (turn == 1)
@@ -218,7 +226,7 @@ public class BattleSystem : MonoBehaviour
                 EnemyTurn();
             }
             turnText.text = currentTurnPlayer.GetComponent<Unit>().unitName + "'s Turn!";
-            Debug.Log(currentTurnPlayer.GetComponent<Unit>().unitName);
+            //Debug.Log(currentTurnPlayer.GetComponent<Unit>().unitName);
 
         }
         if (turn == 2)
@@ -238,7 +246,7 @@ public class BattleSystem : MonoBehaviour
 
             }
             turnText.text = currentTurnPlayer.GetComponent<Unit>().unitName + "'s Turn!";
-            Debug.Log(currentTurnPlayer.GetComponent<Unit>().unitName);
+            //Debug.Log(currentTurnPlayer.GetComponent<Unit>().unitName);
         }
         if (turn == 3)
         {
@@ -275,7 +283,7 @@ public class BattleSystem : MonoBehaviour
                     characterList[i].GetComponent<Unit>().SetDamage(characterList[i].GetComponent<Unit>().firstAttackBP,
                     enemyUnit.GetComponent<Unit>().defense);
                     bool isDead = enemyUnit.GetComponent<Unit>().TakeDamage(characterList[i].GetComponent<Unit>().damage);
-                    actionText.text = characterList[i].GetComponent<Unit>().unitName + " used " + characterList[i].GetComponent<Unit>().firstAttackName + "!";
+                    actionText.text = characterList[i].GetComponent<Unit>().unitName + " used " + "'" + characterList[i].GetComponent<Unit>().firstAttackName + "'" + " for " + characterList[i].GetComponent<Unit>().damage + " Damage!";
                     currentAP -= characterList[i].GetComponent<Unit>().firstAttackCost;
                     apSlider.value = currentAP;
                     APNum.text = currentAP.ToString();
@@ -311,7 +319,7 @@ public class BattleSystem : MonoBehaviour
                     characterList[i].GetComponent<Unit>().SetDamage(characterList[i].GetComponent<Unit>().secondAttackBP,
                     enemyUnit.GetComponent<Unit>().defense);
                     bool isDead = enemyUnit.TakeDamage(characterList[i].GetComponent<Unit>().damage);
-                    actionText.text = characterList[i].GetComponent<Unit>().unitName + "used " + characterList[i].GetComponent<Unit>().secondAttackName + "!";
+                    actionText.text = characterList[i].GetComponent<Unit>().unitName + " used " + "'" + characterList[i].GetComponent<Unit>().secondAttackName + "'" + " for " + characterList[i].GetComponent<Unit>().damage + " Damage!"; 
                     currentAP -= characterList[i].GetComponent<Unit>().secondAttackCost;
                     apSlider.value = currentAP;
                     APNum.text = currentAP.ToString();
@@ -346,7 +354,7 @@ public class BattleSystem : MonoBehaviour
                     characterList[i].GetComponent<Unit>().SetDamage(characterList[i].GetComponent<Unit>().thirdAttackBP,
                     enemyUnit.GetComponent<Unit>().defense);
                     bool isDead = enemyUnit.TakeDamage(characterList[i].GetComponent<Unit>().damage);
-                    actionText.text = characterList[i].GetComponent<Unit>().unitName + "used " + characterList[i].GetComponent<Unit>().thirdAttackName + "!";
+                    actionText.text = characterList[i].GetComponent<Unit>().unitName + " used " + "'" + characterList[i].GetComponent<Unit>().thirdAttackName + "'" + " for " + characterList[i].GetComponent<Unit>().damage + " Damage!";
                     currentAP -= characterList[i].GetComponent<Unit>().thirdAttackCost;
                     apSlider.value = currentAP;
                     APNum.text = currentAP.ToString();
@@ -380,7 +388,7 @@ public class BattleSystem : MonoBehaviour
                     characterList[i].GetComponent<Unit>().SetDamage(characterList[i].GetComponent<Unit>().fourthAttackBP,
                     enemyUnit.GetComponent<Unit>().defense);
                     bool isDead = enemyUnit.TakeDamage(characterList[i].GetComponent<Unit>().damage);
-                    actionText.text = characterList[i].GetComponent<Unit>().unitName + "used " + characterList[i].GetComponent<Unit>().fourthAttackName + "!";
+                    actionText.text = characterList[i].GetComponent<Unit>().unitName + " used " + "'" + characterList[i].GetComponent<Unit>().fourthAttackName + "'" + " for " + characterList[i].GetComponent<Unit>().damage + " Damage!";
                     currentAP -= characterList[i].GetComponent<Unit>().fourthAttackCost;
                     apSlider.value = currentAP;
                     APNum.text = currentAP.ToString();
@@ -434,6 +442,7 @@ public class BattleSystem : MonoBehaviour
         {
             if (playerPrefab.GetComponent<Unit>().currentHP > 0)
             {
+                
                 playerPrefab.GetComponent<Unit>().TakeDamage(enemyUnit.damage);
                 playerHUD.SetHP(playerPrefab.GetComponent<Unit>().currentHP.ToString());
                 turn = turn + 1;
@@ -564,6 +573,17 @@ public class BattleSystem : MonoBehaviour
                 Debug.Log("Invalid Target");
             }
             
+        }
+    }
+
+    public void UpdateTurnNumbers(GameObject Character)
+    {
+        for(int i = 0; i < characterList.Count; ++i)
+        {
+            if(characterList[i].GetComponent<Unit>().unitName == Character.GetComponent<Unit>().unitName)
+            {
+                Character.GetComponent<Unit>().turnNum = characterList[i].GetComponent<Unit>().turnNum;
+            }
         }
     }
 }

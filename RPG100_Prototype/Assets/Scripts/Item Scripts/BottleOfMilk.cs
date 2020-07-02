@@ -17,7 +17,7 @@ public class BottleOfMilk : MonoBehaviour
     public void ItemEffect()
     {
         TrackCurrentPlayer();
-        Debug.Log("Enter ItemEffect() in BottleOfMilk Script");
+        //Debug.Log("Enter ItemEffect() in BottleOfMilk Script");
         playerUsing.GetComponent<Unit>().currentHP += 25;
         actionText.text = playerUsing.GetComponent<Unit>().unitName + " used " + this.GetComponent<Item>().itemName + " and " + this.GetComponent<Item>().itemDescription;
 
@@ -40,11 +40,16 @@ public class BottleOfMilk : MonoBehaviour
     {
         for (int i = 0; i < battleSystem.characterList.Count; ++i)
         {
-
+            if(battleSystem.turn == battleSystem.playerPrefab.GetComponent<Unit>().turnNum) { playerUsing = battleSystem.playerPrefab; }
+            if (battleSystem.turn == battleSystem.player2Prefab.GetComponent<Unit>().turnNum) { playerUsing = battleSystem.player2Prefab; }
+            if (battleSystem.turn == battleSystem.player3Prefab.GetComponent<Unit>().turnNum) { playerUsing = battleSystem.player3Prefab; }
+            //if(battleSystem.characterList[i].GetComponent<Unit>.)
+            /*
             if (battleSystem.GetComponent<BattleSystem>().turn == battleSystem.GetComponent<BattleSystem>().characterList[i].GetComponent<Unit>().turnNum)
             {
                 playerUsing = battleSystem.GetComponent<BattleSystem>().characterList[i];
             }
+            */
         }
     }
 }

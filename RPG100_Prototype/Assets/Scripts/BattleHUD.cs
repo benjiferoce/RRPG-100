@@ -43,11 +43,6 @@ public class BattleHUD : MonoBehaviour
 
     }
 
-    void Update()
-    {
-        SetHUD(this.GetComponent<Unit>());
-    }
-
     public void SetAttackHUD(Unit unit)
     {
         nameText.text = unit.unitName;

@@ -66,16 +66,6 @@ public class ItemsHUD : MonoBehaviour
         item1Name.text = party.PassiveItem1.GetComponent<Item>().itemName;
 
     }
-    public void SetActiveItemButton()
-    {
-        if (ActiveTab == true)
-        {
-            if (party.ActiveItem1.GetComponent<Item>().itemName == "Bottle Of Milk")
-            {
-                ItemManager.GetComponentInChildren<BottleOfMilk>().ItemEffect();
-            }
-        }
-    }
 
     public void activeItemTab()
     {
@@ -97,5 +87,14 @@ public class ItemsHUD : MonoBehaviour
     {
         viewItems = !viewItems;
         ItemMenuHUD.gameObject.SetActive(viewItems);
+    }
+
+    public void SetActiveItemButton()
+    {
+        if (ActiveTab == true)
+        {
+            if(party.ActiveItem1.GetComponent<Item>().itemName == "Bottle Of Milk"){ItemManager.GetComponentInChildren<BottleOfMilk>().ItemEffect();}
+            //if(party.ActiveItem1.GetComponent<Item>().itemName == "Jug Of Milk") {ItemManager.GetComponentInChildren<JugOfMilk>().ItemEffect();}
+        }
     }
 }
