@@ -30,17 +30,22 @@ public class BattleHUD : MonoBehaviour
 
     public Text hpText;
 
-    public GameObject ActiveMenu;
-    public GameObject PassiveMenu;
+    //public GameObject ActiveMenu;
+    //public GameObject PassiveMenu;
 
-    public GameObject ItemMenuHUD;
-    public bool viewItems;
+    //public GameObject ItemMenuHUD;
+    //public bool viewItems;
     //public Slider apSlider;
 
     public void SetHUD(Unit unit)
     {
         SetHP(unit.GetComponent<Unit>().currentHP.ToString());
 
+    }
+
+    void Update()
+    {
+        SetHUD(this.GetComponent<Unit>());
     }
 
     public void SetAttackHUD(Unit unit)
@@ -68,14 +73,17 @@ public class BattleHUD : MonoBehaviour
         hpText.text = hp;
     }
 
+    /*
     public void activeItemTab()
     {
         ActiveMenu.GetComponent<SpriteRenderer>().sortingOrder = 0;
+        PassiveMenu.GetComponent<SpriteRenderer>().sortingOrder = -1;
     }
 
     public void passiveItemTab()
     {
         ActiveMenu.GetComponent<SpriteRenderer>().sortingOrder = -1;
+        PassiveMenu.GetComponent<SpriteRenderer>().sortingOrder = 0;
     }
 
     public void ItemMenuButton()
@@ -83,5 +91,6 @@ public class BattleHUD : MonoBehaviour
         viewItems = !viewItems;
         ItemMenuHUD.gameObject.SetActive(viewItems);
     }
+    */
 }
 

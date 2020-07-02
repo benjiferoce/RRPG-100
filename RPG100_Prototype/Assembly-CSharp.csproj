@@ -55,10 +55,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Attack Scripts\Character Attack Scripts\DrCarColaAttacksScript.cs" />
      <Compile Include="Assets\Scripts\BattleHUD.cs" />
      <Compile Include="Assets\Scripts\BattleSystem.cs" />
      <Compile Include="Assets\Scripts\Item Scripts\BottleOfMilk.cs" />
+     <Compile Include="Assets\Scripts\Item Scripts\Item.cs" />
+     <Compile Include="Assets\Scripts\Item Scripts\ItemDatabase.cs" />
+     <Compile Include="Assets\Scripts\Item Scripts\ItemsHUD.cs" />
      <Compile Include="Assets\Scripts\PartyScript.cs" />
      <Compile Include="Assets\Scripts\Unit.cs" />
  <Reference Include="Unity.Timeline.Editor">

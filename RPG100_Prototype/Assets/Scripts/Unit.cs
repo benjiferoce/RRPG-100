@@ -50,6 +50,9 @@ public class Unit : MonoBehaviour
     public int fourthAttackBP;
     public string AttackType;
 
+    public GameObject passiveItem1;
+    public GameObject passiveItem2; 
+
     void Start()
     {
         isTurn = false;

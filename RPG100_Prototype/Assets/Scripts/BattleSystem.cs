@@ -14,6 +14,7 @@ public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 public class BattleSystem : MonoBehaviour
 {
     public GameObject Party;
+    public GameObject CurrentTurnCharacter;
     public GameObject playerPrefab;
     public GameObject player2Prefab;
     public GameObject player3Prefab;
