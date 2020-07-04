@@ -25,7 +25,7 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 22933
+  controlID: 10081
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 201, y: 442}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 22894
+  controlID: 10082
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -203,9 +203,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -69.87976, y: 43.490314, z: -172.70789}
+    m_Target: {x: -10.742302, y: 22.222733, z: -47.875}
     speed: 2
-    m_Value: {x: -69.87976, y: 43.490314, z: -172.70789}
+    m_Value: {x: -10.742302, y: 22.222733, z: -47.875}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -255,9 +255,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 279.9335
+    m_Target: 178.58046
     speed: 2
-    m_Value: 279.9335
+    m_Value: 178.58046
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -365,8 +365,8 @@ MonoBehaviour:
     y: 499
     width: 1303
     height: 448
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -396,7 +396,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 22848
+  controlID: 10037
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -454,7 +454,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 6efbffff02340000ca340000e0340000e63400001e35000082350000a8350000d835000000360000
+      m_ExpandedIDs: f4f6ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -543,19 +543,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sprites/Item Sprites
+    - Assets/Prefabs/Enemy Prefabs
   m_ViewMode: 0
   m_StartGridSize: 16
   m_LastFolders: []
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\Ben Weaver\Documents\RPG100_Repo\RPG100_Prototype
+  m_LastProjectPath: C:\Users\Ben Weaver\Documents\RRPG-100\RPG100_Prototype
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: b82d0000
     m_LastClickedID: 11704
-    m_ExpandedIDs: ffffffff000000008a360000c2360000c4360000c6360000c8360000ca360000cc360000ce360000d0360000d2360000d4360000d6360000d8360000da360000dc360000de360000e0360000e2360000e4360000e63600000a370000
+    m_ExpandedIDs: ffffffff00000000c6370000f8370000fa370000fc370000fe370000003800000238000004380000063800000a3800000c3800000e3800001038000012380000143800001638000038380000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -580,10 +580,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 674}
-    m_SelectedIDs: 22340000
-    m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff000000008a360000c2360000c4360000c6360000c8360000ca360000cc360000ce360000d0360000d2360000d4360000d6360000d8360000da360000dc360000de360000e0360000e2360000e4360000e63600000a370000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 6c370000
+    m_LastClickedID: 14188
+    m_ExpandedIDs: ffffffff00000000c6370000f8370000fa370000fc370000fe370000003800000238000004380000063800000a3800000c3800000e38000010380000123800001438000016380000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -608,8 +608,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 22340000
-    m_LastClickedInstanceID: 13346
+    m_SelectedInstanceIDs: 6c370000
+    m_LastClickedInstanceID: 14188
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -701,5 +701,5 @@ MonoBehaviour:
     m_ControlHash: 1412526313
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-  m_LastInspectedObjectInstanceID: 13346
-  m_LastVerticalScrollValue: 0
+  m_LastInspectedObjectInstanceID: 14188
+  m_LastVerticalScrollValue: 100

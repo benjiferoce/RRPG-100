@@ -116,7 +116,7 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 141
+  controlID: 143
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -291,8 +291,8 @@ MonoBehaviour:
     y: 0
     width: 328
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -495,7 +495,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.12128505, y: 0.30502287, z: -0.03919862, w: -0.94377863}
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -612,9 +612,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 183b0000
+      m_SelectedIDs: 9c380000
       m_LastClickedID: 0
-      m_ExpandedIDs: d2f9ffff
+      m_ExpandedIDs: f2ddffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -676,20 +676,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders:
-    - Assets/Sprites
+    m_Folders: []
   m_ViewMode: 0
   m_StartGridSize: 16
   m_LastFolders: []
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\Ben Weaver\Desktop\RRPGNEW\RRPG-100\RRPG100_Demo
+  m_LastProjectPath: C:\Users\Ben Weaver\Documents\RRPG-100\RRPG100_Demo
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: b82d0000
     m_LastClickedID: 11704
-    m_ExpandedIDs: 00000000163900005e39000060390000623900006439000066390000683900006a3900006c3900006e39000070390000723900007439000076390000
+    m_ExpandedIDs: 00000000583f0000883f00008a3f00008c3f00008e3f0000903f0000923f0000943f0000963f0000983f00009a3f00009c3f00009e3f0000a03f0000a23f0000a43f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -717,21 +716,21 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 60}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000163900005e39000060390000623900006439000066390000683900006a3900006c3900006e39000070390000723900007439000076390000b4390000ba390000
+    m_ExpandedIDs: ffffffff00000000583f0000883f00008a3f00008c3f00008e3f0000903f0000923f0000943f0000963f0000983f00009a3f00009c3f00009e3f0000a03f0000a23f0000a43f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Acid Lime Lad (2)
-      m_OriginalName: Acid Lime Lad (2)
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 15126
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_SearchString: 

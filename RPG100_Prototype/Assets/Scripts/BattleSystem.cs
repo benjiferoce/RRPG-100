@@ -36,9 +36,10 @@ public class BattleSystem : MonoBehaviour
     public Text APNum; 
     public Slider apSlider;
 
-    //public Text hpText1;
-    //public Text hpText2;
-    //public Text hpText3; 
+    public Text nameText1;
+    public Text nameText2;
+    public Text nameText3;
+    public Text enemyNameText;
 
     public int startingAP;
     public int currentAP;
@@ -79,6 +80,7 @@ public class BattleSystem : MonoBehaviour
         UpdateTurnNumbers(playerPrefab);
         UpdateTurnNumbers(player2Prefab);
         UpdateTurnNumbers(player3Prefab);
+        UpdateTurnNumbers(enemyPrefab);
     }
 
     // Update is called once per frame
@@ -163,7 +165,7 @@ public class BattleSystem : MonoBehaviour
         }
 
         characterList.Reverse();
-
+        
         for (int i = 0; i < characterList.Count; ++i)
         {
             characterList[i].GetComponent<Unit>().turnNum = i;
@@ -426,16 +428,10 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    void PlayerTurn()
-    {
-
-    }
-
     void EnemyTurn()
     {
-        turnText.text = enemyPrefab.GetComponent<Unit>().unitName + "'s Turn!";
-
         int playerToAttack = UnityEngine.Random.Range(0, 3);
+        
         //Debug.Log("Random Number is" + playerToAttack);
 
         if (playerToAttack == 0)
@@ -444,6 +440,7 @@ public class BattleSystem : MonoBehaviour
             {
                 
                 playerPrefab.GetComponent<Unit>().TakeDamage(enemyUnit.damage);
+                actionText.text = enemyPrefab.GetComponent<Unit>().unitName + " attacked " + playerPrefab.GetComponent<Unit>().unitName + " for " + enemyUnit.damage + " damage!";
                 playerHUD.SetHP(playerPrefab.GetComponent<Unit>().currentHP.ToString());
                 turn = turn + 1;
             }
@@ -457,7 +454,9 @@ public class BattleSystem : MonoBehaviour
         {
             if (player2Prefab.GetComponent<Unit>().currentHP > 0)
             {
+                
                 player2Prefab.GetComponent<Unit>().TakeDamage(enemyUnit.damage);
+                actionText.text = enemyPrefab.GetComponent<Unit>().unitName + " attacked " + player2Prefab.GetComponent<Unit>().unitName + " for " + enemyUnit.damage + " damage!";
                 playerHUD2.SetHP(player2Prefab.GetComponent<Unit>().currentHP.ToString());
                 turn = turn + 1;
             }
@@ -471,7 +470,9 @@ public class BattleSystem : MonoBehaviour
         {
             if (player3Prefab.GetComponent<Unit>().currentHP > 0)
             {
+                
                 player3Prefab.GetComponent<Unit>().TakeDamage(enemyUnit.damage);
+                actionText.text = enemyPrefab.GetComponent<Unit>().unitName + " attacked " + player3Prefab.GetComponent<Unit>().unitName + " for " + enemyUnit.damage + " damage!";
                 playerHUD3.SetHP(player3Prefab.GetComponent<Unit>().currentHP.ToString());
                 turn = turn + 1;
             }
@@ -480,7 +481,6 @@ public class BattleSystem : MonoBehaviour
                 playerToAttack = UnityEngine.Random.Range(0, 3);
             }
         }
-
     }
 
     public void OnFirstAttackButton()
@@ -576,7 +576,7 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    public void UpdateTurnNumbers(GameObject Character)
+    void UpdateTurnNumbers(GameObject Character)
     {
         for(int i = 0; i < characterList.Count; ++i)
         {

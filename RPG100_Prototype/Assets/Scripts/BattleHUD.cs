@@ -9,7 +9,6 @@ using UnityEngine.UI;
 public class BattleHUD : MonoBehaviour
 {
     public Text nameText;
-
     public Text firstAttackNameText;
     public Text firstAttackBPText;
     public Text firstAttackCostText;

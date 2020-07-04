@@ -4,6 +4,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Unit : MonoBehaviour
 {
@@ -21,9 +22,6 @@ public class Unit : MonoBehaviour
     public int block;
     public int dodge;
 
-    //public int startingAP;
-    //public int currentAP;
-    //public int maxAP;
     public int APGen;
 
     // First Attack Stats

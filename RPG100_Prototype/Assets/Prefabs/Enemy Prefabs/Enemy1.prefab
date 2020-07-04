@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691a66f1a32b4674588e6c1e04ced080, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: 
+  unitName: Enemy1
   attack: 25
   defense: 30
   multiplier: 0
@@ -126,6 +126,8 @@ MonoBehaviour:
   fourthAttackCost: 0
   fourthAttackBP: 0
   AttackType: 
+  passiveItem1: {fileID: 0}
+  passiveItem2: {fileID: 0}
 --- !u!114 &-4099552248969427473
 MonoBehaviour:
   m_ObjectHideFlags: 0
