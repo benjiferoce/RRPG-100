@@ -48,8 +48,8 @@ public class Unit : MonoBehaviour
     public int fourthAttackBP;
     public string fourthAttackType;
 
-    public GameObject passiveItem1;
-    public GameObject passiveItem2;
+    public GameObject PassiveItem1;
+    public GameObject PassiveItem2;
 
     public bool newRun; 
 
@@ -73,8 +73,19 @@ public class Unit : MonoBehaviour
             return false;
     }
 
+    public int SetDamage(int AttackBP, int enemyDefense)
+    {
+        damage = (2 * AttackBP * (attack / enemyDefense) + multiplier) + 2;
+        Debug.Log(damage);
+        return damage;
+    }
+
     // Multiplier Modifier //
     public void setMult(int newVal) { multiplier = newVal; }
+
+    public void RemovePassiveItem(GameObject Item) { Item = null; }
+    public void SetItemActive1(GameObject Item) { PassiveItem1 = Item; }
+    public void SetItemActive2(GameObject Item) { PassiveItem2 = Item; }
 
     // AP Methods //=====================================================================
     //public void generateTurnAP(){ currentAP += APGen;}
@@ -94,10 +105,5 @@ public class Unit : MonoBehaviour
     public void setFourthAttackBP(int newVal) { firstAttackBP = newVal; }
 
     // damage formula ==================================================================
-    public int SetDamage(int AttackBP, int enemyDefense)
-    {
-        damage = (2 * AttackBP * (attack / enemyDefense) + multiplier) + 2;
-        Debug.Log(damage);
-        return damage;
-    }
+    
 }

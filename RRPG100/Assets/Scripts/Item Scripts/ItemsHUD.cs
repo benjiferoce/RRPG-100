@@ -13,6 +13,9 @@ public class ItemsHUD : MonoBehaviour
     public GameObject ItemManager;
     public Text item1Name;
 
+    public GameObject BattleSystem;
+    public GameObject currentChar;
+
     public bool ActiveTab;
     public bool PassiveTab;
 
@@ -37,7 +40,8 @@ public class ItemsHUD : MonoBehaviour
 
     void Update()
     {
-        if(ActiveTab == true)
+        currentChar = BattleSystem.GetComponent<BattleSystem>().CurrentTurnCharacter;
+        if (ActiveTab == true)
         {
             UseItemButton.SetActive(true);
         }
@@ -58,29 +62,27 @@ public class ItemsHUD : MonoBehaviour
     public void SetActiveItemHUD()
     {
         item1Name.text = party.ActiveItem1.GetComponent<Item>().itemName;
-        
     }
 
     public void SetPassiveItemHUD()
     {
-        item1Name.text = party.PassiveItem1.GetComponent<Item>().itemName;
-
+        item1Name.text = BattleSystem.GetComponent<BattleSystem>().CurrentTurnCharacter.GetComponent<Unit>().
+        PassiveItem1.GetComponent<Item>().itemName;
     }
-
     public void activeItemTab()
     {
         ActiveTab = true;
         PassiveTab = false;
-        ActiveMenu.GetComponent<SpriteRenderer>().sortingOrder = 0;
-        PassiveMenu.GetComponent<SpriteRenderer>().sortingOrder = -1;
+        ActiveMenu.GetComponent<SpriteRenderer>().sortingOrder = 2;
+        PassiveMenu.GetComponent<SpriteRenderer>().sortingOrder = 1;
     }
 
     public void passiveItemTab()
     {
         ActiveTab = false;
         PassiveTab = true;
-        ActiveMenu.GetComponent<SpriteRenderer>().sortingOrder = -1;
-        PassiveMenu.GetComponent<SpriteRenderer>().sortingOrder = 0;
+        ActiveMenu.GetComponent<SpriteRenderer>().sortingOrder = 1;
+        PassiveMenu.GetComponent<SpriteRenderer>().sortingOrder = 2;
     }
 
     public void ItemMenuButton()

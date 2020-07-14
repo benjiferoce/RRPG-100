@@ -72,7 +72,6 @@ public class BattleSystem : MonoBehaviour
         enemyPrefab.GetComponent<Unit>().currentHP = enemyPrefab.GetComponent<Unit>().maxHP;
 
         apGen = apGen + playerPrefab.GetComponent<Unit>().APGen + player2Prefab.GetComponent<Unit>().APGen + player3Prefab.GetComponent<Unit>().APGen;
-        Debug.Log(apGen);
 
         startingAP = 0;
         maxAP = 10;
@@ -216,7 +215,7 @@ public class BattleSystem : MonoBehaviour
 
     public void OnEndTurnButton()
     {
-
+        
         if (turn == characterList.Count() - 1)
         {
             setPartyAP();
@@ -228,13 +227,19 @@ public class BattleSystem : MonoBehaviour
 
     public void setPartyAP()
     {
-        if (currentAP < maxAP)
+        for (int i = 0; i < characterList.Count(); ++i)
         {
-            currentAP = currentAP + playerPrefab.GetComponent<Unit>().APGen + player2Prefab.GetComponent<Unit>().APGen + player3Prefab.GetComponent<Unit>().APGen;
-        }
-        else
-        {
-            currentAP = maxAP;
+            if (currentAP < maxAP)
+            {
+                currentAP += characterList[i].GetComponent<Unit>().APGen;
+                apSlider.value = currentAP;
+                APNum.text = currentAP.ToString();
+            }
+            else
+            {
+                currentAP = maxAP;
+                APNum.text = maxAP.ToString();
+            }
         }
     }
 

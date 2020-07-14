@@ -20,7 +20,7 @@ public class PartyScript : MonoBehaviour
     public GameObject ActiveItem3;
     public GameObject ActiveItem4;
 
-    public GameObject PassiveItem1;
+    //public GameObject PassiveItem1;
 
     public int startingAP;
     public int currentAP;
@@ -35,6 +35,7 @@ public class PartyScript : MonoBehaviour
 
     void Start()
     {
+        
         startingAP = 0;
         maxAP = 10;
         currentAP = startingAP;
@@ -49,6 +50,12 @@ public class PartyScript : MonoBehaviour
     {
 
     }
+
+    public void RemoveActiveItem(GameObject Item){ Item = null; }
+    public void SetItemActive1(GameObject Item){ ActiveItem1 = Item; }
+    public void SetItemActive2(GameObject Item) { ActiveItem2 = Item; }
+    public void SetItemActive3(GameObject Item) { ActiveItem3 = Item; }
+    public void SetItemActive4(GameObject Item) { ActiveItem4 = Item; }
 
     void SetAPGenRate()
     {

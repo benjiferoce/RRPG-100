@@ -99,10 +99,10 @@ MonoBehaviour:
   defense: 40
   multiplier: 0
   maxHP: 55
-  currentHP: -5
+  currentHP: 55
   speed: 45
   charType: Player
-  turnNum: 2
+  turnNum: 3
   isTurn: 0
   damage: 6
   block: 5
@@ -124,6 +124,7 @@ MonoBehaviour:
   fourthAttackCost: 5
   fourthAttackBP: 2
   fourthAttackType: Ranged
-  passiveItem1: {fileID: 0}
-  passiveItem2: {fileID: 0}
+  PassiveItem1: {fileID: 3191526161018986169, guid: 69bf8e00cb71aa24f8645317a8dcd05d,
+    type: 3}
+  PassiveItem2: {fileID: 0}
   newRun: 1
