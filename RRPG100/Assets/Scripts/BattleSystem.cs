@@ -35,6 +35,7 @@ public class BattleSystem : MonoBehaviour
     public int startingAP;
     public int currentAP;
     public int maxAP;
+    public int apGen;
     public Text APNum;
     public Slider apSlider;
 
@@ -69,6 +70,9 @@ public class BattleSystem : MonoBehaviour
         resetStats(Party.GetComponent<PartyScript>().Character3.GetComponent<Unit>());
 
         enemyPrefab.GetComponent<Unit>().currentHP = enemyPrefab.GetComponent<Unit>().maxHP;
+
+        apGen = apGen + playerPrefab.GetComponent<Unit>().APGen + player2Prefab.GetComponent<Unit>().APGen + player3Prefab.GetComponent<Unit>().APGen;
+        Debug.Log(apGen);
 
         startingAP = 0;
         maxAP = 10;
