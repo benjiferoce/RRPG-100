@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5971964222487204756}
   - component: {fileID: 5971964222487204755}
   - component: {fileID: 5971964222487204757}
+  - component: {fileID: -4550163128454362625}
   m_Layer: 0
   m_Name: Dr Car Cola
   m_TagString: Character
@@ -94,12 +95,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e14b5fd57a7f1648b624a39238f3f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: Dr  Car Cola
+  unitID: DrCarCola
+  unitName: Dr.  Car Cola
   attack: 70
   defense: 30
   multiplier: 0
   maxHP: 50
-  currentHP: 50
+  currentHP: 40
   speed: 65
   charType: Player
   turnNum: 0
@@ -112,21 +114,46 @@ MonoBehaviour:
   firstAttackCost: 0
   firstAttackBP: 2
   firstAttackType: Ranged
+  isFirstAttackDelayed: 0
+  firstAttackEffect: 
   secondAttackName: Super Pop
   secondAttackCost: 2
   secondAttackBP: 3
   secondAttackType: Ranged
+  isSecondAttackDelayed: 0
+  secondAttackEffect: 
   thirdAttackName: Fizz Shot
   thirdAttackCost: 2
   thirdAttackBP: 5
   thirdAttackType: Ranged
+  isThirdAttackDelayed: 1
+  thirdAttackEffect: 
   fourthAttackName: Seethe Blast
   fourthAttackCost: 5
   fourthAttackBP: 2
   fourthAttackType: Ranged
+  isFourthAttackDelayed: 0
+  fourthAttackEffect: 
   PassiveItem1: {fileID: 5939349358814500442, guid: 5f808a1db6e6e634b977aec443907533,
     type: 3}
   PassiveItem2: {fileID: 0}
-  EmptyItem: {fileID: 9076473585727246382, guid: 69bf8e00cb71aa24f8645317a8dcd05d,
-    type: 3}
   newRun: 1
+--- !u!114 &-4550163128454362625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5971964222487204754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d83a9bab8e665b6499946dd3d2bcf63d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _DrCarCola: {fileID: 0}
+  _BattleSystem: {fileID: 0}
+  _turnCount: 0
+  isFirstAttackReady: 1
+  isSecondAttackReady: 1
+  isThirdAttackReady: 0
+  isFourthAttackReady: 1

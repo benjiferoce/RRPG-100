@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2316476932885022668}
   - component: {fileID: 2316476932885022671}
   - component: {fileID: 2316476932885022670}
+  - component: {fileID: 2278930171947602933}
   m_Layer: 0
   m_Name: Lemon Lime Lad
   m_TagString: Character
@@ -94,12 +95,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e14b5fd57a7f1648b624a39238f3f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitID: LemonLimeLad
   unitName: Lemon Lime Lad
   attack: 40
   defense: 40
   multiplier: 0
   maxHP: 55
-  currentHP: 55
+  currentHP: 45
   speed: 45
   charType: Player
   turnNum: 3
@@ -128,3 +130,17 @@ MonoBehaviour:
     type: 3}
   PassiveItem2: {fileID: 0}
   newRun: 1
+--- !u!114 &2278930171947602933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2316476932885022665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ca082ec96801f143b0162bac8c15b68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _LemonLimeLad: {fileID: 0}
+  _BattleSystem: {fileID: 0}

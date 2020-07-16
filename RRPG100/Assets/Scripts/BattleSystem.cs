@@ -45,6 +45,8 @@ public class BattleSystem : MonoBehaviour
 
     public bool chooseAttack;
 
+    public GameObject AttackEffectsManager;
+
     public int turn = 0;
     public int turnCount;
 
@@ -57,6 +59,8 @@ public class BattleSystem : MonoBehaviour
     public bool EnemySelected;
 
     public BattleState state;
+
+    public int agents;
 
     void Start()
     {
@@ -90,9 +94,12 @@ public class BattleSystem : MonoBehaviour
     }
     void Update()
     {
+        Party.GetComponent<PartyScript>().currentAP = currentAP;
         SetTurn();
 
         SetPartyAPHUD();
+
+        agents = characterList.Count;
 
         turnText.text = CurrentTurnCharacter.GetComponent<Unit>().unitName + "'s turn!";
 
@@ -264,6 +271,7 @@ public class BattleSystem : MonoBehaviour
                 actionText.text = enemyPrefab.GetComponent<Unit>().unitName + " attacked " + playerPrefab.GetComponent<Unit>().unitName + " for " + enemyUnit.damage + " damage!";
                 //playerHUD.SetHP(playerPrefab.GetComponent<Unit>().currentHP.ToString());
                 turn = turn + 1;
+                turnCount = turnCount + 1;
             }
             else
             {
@@ -280,6 +288,7 @@ public class BattleSystem : MonoBehaviour
                 actionText.text = enemyPrefab.GetComponent<Unit>().unitName + " attacked " + player2Prefab.GetComponent<Unit>().unitName + " for " + enemyUnit.damage + " damage!";
                 //playerHUD2.SetHP(player2Prefab.GetComponent<Unit>().currentHP.ToString());
                 turn = turn + 1;
+                turnCount = turnCount + 1;
             }
             else
             {
@@ -296,6 +305,7 @@ public class BattleSystem : MonoBehaviour
                 actionText.text = enemyPrefab.GetComponent<Unit>().unitName + " attacked " + player3Prefab.GetComponent<Unit>().unitName + " for " + enemyUnit.damage + " damage!";
                // playerHUD3.SetHP(player3Prefab.GetComponent<Unit>().currentHP.ToString());
                 turn = turn + 1;
+                turnCount = turnCount + 1;
             }
             else
             {
@@ -310,6 +320,7 @@ public class BattleSystem : MonoBehaviour
     {
         if (Party.GetComponent<PartyScript>().currentAP >= CurrentTurnCharacter.GetComponent<Unit>().firstAttackCost)
         {
+            AttackEffectsManager.GetComponent<AttackEffectsManager>().SetFirstAttackButton(CurrentTurnCharacter.GetComponent<Unit>());
             CurrentTurnCharacter.GetComponent<Unit>().SetDamage(CurrentTurnCharacter.GetComponent<Unit>().firstAttackBP,
             enemyPrefab.GetComponent<Unit>().defense);
 
@@ -374,6 +385,7 @@ public class BattleSystem : MonoBehaviour
 
         if (Party.GetComponent<PartyScript>().currentAP >= CurrentTurnCharacter.GetComponent<Unit>().thirdAttackCost)
         {
+
             CurrentTurnCharacter.GetComponent<Unit>().SetDamage(CurrentTurnCharacter.GetComponent<Unit>().thirdAttackBP,
             enemyPrefab.GetComponent<Unit>().defense);
 
@@ -406,6 +418,7 @@ public class BattleSystem : MonoBehaviour
 
         if (Party.GetComponent<PartyScript>().currentAP >= CurrentTurnCharacter.GetComponent<Unit>().fourthAttackCost)
         {
+            
             CurrentTurnCharacter.GetComponent<Unit>().SetDamage(CurrentTurnCharacter.GetComponent<Unit>().fourthAttackBP,
             enemyPrefab.GetComponent<Unit>().defense);
 
@@ -444,28 +457,28 @@ public class BattleSystem : MonoBehaviour
     public void OnFirstAttackButton()
     {
         if (state != BattleState.PLAYERTURN) return;
-
+        //if (CurrentTurnCharacter.GetComponent<Unit>().isFirstAttackDelayed == true) return;
         StartCoroutine(PlayerFirstAttack());
     }
 
     public void OnSecondAttackButton()
     {
         if (state != BattleState.PLAYERTURN) return;
-
+       // if (CurrentTurnCharacter.GetComponent<Unit>().isSecondAttackDelayed == true) return;
         StartCoroutine(PlayerSecondAttack());
     }
 
     public void OnThirdAttackButton()
     {
         if (state != BattleState.PLAYERTURN) return;
-
+        //if (CurrentTurnCharacter.GetComponent<Unit>().isThirdAttackDelayed == true) return;
         StartCoroutine(PlayerThirdAttack());
     }
 
     public void OnFourthAttackButton()
     {
         if (state != BattleState.PLAYERTURN) return;
-
+        //if (CurrentTurnCharacter.GetComponent<Unit>().isFourthAttackDelayed == true) return;
         StartCoroutine(PlayerFourthAttack());
     }
 

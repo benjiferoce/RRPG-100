@@ -1,5 +1,4 @@
-﻿// RRPG-100 Battle System Script
-// email: benjiferoce@gmail.com | GitHub: https://github.com/benjiferoce
+﻿// email: benjiferoce@gmail.com | GitHub: https://github.com/benjiferoce
 // Copyright 2020, Benjamin Weaver, All rights reserved
 
 using System.Collections;
@@ -16,7 +15,7 @@ public class BottleOfMilk : MonoBehaviour
 
     public void ItemEffect()
     {
-        //TrackCurrentPlayer();
+        TrackCurrentPlayer();
         //Debug.Log("Enter ItemEffect() in BottleOfMilk Script");
         playerUsing.GetComponent<Unit>().currentHP += 25;
         actionText.text = playerUsing.GetComponent<Unit>().unitName + " used " + this.GetComponent<Item>().itemName + " and " + this.GetComponent<Item>().itemDescription;
@@ -35,7 +34,6 @@ public class BottleOfMilk : MonoBehaviour
         }
         */
     }
-    /*
     public void TrackCurrentPlayer()
     {
         for (int i = 0; i < battleSystem.characterList.Count; ++i)
@@ -49,7 +47,7 @@ public class BottleOfMilk : MonoBehaviour
             {
                 playerUsing = battleSystem.GetComponent<BattleSystem>().characterList[i];
             }
-            
-        }
-    }*/
+            */
+}
+    }
 }

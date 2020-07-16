@@ -28,7 +28,6 @@ public class BattleHUD : MonoBehaviour
     public Sprite magicIcon;
 
     public Text hpText;
-
     public void SetHUD(Unit unit)
     {
         SetHP(unit.GetComponent<Unit>().currentHP.ToString());

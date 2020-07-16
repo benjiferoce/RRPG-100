@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8714982713779179618}
   - component: {fileID: 8714982713779179619}
   - component: {fileID: 8714982713779179620}
+  - component: {fileID: -1250653921623261707}
   m_Layer: 0
   m_Name: Root Beer Boy
   m_TagString: Character
@@ -94,6 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e14b5fd57a7f1648b624a39238f3f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitID: RootBeerBoy
   unitName: Root Beer Boy
   attack: 45
   defense: 60
@@ -128,3 +130,17 @@ MonoBehaviour:
     type: 3}
   PassiveItem2: {fileID: 0}
   newRun: 1
+--- !u!114 &-1250653921623261707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8714982713779179621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fabf56d14aacdbb45820ac9cd0f48a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _RootBeerBoy: {fileID: 0}
+  _BattleSystem: {fileID: 0}

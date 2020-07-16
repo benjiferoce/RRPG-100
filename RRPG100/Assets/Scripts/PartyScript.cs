@@ -1,5 +1,4 @@
-﻿// RRPG-100 Battle System Script
-// email: benjiferoce@gmail.com | GitHub: https://github.com/benjiferoce
+﻿// email: benjiferoce@gmail.com | GitHub: https://github.com/benjiferoce
 // Copyright 2020, Benjamin Weaver, All rights reserved
 
 using System.Collections;

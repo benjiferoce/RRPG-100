@@ -8,6 +8,7 @@ TagManager:
   - Party
   - Enemy
   - BattleSystem
+  - ActionText
   layers:
   - Default
   - TransparentFX

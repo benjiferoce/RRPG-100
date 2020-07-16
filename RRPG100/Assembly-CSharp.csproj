@@ -55,6 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AttackEffectsManager.cs" />
      <Compile Include="Assets\Scripts\BattleHUD.cs" />
      <Compile Include="Assets\Scripts\BattleSystem.cs" />
      <Compile Include="Assets\Scripts\HPManagerScript.cs" />
@@ -65,6 +66,9 @@
      <Compile Include="Assets\Scripts\Item Scripts\JugOfMilk.cs" />
      <Compile Include="Assets\Scripts\Item Scripts\StemCell.cs" />
      <Compile Include="Assets\Scripts\PartyScript.cs" />
+     <Compile Include="Assets\Scripts\Player Attack Scripts\DrCarCola.cs" />
+     <Compile Include="Assets\Scripts\Player Attack Scripts\LemonLimeLad.cs" />
+     <Compile Include="Assets\Scripts\Player Attack Scripts\RootBeerBoy.cs" />
      <Compile Include="Assets\Scripts\Unit.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Ben Weaver/Documents/RRPG-100/RRPG100/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

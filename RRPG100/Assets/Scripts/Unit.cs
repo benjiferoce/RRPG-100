@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class Unit : MonoBehaviour
 {
+    public string unitID; 
     public string unitName;
     public int attack;
     public int defense;
@@ -29,24 +30,32 @@ public class Unit : MonoBehaviour
     public int firstAttackCost;
     public int firstAttackBP;
     public string firstAttackType;
+    public bool isFirstAttackDelayed;
+    public string firstAttackEffect; 
 
     // Second Attack Stats
     public string secondAttackName;
     public int secondAttackCost;
     public int secondAttackBP;
     public string secondAttackType;
+    public bool isSecondAttackDelayed;
+    public string secondAttackEffect;
 
     // Third Attack Stats
     public string thirdAttackName;
     public int thirdAttackCost;
     public int thirdAttackBP;
     public string thirdAttackType;
+    public bool isThirdAttackDelayed;
+    public string thirdAttackEffect;
 
     // Fourth Attack Stats
     public string fourthAttackName;
     public int fourthAttackCost;
     public int fourthAttackBP;
     public string fourthAttackType;
+    public bool isFourthAttackDelayed;
+    public string fourthAttackEffect;
 
     public GameObject PassiveItem1;
     public GameObject PassiveItem2;
@@ -55,6 +64,7 @@ public class Unit : MonoBehaviour
 
     void Start()
     {
+        damage = 0;
         isTurn = false; 
     }
 
@@ -75,7 +85,7 @@ public class Unit : MonoBehaviour
 
     public int SetDamage(int AttackBP, int enemyDefense)
     {
-        damage = (2 * AttackBP * (attack / enemyDefense) + multiplier) + 2;
+        damage = damage + (2 * AttackBP * (attack / enemyDefense) + multiplier) + 2;
         Debug.Log(damage);
         return damage;
     }
