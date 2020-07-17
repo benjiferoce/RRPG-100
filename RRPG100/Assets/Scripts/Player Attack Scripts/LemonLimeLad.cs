@@ -26,7 +26,7 @@ public class LemonLimeLad : MonoBehaviour
 
     public void ThirdAttackEffect()
     {
-
+       // _BattleSystem = GameObject.FindGameObjectWithTag("BattleSystem");
     }
 
     public void FourthAttackEffect()

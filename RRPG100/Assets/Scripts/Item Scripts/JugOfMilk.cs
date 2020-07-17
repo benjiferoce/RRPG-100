@@ -15,26 +15,25 @@ public class JugOfMilk : MonoBehaviour
 
     public void ItemEffect()
     {
-        //TrackCurrentPlayer();
-        //Debug.Log("Enter ItemEffect() in BottleOfMilk Script");
-        playerUsing.GetComponent<Unit>().currentHP += 50;
-        actionText.text = playerUsing.GetComponent<Unit>().unitName + " used " + this.GetComponent<Item>().itemName + " and " + this.GetComponent<Item>().itemDescription;
-
-        /*
-        for(int i = 0; i < battleSystem.characterList.Count; ++i)
+        TrackCurrentPlayer();
+        if (playerUsing.GetComponent<Unit>().currentHP + 50 > playerUsing.GetComponent<Unit>().maxHP)
         {
-            
-            if(battleSystem.GetComponent<BattleSystem>().turn == playerUsing.GetComponent<Unit>().turnNum)
-            {
-                
-                Debug.Log(playerUsing.GetComponent<Unit>().unitName + "'s Turn/use Item");
-                playerUsing.GetComponent<Unit>().currentHP += 10;
-            }
-            else { return; }
+            int healedHP = playerUsing.GetComponent<Unit>().maxHP - playerUsing.GetComponent<Unit>().currentHP;
+            playerUsing.GetComponent<Unit>().currentHP = playerUsing.GetComponent<Unit>().maxHP;
+            actionText.text = playerUsing.GetComponent<Unit>().unitName + " used " + this.GetComponent<Item>().itemName + " and healed "
+            + healedHP + " HP!";
         }
-        */
+        else if (playerUsing.GetComponent<Unit>().currentHP == playerUsing.GetComponent<Unit>().maxHP)
+        {
+            actionText.text = playerUsing.GetComponent<Unit>().unitName + " is already at Max HP!";
+        }
+        else
+        {
+            playerUsing.GetComponent<Unit>().currentHP += 50;
+            actionText.text = playerUsing.GetComponent<Unit>().unitName + " used " + this.GetComponent<Item>().itemName
+            + " and healed 50 HP!";
+        }
     }
-    /*
     public void TrackCurrentPlayer()
     {
         for (int i = 0; i < battleSystem.characterList.Count; ++i)
@@ -42,13 +41,6 @@ public class JugOfMilk : MonoBehaviour
             if (battleSystem.turn == battleSystem.playerPrefab.GetComponent<Unit>().turnNum) { playerUsing = battleSystem.playerPrefab; }
             if (battleSystem.turn == battleSystem.player2Prefab.GetComponent<Unit>().turnNum) { playerUsing = battleSystem.player2Prefab; }
             if (battleSystem.turn == battleSystem.player3Prefab.GetComponent<Unit>().turnNum) { playerUsing = battleSystem.player3Prefab; }
-            //if(battleSystem.characterList[i].GetComponent<Unit>.)
-            /*
-            if (battleSystem.GetComponent<BattleSystem>().turn == battleSystem.GetComponent<BattleSystem>().characterList[i].GetComponent<Unit>().turnNum)
-            {
-                playerUsing = battleSystem.GetComponent<BattleSystem>().characterList[i];
-            }
-            
         }
-    }*/
+    }
 }

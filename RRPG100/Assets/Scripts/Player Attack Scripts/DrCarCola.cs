@@ -6,7 +6,7 @@ public class DrCarCola : MonoBehaviour
 {
     public GameObject _DrCarCola;
     public GameObject _BattleSystem;
-    public int _turnCount;
+   
    //public int turnActivated;
    //public bool isFirstAttackReady;
    //public bool isSecondAttackReady;
@@ -18,17 +18,19 @@ public class DrCarCola : MonoBehaviour
     void Start()
     {
         _BattleSystem = GameObject.FindGameObjectWithTag("BattleSystem");
+       
+        ActionText = GameObject.FindGameObjectWithTag("ActionText").GetComponent<Text>();
         
     }
 
     void Update()
     {
-        //_turnCount = _BattleSystem.GetComponent<BattleSystem>().turnCount;
-     
+        _BattleSystem = GameObject.FindGameObjectWithTag("BattleSystem");
+        ActionText = GameObject.FindGameObjectWithTag("ActionText").GetComponent<Text>();
     }
     public void FirstAttackEffect()
     {
-       
+        return; 
     }
 
     public void SecondAttackEffect()
@@ -38,14 +40,21 @@ public class DrCarCola : MonoBehaviour
 
     public void ThirdAttackEffect()
     {
-
+        return;             
     }
 
     public void FourthAttackEffect()
     {
-        _BattleSystem = GameObject.FindGameObjectWithTag("BattleSystem");
-        _BattleSystem.GetComponent<BattleSystem>().CurrentTurnCharacter.GetComponent<Unit>().damage += 10;
-        //Debug.Log("Hi Cola");
+        if (_BattleSystem.GetComponent<BattleSystem>().CurrentTurnCharacter.GetComponent<Unit>().unitID == "DrCarCola")
+        {
+            _BattleSystem = GameObject.FindGameObjectWithTag("BattleSystem");
+            _BattleSystem.GetComponent<BattleSystem>().CurrentTurnCharacter.GetComponent<Unit>().bonusDamage =
+            _BattleSystem.GetComponent<BattleSystem>().CurrentTurnCharacter.GetComponent<Unit>().speed / 10;
+        }
+        else
+        {
+            return;
+        }
     }
 }
 

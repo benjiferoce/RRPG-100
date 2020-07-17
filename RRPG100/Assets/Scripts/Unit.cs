@@ -25,37 +25,37 @@ public class Unit : MonoBehaviour
 
     public int APGen;
 
+    public GameObject _BattleSystem; 
+
     // First Attack Stats
     public string firstAttackName;
     public int firstAttackCost;
     public int firstAttackBP;
     public string firstAttackType;
-    public bool isFirstAttackDelayed;
-    public string firstAttackEffect; 
+    public string firstAttackEffect;
 
     // Second Attack Stats
     public string secondAttackName;
     public int secondAttackCost;
     public int secondAttackBP;
     public string secondAttackType;
-    public bool isSecondAttackDelayed;
     public string secondAttackEffect;
-
+  
     // Third Attack Stats
     public string thirdAttackName;
     public int thirdAttackCost;
     public int thirdAttackBP;
     public string thirdAttackType;
-    public bool isThirdAttackDelayed;
     public string thirdAttackEffect;
-
+ 
     // Fourth Attack Stats
     public string fourthAttackName;
     public int fourthAttackCost;
     public int fourthAttackBP;
     public string fourthAttackType;
-    public bool isFourthAttackDelayed;
     public string fourthAttackEffect;
+ 
+    public int bonusDamage; 
 
     public GameObject PassiveItem1;
     public GameObject PassiveItem2;
@@ -64,8 +64,10 @@ public class Unit : MonoBehaviour
 
     void Start()
     {
-        damage = 0;
-        isTurn = false; 
+        //damage = 0;
+        bonusDamage = 0;
+        isTurn = false;
+        _BattleSystem = GameObject.FindGameObjectWithTag("BattleSystem");
     }
 
     void Update()
@@ -85,7 +87,8 @@ public class Unit : MonoBehaviour
 
     public int SetDamage(int AttackBP, int enemyDefense)
     {
-        damage = damage + (2 * AttackBP * (attack / enemyDefense) + multiplier) + 2;
+        damage = 0;
+        damage = bonusDamage + (2 * AttackBP * (attack / enemyDefense) + multiplier) + 2;
         Debug.Log(damage);
         return damage;
     }

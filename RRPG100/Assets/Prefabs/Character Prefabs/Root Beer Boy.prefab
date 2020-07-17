@@ -101,7 +101,7 @@ MonoBehaviour:
   defense: 60
   multiplier: 0
   maxHP: 60
-  currentHP: 50
+  currentHP: 60
   speed: 50
   charType: Player
   turnNum: 2
@@ -114,18 +114,31 @@ MonoBehaviour:
   firstAttackCost: 0
   firstAttackBP: 2
   firstAttackType: Physical
+  isFirstAttackDelayed: 0
+  firstAttackEffect: Basic Attack
+  firstAttackTurnCharge: 0
   secondAttackName: Thick Foam
   secondAttackCost: 2
   secondAttackBP: 0
   secondAttackType: Heal
+  isSecondAttackDelayed: 0
+  secondAttackEffect: Heal any player by 20
+  SecondAttackTurnCharge: 0
   thirdAttackName: Caffine Buzz
   thirdAttackCost: 4
   thirdAttackBP: 0
   thirdAttackType: Support
+  isThirdAttackDelayed: 0
+  thirdAttackEffect: Raise team's speed by 10 for 3 turns
+  ThirdAttackTurnCharge: 0
   fourthAttackName: Foam Over
   fourthAttackCost: 6
   fourthAttackBP: 0
   fourthAttackType: Heal
+  isFourthAttackDelayed: 0
+  fourthAttackEffect: Heal all players by 20
+  FourthAttackTurnCharge: 0
+  bonusDamage: 0
   PassiveItem1: {fileID: 3191526161018986169, guid: 69bf8e00cb71aa24f8645317a8dcd05d,
     type: 3}
   PassiveItem2: {fileID: 0}

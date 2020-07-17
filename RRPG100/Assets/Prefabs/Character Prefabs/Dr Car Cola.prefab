@@ -101,12 +101,12 @@ MonoBehaviour:
   defense: 30
   multiplier: 0
   maxHP: 50
-  currentHP: 40
+  currentHP: 50
   speed: 65
   charType: Player
   turnNum: 0
   isTurn: 0
-  damage: 10
+  damage: 28
   block: 5
   dodge: 15
   APGen: 1
@@ -114,26 +114,31 @@ MonoBehaviour:
   firstAttackCost: 0
   firstAttackBP: 2
   firstAttackType: Ranged
+  firstAttackEffect: Basic Attack
   isFirstAttackDelayed: 0
-  firstAttackEffect: 
+  isFirstAttackReady: 1
   secondAttackName: Super Pop
   secondAttackCost: 2
   secondAttackBP: 3
   secondAttackType: Ranged
+  secondAttackEffect: Basic Attack
   isSecondAttackDelayed: 0
-  secondAttackEffect: 
+  isSecondAttackReady: 1
   thirdAttackName: Fizz Shot
   thirdAttackCost: 2
   thirdAttackBP: 5
   thirdAttackType: Ranged
+  thirdAttackEffect: Takes on turn to charge before attacking
   isThirdAttackDelayed: 1
-  thirdAttackEffect: 
+  isThirdAttackReady: 0
   fourthAttackName: Seethe Blast
   fourthAttackCost: 5
   fourthAttackBP: 2
   fourthAttackType: Ranged
+  fourthAttackEffect: Bonus damage equal to speed/10
   isFourthAttackDelayed: 0
-  fourthAttackEffect: 
+  isFourthAttackReady: 1
+  bonusDamage: 6
   PassiveItem1: {fileID: 5939349358814500442, guid: 5f808a1db6e6e634b977aec443907533,
     type: 3}
   PassiveItem2: {fileID: 0}
@@ -152,8 +157,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _DrCarCola: {fileID: 0}
   _BattleSystem: {fileID: 0}
-  _turnCount: 0
-  isFirstAttackReady: 1
-  isSecondAttackReady: 1
-  isThirdAttackReady: 0
-  isFourthAttackReady: 1
+  charge: 0
+  startCharge: 0
+  charging: 0
+  isCharged: 0
+  ActionText: {fileID: 0}
