@@ -47,7 +47,8 @@ MonoBehaviour:
   itemId: 0
   itemName: Jug Of Milk
   itemDescription: Heals 50 HP
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 8400735635785274641, guid: 7153e3e266807fe49ab24e8bb646a01a,
+    type: 3}
   use: 0
 --- !u!114 &9073230493628142959
 MonoBehaviour:

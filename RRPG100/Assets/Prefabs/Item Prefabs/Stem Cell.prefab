@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5939349358814500441}
   - component: {fileID: 5939349358814500440}
+  - component: {fileID: 1540161437979109043}
   m_Layer: 0
   m_Name: Stem Cell
   m_TagString: Untagged
@@ -47,5 +48,19 @@ MonoBehaviour:
   itemName: Stem Cell
   itemDescription: Raise one primary stat by 20 and decrease another primary stat
     by 20
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 472002771260159043, guid: 7153e3e266807fe49ab24e8bb646a01a, type: 3}
   use: 0
+--- !u!114 &1540161437979109043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5939349358814500442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f6b4369e7ef31e48a34913c4115781e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemSprite: {fileID: 472002771260159043, guid: 7153e3e266807fe49ab24e8bb646a01a,
+    type: 3}

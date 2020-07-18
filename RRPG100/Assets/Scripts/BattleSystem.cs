@@ -70,6 +70,14 @@ public class BattleSystem : MonoBehaviour
         player2Prefab = Party.GetComponent<PartyScript>().Character2;
         player3Prefab = Party.GetComponent<PartyScript>().Character3;
 
+        playerPrefab.GetComponent<Unit>().damage = 0;
+        player2Prefab.GetComponent<Unit>().damage = 0;
+        player3Prefab.GetComponent<Unit>().damage = 0;
+
+        playerPrefab.GetComponent<Unit>().bonusDamage = 0;
+        player2Prefab.GetComponent<Unit>().bonusDamage = 0;
+        player3Prefab.GetComponent<Unit>().bonusDamage = 0;
+
         resetStats(Party.GetComponent<PartyScript>().Character1.GetComponent<Unit>());
         resetStats(Party.GetComponent<PartyScript>().Character2.GetComponent<Unit>());
         resetStats(Party.GetComponent<PartyScript>().Character3.GetComponent<Unit>());
@@ -234,6 +242,8 @@ public class BattleSystem : MonoBehaviour
         if (state != BattleState.PLAYERTURN) return;
         turn = turn + 1;
         turnCount = turnCount + 1;
+        attackEffectDescText.text = " ";
+        actionText.text = " ";
     }
 
     public void setPartyAP()

@@ -106,38 +106,32 @@ MonoBehaviour:
   charType: Player
   turnNum: 3
   isTurn: 0
-  damage: 6
+  damage: 0
   block: 5
   dodge: 15
   APGen: 1
+  CharacterHUDSprite: {fileID: 21300000, guid: 2d46a42e8c5dcf142835ce5dbff1fdbd, type: 3}
+  _BattleSystem: {fileID: 0}
   firstAttackName: Squirt
   firstAttackCost: 0
   firstAttackBP: 2
   firstAttackType: Ranged
-  isFirstAttackDelayed: 0
   firstAttackEffect: Basic Attack
-  firstAttackTurnCharge: 0
   secondAttackName: Super Squirt
   secondAttackCost: 2
   secondAttackBP: 3
   secondAttackType: 'Ranged '
-  isSecondAttackDelayed: 0
   secondAttackEffect: Basic Attack
-  SecondAttackTurnCharge: 0
   thirdAttackName: Tartify
   thirdAttackCost: 2
   thirdAttackBP: 0
   thirdAttackType: Support
-  isThirdAttackDelayed: 0
   thirdAttackEffect: Lower one enemy's defecne by 10 for 3 turns
-  ThirdAttackTurnCharge: 0
   fourthAttackName: Sour Burst
   fourthAttackCost: 5
   fourthAttackBP: 2
   fourthAttackType: Ranged
-  isFourthAttackDelayed: 0
   fourthAttackEffect: Hits all enemies, lowers enemy's defence by 10 for 3 turns
-  FourthAttackTurnCharge: 0
   bonusDamage: 0
   PassiveItem1: {fileID: 3191526161018986169, guid: 69bf8e00cb71aa24f8645317a8dcd05d,
     type: 3}

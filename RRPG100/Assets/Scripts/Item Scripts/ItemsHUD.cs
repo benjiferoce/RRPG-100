@@ -11,6 +11,8 @@ public class ItemsHUD : MonoBehaviour
     public PartyScript party;
     public GameObject ItemManager;
     public Text item1Name;
+    public Text item1Description;
+    public GameObject itemSprite; 
 
     public GameObject BattleSystem;
     public GameObject currentChar;
@@ -61,12 +63,20 @@ public class ItemsHUD : MonoBehaviour
     public void SetActiveItemHUD()
     {
         item1Name.text = party.ActiveItem1.GetComponent<Item>().itemName;
+        item1Description.text = party.ActiveItem1.GetComponent<Item>().itemDescription;
+        itemSprite.GetComponent<SpriteRenderer>().sprite = party.ActiveItem1.GetComponent<Item>().itemIcon;
+        
+
     }
 
     public void SetPassiveItemHUD()
     {
         item1Name.text = BattleSystem.GetComponent<BattleSystem>().CurrentTurnCharacter.GetComponent<Unit>().
         PassiveItem1.GetComponent<Item>().itemName;
+        item1Description.text = BattleSystem.GetComponent<BattleSystem>().CurrentTurnCharacter.GetComponent<Unit>().
+        PassiveItem1.GetComponent<Item>().itemDescription;
+        itemSprite.GetComponent<SpriteRenderer>().sprite = BattleSystem.GetComponent<BattleSystem>().CurrentTurnCharacter.GetComponent<Unit>().
+        PassiveItem1.GetComponent<Item>().itemIcon;
     }
     public void activeItemTab()
     {

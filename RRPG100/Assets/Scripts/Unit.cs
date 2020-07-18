@@ -25,6 +25,8 @@ public class Unit : MonoBehaviour
 
     public int APGen;
 
+    public Sprite CharacterHUDSprite; 
+
     public GameObject _BattleSystem; 
 
     // First Attack Stats

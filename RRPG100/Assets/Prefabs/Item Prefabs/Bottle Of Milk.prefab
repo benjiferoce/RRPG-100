@@ -49,6 +49,8 @@ MonoBehaviour:
   partyMembers: []
   playerUsing: {fileID: 0}
   actionText: {fileID: 0}
+  itemSprite: {fileID: -4363911643957243178, guid: 7153e3e266807fe49ab24e8bb646a01a,
+    type: 3}
 --- !u!114 &1856550397736918950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,5 +66,6 @@ MonoBehaviour:
   itemId: 0
   itemName: Bottle Of Milk
   itemDescription: Heals 25 HP
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: -4363911643957243178, guid: 7153e3e266807fe49ab24e8bb646a01a,
+    type: 3}
   use: 0

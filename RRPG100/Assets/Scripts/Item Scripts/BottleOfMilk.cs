@@ -12,7 +12,6 @@ public class BottleOfMilk : MonoBehaviour
     public List<GameObject> partyMembers = new List<GameObject>();
     public GameObject playerUsing;
     public Text actionText;
-
     public void ItemEffect()
     {
         TrackCurrentPlayer();
