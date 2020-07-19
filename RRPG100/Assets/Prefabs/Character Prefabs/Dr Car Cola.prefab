@@ -97,11 +97,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitID: DrCarCola
   unitName: Dr.  Car Cola
+  unitNumber: 0
   attack: 70
   defense: 30
   multiplier: 0
   maxHP: 50
-  currentHP: 50
+  currentHP: 40
   speed: 65
   charType: Player
   turnNum: 0
@@ -109,28 +110,37 @@ MonoBehaviour:
   damage: 0
   block: 5
   dodge: 15
+  style: 
   APGen: 1
-  CharacterHUDSprite: {fileID: 21300000, guid: b33fa320e7fd9b348bf5aff2264c965e, type: 3}
+  CharacterHUDSprite: {fileID: 21300000, guid: fb4733290a66a8f4b96f1765fce4f450, type: 3}
   _BattleSystem: {fileID: 0}
   firstAttackName: Pop
   firstAttackCost: 0
   firstAttackBP: 2
   firstAttackType: Ranged
+  firstAttackTypeIcon: {fileID: 21300000, guid: 79dccc4fbde23604b90ff8fc8eec1de8,
+    type: 3}
   firstAttackEffect: Basic Attack
   secondAttackName: Super Pop
   secondAttackCost: 2
   secondAttackBP: 3
   secondAttackType: Ranged
+  secondAttackTypeIcon: {fileID: 21300000, guid: 79dccc4fbde23604b90ff8fc8eec1de8,
+    type: 3}
   secondAttackEffect: Basic Attack
   thirdAttackName: Fizz Shot
   thirdAttackCost: 2
   thirdAttackBP: 5
   thirdAttackType: Ranged
+  thirdAttackTypeIcon: {fileID: 21300000, guid: 79dccc4fbde23604b90ff8fc8eec1de8,
+    type: 3}
   thirdAttackEffect: Takes on turn to charge before attacking
   fourthAttackName: Seethe Blast
   fourthAttackCost: 5
   fourthAttackBP: 2
   fourthAttackType: Ranged
+  fourthAttackTypeIcon: {fileID: 21300000, guid: 79dccc4fbde23604b90ff8fc8eec1de8,
+    type: 3}
   fourthAttackEffect: Bonus damage equal to speed/10
   bonusDamage: 0
   PassiveItem1: {fileID: 5939349358814500442, guid: 5f808a1db6e6e634b977aec443907533,

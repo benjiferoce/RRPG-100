@@ -37,6 +37,7 @@ public class Unit : MonoBehaviour
     public int firstAttackCost;
     public int firstAttackBP;
     public string firstAttackType;
+    public Sprite firstAttackTypeIcon;
     public string firstAttackEffect;
 
     // Second Attack Stats
@@ -44,6 +45,7 @@ public class Unit : MonoBehaviour
     public int secondAttackCost;
     public int secondAttackBP;
     public string secondAttackType;
+    public Sprite secondAttackTypeIcon;
     public string secondAttackEffect;
   
     // Third Attack Stats
@@ -51,6 +53,7 @@ public class Unit : MonoBehaviour
     public int thirdAttackCost;
     public int thirdAttackBP;
     public string thirdAttackType;
+    public Sprite thirdAttackTypeIcon;
     public string thirdAttackEffect;
  
     // Fourth Attack Stats
@@ -58,8 +61,9 @@ public class Unit : MonoBehaviour
     public int fourthAttackCost;
     public int fourthAttackBP;
     public string fourthAttackType;
+    public Sprite fourthAttackTypeIcon;
     public string fourthAttackEffect;
- 
+
     public int bonusDamage; 
 
     public GameObject PassiveItem1;
@@ -123,5 +127,5 @@ public class Unit : MonoBehaviour
     public void setFourthAttackBP(int newVal) { firstAttackBP = newVal; }
 
     // damage formula ==================================================================
-    
+
 }

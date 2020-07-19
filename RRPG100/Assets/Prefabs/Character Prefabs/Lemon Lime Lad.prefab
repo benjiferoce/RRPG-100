@@ -97,6 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitID: LemonLimeLad
   unitName: Lemon Lime Lad
+  unitNumber: 0
   attack: 40
   defense: 40
   multiplier: 0
@@ -109,28 +110,37 @@ MonoBehaviour:
   damage: 0
   block: 5
   dodge: 15
+  style: 
   APGen: 1
-  CharacterHUDSprite: {fileID: 21300000, guid: 2d46a42e8c5dcf142835ce5dbff1fdbd, type: 3}
+  CharacterHUDSprite: {fileID: 21300000, guid: 137ccf0ab14e86a4c938464a5a25d270, type: 3}
   _BattleSystem: {fileID: 0}
   firstAttackName: Squirt
   firstAttackCost: 0
   firstAttackBP: 2
   firstAttackType: Ranged
+  firstAttackTypeIcon: {fileID: 21300000, guid: 79dccc4fbde23604b90ff8fc8eec1de8,
+    type: 3}
   firstAttackEffect: Basic Attack
   secondAttackName: Super Squirt
   secondAttackCost: 2
   secondAttackBP: 3
   secondAttackType: 'Ranged '
+  secondAttackTypeIcon: {fileID: 21300000, guid: 79dccc4fbde23604b90ff8fc8eec1de8,
+    type: 3}
   secondAttackEffect: Basic Attack
   thirdAttackName: Tartify
   thirdAttackCost: 2
   thirdAttackBP: 0
   thirdAttackType: Support
+  thirdAttackTypeIcon: {fileID: 21300000, guid: 79dccc4fbde23604b90ff8fc8eec1de8,
+    type: 3}
   thirdAttackEffect: Lower one enemy's defecne by 10 for 3 turns
   fourthAttackName: Sour Burst
   fourthAttackCost: 5
   fourthAttackBP: 2
   fourthAttackType: Ranged
+  fourthAttackTypeIcon: {fileID: 21300000, guid: 79dccc4fbde23604b90ff8fc8eec1de8,
+    type: 3}
   fourthAttackEffect: Hits all enemies, lowers enemy's defence by 10 for 3 turns
   bonusDamage: 0
   PassiveItem1: {fileID: 3191526161018986169, guid: 69bf8e00cb71aa24f8645317a8dcd05d,

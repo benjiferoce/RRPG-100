@@ -354,7 +354,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 103839396}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -652, y: -195, z: 0}
+  m_LocalPosition: {x: -652, y: -197, z: 0}
   m_LocalScale: {x: 12, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 3996722319508304981}
@@ -989,7 +989,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 389380209}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -652, y: -206, z: 0}
+  m_LocalPosition: {x: -652, y: -209, z: 0}
   m_LocalScale: {x: 12, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 3996722319508304981}
@@ -1916,7 +1916,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919804687}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -652, y: -172, z: 0}
+  m_LocalPosition: {x: -652, y: -173, z: 0}
   m_LocalScale: {x: 12, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 3996722319508304981}
@@ -2012,8 +2012,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -666.39, y: -217.7}
-  m_SizeDelta: {x: 2851.18, y: 599.55}
+  m_AnchoredPosition: {x: -666.325, y: -218.388}
+  m_SizeDelta: {x: 2859.896, y: 542.804}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &983929535
 MonoBehaviour:
@@ -2705,10 +2705,10 @@ MonoBehaviour:
   fourthAttackNameText: {fileID: 3996722319036297227}
   fourthAttackBPText: {fileID: 3996722319225400413}
   fourthAttackCostText: {fileID: 3996722318918098288}
-  physicalIcon: {fileID: 0}
-  rangedIcon: {fileID: 0}
-  healIcon: {fileID: 0}
-  magicIcon: {fileID: 0}
+  firstAttackTypeSprite: {fileID: 0}
+  secondAttackTypeSprite: {fileID: 0}
+  thirdAttackTypeSprite: {fileID: 0}
+  fourthAttackTypeSprite: {fileID: 0}
   hpText: {fileID: 0}
   _BattleSystem: {fileID: 0}
 --- !u!1 &1353997366
@@ -3005,10 +3005,10 @@ MonoBehaviour:
   fourthAttackNameText: {fileID: 0}
   fourthAttackBPText: {fileID: 0}
   fourthAttackCostText: {fileID: 0}
-  physicalIcon: {fileID: 0}
-  rangedIcon: {fileID: 0}
-  healIcon: {fileID: 0}
-  magicIcon: {fileID: 0}
+  firstAttackTypeSprite: {fileID: 0}
+  secondAttackTypeSprite: {fileID: 0}
+  thirdAttackTypeSprite: {fileID: 0}
+  fourthAttackTypeSprite: {fileID: 0}
   hpText: {fileID: 0}
   _BattleSystem: {fileID: 0}
 --- !u!1 &1547894944
@@ -3155,10 +3155,10 @@ MonoBehaviour:
   fourthAttackNameText: {fileID: 0}
   fourthAttackBPText: {fileID: 0}
   fourthAttackCostText: {fileID: 0}
-  physicalIcon: {fileID: 0}
-  rangedIcon: {fileID: 0}
-  healIcon: {fileID: 0}
-  magicIcon: {fileID: 0}
+  firstAttackTypeSprite: {fileID: 0}
+  secondAttackTypeSprite: {fileID: 0}
+  thirdAttackTypeSprite: {fileID: 0}
+  fourthAttackTypeSprite: {fileID: 0}
   hpText: {fileID: 1591607194}
   _BattleSystem: {fileID: 0}
 --- !u!114 &1591607194
@@ -3263,7 +3263,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1615679593}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -652, y: -184, z: 0}
+  m_LocalPosition: {x: -652, y: -185, z: 0}
   m_LocalScale: {x: 12, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 3996722319508304981}
@@ -3361,10 +3361,10 @@ MonoBehaviour:
   fourthAttackNameText: {fileID: 3996722319036297227}
   fourthAttackBPText: {fileID: 3996722319225400413}
   fourthAttackCostText: {fileID: 3996722318918098288}
-  physicalIcon: {fileID: 0}
-  rangedIcon: {fileID: 0}
-  healIcon: {fileID: 0}
-  magicIcon: {fileID: 0}
+  firstAttackTypeSprite: {fileID: 919804687}
+  secondAttackTypeSprite: {fileID: 3996722319052175072}
+  thirdAttackTypeSprite: {fileID: 3996722319694781796}
+  fourthAttackTypeSprite: {fileID: 3996722320767329665}
   hpText: {fileID: 0}
   _BattleSystem: {fileID: 0}
 --- !u!4 &1621392341
@@ -3444,10 +3444,10 @@ MonoBehaviour:
   fourthAttackNameText: {fileID: 0}
   fourthAttackBPText: {fileID: 0}
   fourthAttackCostText: {fileID: 0}
-  physicalIcon: {fileID: 0}
-  rangedIcon: {fileID: 0}
-  healIcon: {fileID: 0}
-  magicIcon: {fileID: 0}
+  firstAttackTypeSprite: {fileID: 0}
+  secondAttackTypeSprite: {fileID: 0}
+  thirdAttackTypeSprite: {fileID: 0}
+  fourthAttackTypeSprite: {fileID: 0}
   hpText: {fileID: 0}
   _BattleSystem: {fileID: 0}
 --- !u!114 &1659467546
@@ -4008,10 +4008,10 @@ MonoBehaviour:
   fourthAttackNameText: {fileID: 0}
   fourthAttackBPText: {fileID: 0}
   fourthAttackCostText: {fileID: 0}
-  physicalIcon: {fileID: 0}
-  rangedIcon: {fileID: 0}
-  healIcon: {fileID: 0}
-  magicIcon: {fileID: 0}
+  firstAttackTypeSprite: {fileID: 0}
+  secondAttackTypeSprite: {fileID: 0}
+  thirdAttackTypeSprite: {fileID: 0}
+  fourthAttackTypeSprite: {fileID: 0}
   hpText: {fileID: 0}
   _BattleSystem: {fileID: 0}
 --- !u!114 &2016561916
@@ -5689,7 +5689,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -672.5, y: -205.20003}
+  m_AnchoredPosition: {x: -672.5, y: -211}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3996722318918098290
@@ -5987,7 +5987,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -664, y: -183}
+  m_AnchoredPosition: {x: -664, y: -185}
   m_SizeDelta: {x: 4.12, y: 3.78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3996722319182895938
@@ -6793,7 +6793,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -664, y: -195}
+  m_AnchoredPosition: {x: -664, y: -197}
   m_SizeDelta: {x: 4.12, y: 3.78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3996722319902665712
@@ -7090,7 +7090,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -672.5, y: -195.4}
+  m_AnchoredPosition: {x: -672.5, y: -198}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &3996722320215740416
@@ -7391,7 +7391,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -672.5, y: -185.1}
+  m_AnchoredPosition: {x: -672.5, y: -187}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3996722320600036201
@@ -7623,7 +7623,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -664, y: -207}
+  m_AnchoredPosition: {x: -664, y: -209}
   m_SizeDelta: {x: 4.12, y: 3.78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3996722320767329665
@@ -7834,7 +7834,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -664, y: -171}
+  m_AnchoredPosition: {x: -664, y: -173}
   m_SizeDelta: {x: 4.12, y: 3.78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3996722320944667899

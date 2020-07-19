@@ -22,10 +22,10 @@ public class BattleHUD : MonoBehaviour
     public Text fourthAttackBPText;
     public Text fourthAttackCostText;
 
-    public Sprite physicalIcon;
-    public Sprite rangedIcon;
-    public Sprite healIcon;
-    public Sprite magicIcon;
+    public GameObject firstAttackTypeSprite;
+    public GameObject secondAttackTypeSprite;
+    public GameObject thirdAttackTypeSprite;
+    public GameObject fourthAttackTypeSprite;
 
     public Text hpText;
 
@@ -43,18 +43,22 @@ public class BattleHUD : MonoBehaviour
         firstAttackNameText.text = unit.firstAttackName;
         firstAttackBPText.text = "Base Power: " + unit.firstAttackBP.ToString();
         firstAttackCostText.text = unit.firstAttackCost.ToString();
+        firstAttackTypeSprite.GetComponent<SpriteRenderer>().sprite = unit.firstAttackTypeIcon;
 
         secondAttackNameText.text = unit.secondAttackName;
         secondAttackBPText.text = "Base Power: " + unit.secondAttackBP.ToString();
         secondAttackCostText.text = unit.secondAttackCost.ToString();
+        secondAttackTypeSprite.GetComponent<SpriteRenderer>().sprite = unit.secondAttackTypeIcon;
 
         thirdAttackNameText.text = unit.thirdAttackName;
         thirdAttackBPText.text = "Base Power: " + unit.thirdAttackBP.ToString();
         thirdAttackCostText.text = unit.thirdAttackCost.ToString();
+        thirdAttackTypeSprite.GetComponent<SpriteRenderer>().sprite = unit.thirdAttackTypeIcon;
 
         fourthAttackNameText.text = unit.fourthAttackName;
         fourthAttackBPText.text = "Base Power: " + unit.fourthAttackBP.ToString();
         fourthAttackCostText.text = unit.fourthAttackCost.ToString();
+        fourthAttackTypeSprite.GetComponent<SpriteRenderer>().sprite = unit.fourthAttackTypeIcon;
 
     }
     public void SetHP(string hp)
