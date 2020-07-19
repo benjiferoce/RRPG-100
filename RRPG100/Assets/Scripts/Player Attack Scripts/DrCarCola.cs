@@ -6,21 +6,13 @@ public class DrCarCola : MonoBehaviour
 {
     public GameObject _DrCarCola;
     public GameObject _BattleSystem;
-   
-   //public int turnActivated;
-   //public bool isFirstAttackReady;
-   //public bool isSecondAttackReady;
-   //public bool isThirdAttackReady;
-   //public bool isFourthAttackReady;
-
     public Text ActionText;
 
     void Start()
     {
         _BattleSystem = GameObject.FindGameObjectWithTag("BattleSystem");
        
-        ActionText = GameObject.FindGameObjectWithTag("ActionText").GetComponent<Text>();
-        
+        ActionText = GameObject.FindGameObjectWithTag("ActionText").GetComponent<Text>();        
     }
 
     void Update()

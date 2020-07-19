@@ -10,6 +10,7 @@ public class Unit : MonoBehaviour
 {
     public string unitID; 
     public string unitName;
+    public int unitNumber; 
     public int attack;
     public int defense;
     public int multiplier;
@@ -22,6 +23,8 @@ public class Unit : MonoBehaviour
     public int damage;
     public int block;
     public int dodge;
+
+    public string style;
 
     public int APGen;
 
