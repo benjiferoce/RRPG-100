@@ -30,7 +30,9 @@ public class Unit : MonoBehaviour
 
     public Sprite CharacterHUDSprite; 
 
-    public GameObject _BattleSystem; 
+    public GameObject _BattleSystem;
+
+    public List<string> Tags = new List<string>();
 
     // First Attack Stats
     public string firstAttackName;
