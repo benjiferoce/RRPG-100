@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 5971964222487204755}
   - component: {fileID: 5971964222487204757}
   - component: {fileID: -4550163128454362625}
+  - component: {fileID: -686408382062247024}
+  - component: {fileID: 6356452813870737774}
+  - component: {fileID: -5860300523373513303}
   m_Layer: 0
   m_Name: Dr Car Cola
   m_TagString: Character
@@ -27,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5971964222487204754}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -79.3, y: -8.8, z: 0}
+  m_LocalPosition: {x: -79.56, y: -8.28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -102,7 +105,7 @@ MonoBehaviour:
   defense: 30
   multiplier: 0
   maxHP: 50
-  currentHP: 40
+  currentHP: 50
   speed: 65
   charType: Player
   turnNum: 0
@@ -114,33 +117,30 @@ MonoBehaviour:
   APGen: 1
   CharacterHUDSprite: {fileID: 21300000, guid: fb4733290a66a8f4b96f1765fce4f450, type: 3}
   _BattleSystem: {fileID: 0}
+  tag1: Soft Drink
+  tag2: Gun
+  tag3: Doctor
+  tag4: 
+  tag5: 
   firstAttackName: Pop
   firstAttackCost: 0
   firstAttackBP: 2
   firstAttackType: Ranged
-  firstAttackTypeIcon: {fileID: 21300000, guid: 79dccc4fbde23604b90ff8fc8eec1de8,
-    type: 3}
   firstAttackEffect: Basic Attack
   secondAttackName: Super Pop
   secondAttackCost: 2
   secondAttackBP: 3
   secondAttackType: Ranged
-  secondAttackTypeIcon: {fileID: 21300000, guid: 79dccc4fbde23604b90ff8fc8eec1de8,
-    type: 3}
   secondAttackEffect: Basic Attack
   thirdAttackName: Fizz Shot
   thirdAttackCost: 2
   thirdAttackBP: 5
   thirdAttackType: Ranged
-  thirdAttackTypeIcon: {fileID: 21300000, guid: 79dccc4fbde23604b90ff8fc8eec1de8,
-    type: 3}
   thirdAttackEffect: Takes on turn to charge before attacking
   fourthAttackName: Seethe Blast
   fourthAttackCost: 5
   fourthAttackBP: 2
   fourthAttackType: Ranged
-  fourthAttackTypeIcon: {fileID: 21300000, guid: 79dccc4fbde23604b90ff8fc8eec1de8,
-    type: 3}
   fourthAttackEffect: Bonus damage equal to speed/10
   bonusDamage: 0
   PassiveItem1: {fileID: 5939349358814500442, guid: 5f808a1db6e6e634b977aec443907533,
@@ -162,3 +162,39 @@ MonoBehaviour:
   _DrCarCola: {fileID: 0}
   _BattleSystem: {fileID: 0}
   ActionText: {fileID: 0}
+--- !u!114 &-686408382062247024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5971964222487204754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c547cf766518145aa2d1da9b9a482e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6356452813870737774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5971964222487204754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b62a9232201ea57449e2ab328b021f14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-5860300523373513303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5971964222487204754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2645f5bedad6c1543aac8770c3699d53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -31,6 +31,6 @@ public class LemonLimeLad : MonoBehaviour
 
     public void FourthAttackEffect()
     {
-        Debug.Log("Hi Lemon Lad");
+        //Debug.Log("Hi Lemon Lad");
     }
 }

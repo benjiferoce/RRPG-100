@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class AttackEffectsManager : MonoBehaviour
 {
@@ -12,8 +13,8 @@ public class AttackEffectsManager : MonoBehaviour
     public GameObject Character;
     void Update()
     {
-        Debug.Log("Attack Effects Manager: Current Turn Character: " +
-        _BattleSystem.GetComponent<BattleSystem>().CurrentTurnCharacter.GetComponent<Unit>().unitName);
+        //Debug.Log("Attack Effects Manager: Current Turn Character: " +
+        //_BattleSystem.GetComponent<BattleSystem>().CurrentTurnCharacter.GetComponent<Unit>().unitName);
     }
 
     public void SetFirstAttackButton(Unit unit){

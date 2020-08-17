@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 5783924962296517004}
   - component: {fileID: 5783924962296517041}
   - component: {fileID: 5783924962296517006}
+  - component: {fileID: 285539892797460753}
+  - component: {fileID: 162338309247305730}
+  - component: {fileID: -1402456093784993053}
   m_Layer: 0
   m_Name: Curtis Ice Blower
   m_TagString: Untagged
@@ -114,30 +117,30 @@ MonoBehaviour:
   APGen: 2
   CharacterHUDSprite: {fileID: 0}
   _BattleSystem: {fileID: 0}
-  Tags: []
+  tag1: Reptile
+  tag2: Cold
+  tag3: Plaid
+  tag4: 
+  tag5: 
   firstAttackName: Icicle Spit
   firstAttackCost: 0
   firstAttackBP: 2
   firstAttackType: Ranged
-  firstAttackTypeIcon: {fileID: 0}
   firstAttackEffect: Basic Attack
   secondAttackName: Boomerang Tail
   secondAttackCost: 3
   secondAttackBP: 2
   secondAttackType: Ranged
-  secondAttackTypeIcon: {fileID: 0}
   secondAttackEffect: Hits All Enemies
   thirdAttackName: Double Ice Spit
   thirdAttackCost: 4
   thirdAttackBP: 2
   thirdAttackType: Ranged
-  thirdAttackTypeIcon: {fileID: 0}
   thirdAttackEffect: Hits 2 enemies + cold chance twice
   fourthAttackName: Curt-alanche
   fourthAttackCost: 5
   fourthAttackBP: 4
   fourthAttackType: Ranged
-  fourthAttackTypeIcon: {fileID: 0}
   fourthAttackEffect: Hits all enemies
   bonusDamage: 0
   PassiveItem1: {fileID: 0}
@@ -153,5 +156,41 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a3a0ccc30aa4ac45a67879eadab83f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &285539892797460753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5783924962296517005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa0d5e6cdababf4fa9f3eee3ca0b293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &162338309247305730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5783924962296517005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 230783735a22156468b88450d82cfe47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-1402456093784993053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5783924962296517005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbc09d863654a0844982b9f0e44e2fe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

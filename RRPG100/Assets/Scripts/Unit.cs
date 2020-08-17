@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class Unit : MonoBehaviour
 {
@@ -32,14 +33,15 @@ public class Unit : MonoBehaviour
 
     public GameObject _BattleSystem;
 
-    public List<string> Tags = new List<string>();
+    public string tag1, tag2, tag3, tag4, tag5;
+
 
     // First Attack Stats
     public string firstAttackName;
     public int firstAttackCost;
     public int firstAttackBP;
     public string firstAttackType;
-    public Sprite firstAttackTypeIcon;
+    //public Sprite firstAttackTypeIcon;
     public string firstAttackEffect;
 
     // Second Attack Stats
@@ -47,7 +49,7 @@ public class Unit : MonoBehaviour
     public int secondAttackCost;
     public int secondAttackBP;
     public string secondAttackType;
-    public Sprite secondAttackTypeIcon;
+    //public Sprite secondAttackTypeIcon;
     public string secondAttackEffect;
   
     // Third Attack Stats
@@ -55,7 +57,7 @@ public class Unit : MonoBehaviour
     public int thirdAttackCost;
     public int thirdAttackBP;
     public string thirdAttackType;
-    public Sprite thirdAttackTypeIcon;
+   // public Sprite thirdAttackTypeIcon;
     public string thirdAttackEffect;
  
     // Fourth Attack Stats
@@ -63,7 +65,7 @@ public class Unit : MonoBehaviour
     public int fourthAttackCost;
     public int fourthAttackBP;
     public string fourthAttackType;
-    public Sprite fourthAttackTypeIcon;
+   // public Sprite fourthAttackTypeIcon;
     public string fourthAttackEffect;
 
     public int bonusDamage; 
@@ -100,7 +102,7 @@ public class Unit : MonoBehaviour
     {
         damage = 0;
         damage = bonusDamage + (2 * AttackBP * (attack / enemyDefense) + multiplier) + 2;
-        Debug.Log(damage);
+        //Debug.Log(damage);
         return damage;
     }
 

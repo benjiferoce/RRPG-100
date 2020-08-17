@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8714982713779179619}
   - component: {fileID: 8714982713779179620}
   - component: {fileID: -1250653921623261707}
+  - component: {fileID: -5132299542896704672}
+  - component: {fileID: 6615709425503040378}
   m_Layer: 0
   m_Name: Root Beer Boy
   m_TagString: Character
@@ -114,33 +116,30 @@ MonoBehaviour:
   APGen: 2
   CharacterHUDSprite: {fileID: 21300000, guid: 737cbe99083a6984a8ef3f68128ff7e0, type: 3}
   _BattleSystem: {fileID: 0}
+  tag1: Soft Drink
+  tag2: Sweet
+  tag3: 
+  tag4: 
+  tag5: 
   firstAttackName: Rootbeer Punch
   firstAttackCost: 0
   firstAttackBP: 2
   firstAttackType: Physical
-  firstAttackTypeIcon: {fileID: 21300000, guid: 440a4caee52d6b548a5d088fb567bcaf,
-    type: 3}
   firstAttackEffect: Basic Attack
   secondAttackName: Thick Foam
   secondAttackCost: 2
   secondAttackBP: 0
   secondAttackType: Heal
-  secondAttackTypeIcon: {fileID: 21300000, guid: 02dcba5d9a4f92940bdaf44a3395f70b,
-    type: 3}
   secondAttackEffect: Heal any player by 20
   thirdAttackName: Caffine Buzz
   thirdAttackCost: 4
   thirdAttackBP: 0
   thirdAttackType: Support
-  thirdAttackTypeIcon: {fileID: 21300000, guid: f486e18b1033bf647bdc2af833652f06,
-    type: 3}
   thirdAttackEffect: Raise team's speed by 10 for 3 turns
   fourthAttackName: Foam Over
   fourthAttackCost: 6
   fourthAttackBP: 0
   fourthAttackType: Heal
-  fourthAttackTypeIcon: {fileID: 21300000, guid: 02dcba5d9a4f92940bdaf44a3395f70b,
-    type: 3}
   fourthAttackEffect: Heal all players by 20
   bonusDamage: 0
   PassiveItem1: {fileID: 3191526161018986169, guid: 69bf8e00cb71aa24f8645317a8dcd05d,
@@ -161,3 +160,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _RootBeerBoy: {fileID: 0}
   _BattleSystem: {fileID: 0}
+--- !u!114 &-5132299542896704672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8714982713779179621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c547cf766518145aa2d1da9b9a482e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6615709425503040378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8714982713779179621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17ffc61f0f7340448e427df6766a901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

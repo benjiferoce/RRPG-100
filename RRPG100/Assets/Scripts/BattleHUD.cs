@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class BattleHUD : MonoBehaviour
 {
@@ -22,19 +23,34 @@ public class BattleHUD : MonoBehaviour
     public Text fourthAttackBPText;
     public Text fourthAttackCostText;
 
-    public GameObject firstAttackTypeSprite;
-    public GameObject secondAttackTypeSprite;
-    public GameObject thirdAttackTypeSprite;
-    public GameObject fourthAttackTypeSprite;
+    public Text partyMem1InfoTxtTags;
+    public Text partyMem2InfoTxtTags;
+    public Text partyMem3InfoTxtTags;
+    //public Text partyMemRsvInfoTxtTags;
+
+    public Text partySynergyTxt;
+    public Text partySynergyDescTxt; 
+    
+    // public GameObject firstAttackTypeSprite;
+    // public GameObject secondAttackTypeSprite;
+    // public GameObject thirdAttackTypeSprite;
+    // public GameObject fourthAttackTypeSprite;
 
     public Text hpText;
 
     public GameObject _BattleSystem;
+    public GameObject _party;
+
+    bool mem1InfoButt, mem2InfoButt, mem3InfoButt;
 
     public void SetHUD(Unit unit)
     {
         SetHP(unit.GetComponent<Unit>().currentHP.ToString());
+    }
 
+    void Update()
+    {
+        SetTagText();
     }
 
     public void SetAttackHUD(Unit unit)
@@ -43,26 +59,65 @@ public class BattleHUD : MonoBehaviour
         firstAttackNameText.text = unit.firstAttackName;
         firstAttackBPText.text = "Base Power: " + unit.firstAttackBP.ToString();
         firstAttackCostText.text = unit.firstAttackCost.ToString();
-        firstAttackTypeSprite.GetComponent<SpriteRenderer>().sprite = unit.firstAttackTypeIcon;
+        //firstAttackTypeSprite.GetComponent<SpriteRenderer>().sprite = unit.firstAttackTypeIcon;
 
         secondAttackNameText.text = unit.secondAttackName;
         secondAttackBPText.text = "Base Power: " + unit.secondAttackBP.ToString();
         secondAttackCostText.text = unit.secondAttackCost.ToString();
-        secondAttackTypeSprite.GetComponent<SpriteRenderer>().sprite = unit.secondAttackTypeIcon;
+       // secondAttackTypeSprite.GetComponent<SpriteRenderer>().sprite = unit.secondAttackTypeIcon;
 
         thirdAttackNameText.text = unit.thirdAttackName;
         thirdAttackBPText.text = "Base Power: " + unit.thirdAttackBP.ToString();
         thirdAttackCostText.text = unit.thirdAttackCost.ToString();
-        thirdAttackTypeSprite.GetComponent<SpriteRenderer>().sprite = unit.thirdAttackTypeIcon;
+        //thirdAttackTypeSprite.GetComponent<SpriteRenderer>().sprite = unit.thirdAttackTypeIcon;
 
         fourthAttackNameText.text = unit.fourthAttackName;
         fourthAttackBPText.text = "Base Power: " + unit.fourthAttackBP.ToString();
         fourthAttackCostText.text = unit.fourthAttackCost.ToString();
-        fourthAttackTypeSprite.GetComponent<SpriteRenderer>().sprite = unit.fourthAttackTypeIcon;
-
+        //fourthAttackTypeSprite.GetComponent<SpriteRenderer>().sprite = unit.fourthAttackTypeIcon;
     }
+
     public void SetHP(string hp)
     {
         hpText.text = hp;
+    }
+
+    public void SetTagText()
+    {
+        partyMem1InfoTxtTags.text = _party.GetComponent<PartyScript>().Character1.GetComponent<Unit>().tag1 + ", "
+            + _party.GetComponent<PartyScript>().Character1.GetComponent<Unit>().tag2 + ", "
+            + _party.GetComponent<PartyScript>().Character1.GetComponent<Unit>().tag3 + ", "
+            + _party.GetComponent<PartyScript>().Character1.GetComponent<Unit>().tag4 + ", "
+            + _party.GetComponent<PartyScript>().Character1.GetComponent<Unit>().tag5;
+
+        partyMem2InfoTxtTags.text = _party.GetComponent<PartyScript>().Character2.GetComponent<Unit>().tag1 + ", "
+           + _party.GetComponent<PartyScript>().Character2.GetComponent<Unit>().tag2 + ", "
+           + _party.GetComponent<PartyScript>().Character2.GetComponent<Unit>().tag3 + ", "
+           + _party.GetComponent<PartyScript>().Character2.GetComponent<Unit>().tag4 + ", "
+           + _party.GetComponent<PartyScript>().Character2.GetComponent<Unit>().tag5;
+
+        partyMem3InfoTxtTags.text = _party.GetComponent<PartyScript>().Character3.GetComponent<Unit>().tag1 + ", "
+           + _party.GetComponent<PartyScript>().Character3.GetComponent<Unit>().tag2 + ", "
+           + _party.GetComponent<PartyScript>().Character3.GetComponent<Unit>().tag3 + ", "
+           + _party.GetComponent<PartyScript>().Character3.GetComponent<Unit>().tag4 + ", "
+           + _party.GetComponent<PartyScript>().Character3.GetComponent<Unit>().tag5;
+    }
+
+    public void OnParMem1InfButton()
+    {
+        mem1InfoButt = !mem1InfoButt;
+        this.gameObject.SetActive(partyMem1InfoTxtTags);
+    }
+
+    public void OnParMem2InfButton()
+    {
+        mem2InfoButt = !mem2InfoButt;
+        this.gameObject.SetActive(partyMem2InfoTxtTags);
+    }
+
+    public void OnParMem3InfButton()
+    {
+        mem3InfoButt = !mem3InfoButt;
+        this.gameObject.SetActive(partyMem3InfoTxtTags);
     }
 }

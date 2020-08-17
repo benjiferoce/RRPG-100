@@ -29,8 +29,9 @@ public class PartyScript : MonoBehaviour
     public Text APNum;
     public Slider apSlider;
 
-
     public int partyGold;
+
+    public GameObject _synergyManager; 
 
     void Start()
     {
@@ -42,6 +43,7 @@ public class PartyScript : MonoBehaviour
         apSlider.maxValue = maxAP;
         apSlider.value = currentAP;
         APNum.text = currentAP.ToString();
+
     }
 
 

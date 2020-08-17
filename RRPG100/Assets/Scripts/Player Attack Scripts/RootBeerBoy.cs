@@ -31,6 +31,6 @@ public class RootBeerBoy : MonoBehaviour
 
     public void FourthAttackEffect()
     {
-        Debug.Log("Hi Root Beer");
+        //Debug.Log("Hi Root Beer");
     }
 }

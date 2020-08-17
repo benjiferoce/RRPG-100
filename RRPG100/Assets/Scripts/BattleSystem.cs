@@ -63,6 +63,9 @@ public class BattleSystem : MonoBehaviour
 
     public int agents;
 
+    bool mem1InfoButt, mem2InfoButt, mem3InfoButt;
+    public GameObject partyMeminfo1, partyMemInfo2, partyMemInfo3; 
+
     void Start()
     {
         turnCount = 0;
@@ -499,6 +502,24 @@ public class BattleSystem : MonoBehaviour
         if (state != BattleState.PLAYERTURN) return;
         //if (CurrentTurnCharacter.GetComponent<Unit>().isFourthAttackDelayed == true) return;
         StartCoroutine(PlayerFourthAttack());
+    }
+
+    public void OnParMem1InfButton()
+    {
+        mem1InfoButt = !mem1InfoButt;
+        partyMeminfo1.SetActive(mem1InfoButt);
+    }
+
+    public void OnParMem2InfButton()
+    {
+        mem2InfoButt = !mem2InfoButt;
+        partyMemInfo2.SetActive(mem2InfoButt);
+    }
+
+    public void OnParMem3InfButton()
+    {
+        mem3InfoButt = !mem3InfoButt;
+        partyMemInfo3.SetActive(mem3InfoButt);
     }
 
     void resetStats(Unit unit)
