@@ -47,6 +47,7 @@ public class BattleSystem : MonoBehaviour
     public Text attackEffectDescText;
 
     public bool chooseAttack;
+    public bool onEnemyHit = false; 
 
     public GameObject AttackEffectsManager;
 
@@ -486,6 +487,7 @@ public class BattleSystem : MonoBehaviour
 
             if (Party.GetComponent<PartyScript>().currentAP < CurrentTurnCharacter.GetComponent<Unit>().secondAttackCost)
         {
+            CurrentTurnCharacter.GetComponent<Unit>().secondAttackReady = -1;
             actionText.text = CurrentTurnCharacter.GetComponent<Unit>().unitName + "Can't Afford " + CurrentTurnCharacter.GetComponent<Unit>().secondAttackName;
             return;
         }
@@ -512,13 +514,16 @@ public class BattleSystem : MonoBehaviour
             StartCoroutine(PlayerThirdAttack());
         }
         else
+        {
 
             if (Party.GetComponent<PartyScript>().currentAP < CurrentTurnCharacter.GetComponent<Unit>().thirdAttackCost)
-        {
-            actionText.text = CurrentTurnCharacter.GetComponent<Unit>().unitName + "Can't Afford " + CurrentTurnCharacter.GetComponent<Unit>().thirdAttackName;
-            return;
+            {
+                CurrentTurnCharacter.GetComponent<Unit>().thirdAttackReady = -1;
+                actionText.text = CurrentTurnCharacter.GetComponent<Unit>().unitName + "Can't Afford " + CurrentTurnCharacter.GetComponent<Unit>().thirdAttackName;
+                return;
+            }
         }
-        if (CurrentTurnCharacter.GetComponent<Unit>().thirdAttackCharged == false && 
+        if (CurrentTurnCharacter.GetComponent<Unit>().thirdAttackCharged == false &&
             Party.GetComponent<PartyScript>().currentAP >= CurrentTurnCharacter.GetComponent<Unit>().thirdAttackCost)
         {
             actionText.text = CurrentTurnCharacter.GetComponent<Unit>().unitName + "'s " + CurrentTurnCharacter.GetComponent<Unit>().thirdAttackName +
@@ -662,7 +667,6 @@ public class BattleSystem : MonoBehaviour
             }
         }
     }
-
     public void firstAttackAP() { currentAP = currentAP - CurrentTurnCharacter.GetComponent<Unit>().firstAttackCost; }
     public void secondAttackAP() { currentAP = currentAP - CurrentTurnCharacter.GetComponent<Unit>().secondAttackCost; }
     public void thirdAttackAP() { currentAP = currentAP - CurrentTurnCharacter.GetComponent<Unit>().thirdAttackCost; }

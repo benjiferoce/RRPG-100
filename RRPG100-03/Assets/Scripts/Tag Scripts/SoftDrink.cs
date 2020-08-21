@@ -15,7 +15,8 @@ public class SoftDrink : MonoBehaviour
     public List<string> _pTags = new List<string>();
     public int xBonus = 0;
     public int bonReq = 1; 
-    public bool typeSyng = false; 
+    public bool typeSyng = false;
+    public Unit TargetEnemy; 
     void Start()
     {
         _synergy = GameObject.FindGameObjectWithTag("SynergyManager");
@@ -36,5 +37,10 @@ public class SoftDrink : MonoBehaviour
             _battleHUD.GetComponent<BattleHUD>().partySynergyTxt.text = 
             tagType + " Synergy " + "X" + xBonus.ToString() + " Bonus!";
         }
+    }
+
+    public void SetSynergy()
+    {
+
     }
 }
