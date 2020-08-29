@@ -19,16 +19,22 @@ public class BattleSystem : MonoBehaviour
     public GameObject player2Prefab;
     public GameObject player3Prefab;
     public GameObject enemyPrefab;
+    public GameObject enemyPrefab2;
+    public GameObject enemyPrefab3;
 
     public Transform playerBattleStation;
     public Transform player2BattleStation;
     public Transform player3BattleStation;
     public Transform enemyBattleStation;
+    public Transform enemyBattleStation2;
+    public Transform enemyBattleStation3;
 
     public BattleHUD playerHUD;
     public BattleHUD playerHUD2;
     public BattleHUD playerHUD3;
     public BattleHUD enemyHUD;
+    public BattleHUD enemyHUD2;
+    public BattleHUD enemyHUD3;
     public BattleHUD playerAttacksHUD;
     public GameObject AttacksHUD;
 
@@ -46,21 +52,23 @@ public class BattleSystem : MonoBehaviour
     public Text enemyHPText;
     public Text attackEffectDescText;
 
-    public bool chooseAttack;
-    public bool onEnemyHit = false; 
+    public GameObject EnemyTarget; 
 
+    public Text enemyNameText1, enemyNameText2, enemyNameText3; 
+
+    public bool chooseAttack;
     public GameObject AttackEffectsManager;
 
     public int turn = 0;
     public int turnCount;
 
     public List<GameObject> characterList = new List<GameObject>();
+    public List<GameObject> partyList = new List<GameObject>();
+    public List<GameObject> enemyList = new List<GameObject>();
 
     Unit playerUnit;
     Unit enemyUnit;
 
-    public Unit SelectedEnemy;
-    public bool EnemySelected;
 
     public BattleState state;
 
@@ -71,7 +79,9 @@ public class BattleSystem : MonoBehaviour
 
     void Start()
     {
+        EnemyTarget = enemyPrefab; 
         BattleHUD.GetComponent<BattleHUD>().SetTagText();
+
         turnCount = 0;
         playerPrefab = Party.GetComponent<PartyScript>().Character1;
         player2Prefab = Party.GetComponent<PartyScript>().Character2;
@@ -90,7 +100,8 @@ public class BattleSystem : MonoBehaviour
         resetStats(Party.GetComponent<PartyScript>().Character3.GetComponent<Unit>());
 
         enemyPrefab.GetComponent<Unit>().currentHP = enemyPrefab.GetComponent<Unit>().maxHP;
-
+        enemyPrefab2.GetComponent<Unit>().currentHP = enemyPrefab2.GetComponent<Unit>().maxHP;
+        enemyPrefab3.GetComponent<Unit>().currentHP = enemyPrefab3.GetComponent<Unit>().maxHP;
         apGen = apGen + playerPrefab.GetComponent<Unit>().APGen + player2Prefab.GetComponent<Unit>().APGen + player3Prefab.GetComponent<Unit>().APGen;
 
         startingAP = 0;
@@ -102,14 +113,15 @@ public class BattleSystem : MonoBehaviour
 
         state = BattleState.START;
 
-        EnemySelected = false;
-
         StartCoroutine(SetupBattle());
 
         UpdateTurnNumbers(playerPrefab);
         UpdateTurnNumbers(player2Prefab);
         UpdateTurnNumbers(player3Prefab);
         UpdateTurnNumbers(enemyPrefab);
+        UpdateTurnNumbers(enemyPrefab2);
+        UpdateTurnNumbers(enemyPrefab3);
+
     }
     void Update()
     {
@@ -128,7 +140,7 @@ public class BattleSystem : MonoBehaviour
 
         //if(CurrentTurnCharacter.GetComponent<Unit>().charType == "Player"){ state = BattleState.PLAYERTURN; }
 
-        if (turn == 4) { turn = 0; }
+        if (turn == characterList.Count) { turn = 0; }
 
         if (playerPrefab.GetComponent<Unit>().currentHP <= 0)
         {
@@ -158,8 +170,21 @@ public class BattleSystem : MonoBehaviour
         GameObject player2GO = Instantiate(player2Prefab, player2BattleStation);
         GameObject player3GO = Instantiate(player3Prefab, player3BattleStation);
         GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
+        GameObject enemy2GO = Instantiate(enemyPrefab2, enemyBattleStation2);
+        GameObject enemy3GO = Instantiate(enemyPrefab3, enemyBattleStation3);
         enemyUnit = enemyGO.GetComponent<Unit>();
         SortTurns();
+        for(int i = 0; i < characterList.Count; ++i)
+        {
+            if(characterList[i].GetComponent<Unit>().charType == "Enemy")
+            {
+                enemyList.Add(characterList[i]);
+            }
+            else
+            {
+                partyList.Add(characterList[i]);
+            }
+        }
         //enemyHUD.SetHUD(enemyUnit);
         yield return new WaitForSeconds(2f);
     }
@@ -211,6 +236,18 @@ public class BattleSystem : MonoBehaviour
         if (turn == enemyPrefab.GetComponent<Unit>().turnNum)
         {
             CurrentTurnCharacter = enemyPrefab;
+            state = BattleState.ENEMYTURN;
+            EnemyTurn();
+        }
+        if (turn == enemyPrefab2.GetComponent<Unit>().turnNum)
+        {
+            CurrentTurnCharacter = enemyPrefab2;
+            state = BattleState.ENEMYTURN;
+            EnemyTurn();
+        }
+        if (turn == enemyPrefab3.GetComponent<Unit>().turnNum)
+        {
+            CurrentTurnCharacter = enemyPrefab3;
             state = BattleState.ENEMYTURN;
             EnemyTurn();
         }
@@ -279,6 +316,10 @@ public class BattleSystem : MonoBehaviour
 
     void EnemyTurn()
     {
+        if(turn + 1 == characterList.Count)
+        {
+            setPartyAP();
+        }
         int playerToAttack = UnityEngine.Random.Range(0, 3);
 
         //Debug.Log("Random Number is" + playerToAttack);
@@ -288,8 +329,8 @@ public class BattleSystem : MonoBehaviour
             if (playerPrefab.GetComponent<Unit>().currentHP > 0)
             {
 
-                playerPrefab.GetComponent<Unit>().TakeDamage(enemyPrefab.GetComponent<Unit>().damage);
-                actionText.text = enemyPrefab.GetComponent<Unit>().unitName + " attacked " + playerPrefab.GetComponent<Unit>().unitName + " for " + enemyUnit.damage + " damage!";
+                playerPrefab.GetComponent<Unit>().TakeDamage(CurrentTurnCharacter.GetComponent<Unit>().damage);
+                actionText.text = CurrentTurnCharacter.GetComponent<Unit>().unitName + " attacked " + playerPrefab.GetComponent<Unit>().unitName + " for " + enemyUnit.damage + " damage!";
                 //playerHUD.SetHP(playerPrefab.GetComponent<Unit>().currentHP.ToString());
                 turn = turn + 1;
                 turnCount = turnCount + 1;
@@ -305,8 +346,8 @@ public class BattleSystem : MonoBehaviour
             if (player2Prefab.GetComponent<Unit>().currentHP > 0)
             {
 
-                player2Prefab.GetComponent<Unit>().TakeDamage(enemyPrefab.GetComponent<Unit>().damage);
-                actionText.text = enemyPrefab.GetComponent<Unit>().unitName + " attacked " + player2Prefab.GetComponent<Unit>().unitName + " for " + enemyUnit.damage + " damage!";
+                player2Prefab.GetComponent<Unit>().TakeDamage(CurrentTurnCharacter.GetComponent<Unit>().damage);
+                actionText.text = CurrentTurnCharacter.GetComponent<Unit>().unitName + " attacked " + player2Prefab.GetComponent<Unit>().unitName + " for " + enemyUnit.damage + " damage!";
                 //playerHUD2.SetHP(player2Prefab.GetComponent<Unit>().currentHP.ToString());
                 turn = turn + 1;
                 turnCount = turnCount + 1;
@@ -322,8 +363,8 @@ public class BattleSystem : MonoBehaviour
             if (player3Prefab.GetComponent<Unit>().currentHP > 0)
             {
 
-                player3Prefab.GetComponent<Unit>().TakeDamage(enemyPrefab.GetComponent<Unit>().damage);
-                actionText.text = enemyPrefab.GetComponent<Unit>().unitName + " attacked " + player3Prefab.GetComponent<Unit>().unitName + " for " + enemyUnit.damage + " damage!";
+                player3Prefab.GetComponent<Unit>().TakeDamage(CurrentTurnCharacter.GetComponent<Unit>().damage);
+                actionText.text = CurrentTurnCharacter.GetComponent<Unit>().unitName + " attacked " + player3Prefab.GetComponent<Unit>().unitName + " for " + enemyUnit.damage + " damage!";
                 // playerHUD3.SetHP(player3Prefab.GetComponent<Unit>().currentHP.ToString());
                 turn = turn + 1;
                 turnCount = turnCount + 1;
@@ -342,14 +383,14 @@ public class BattleSystem : MonoBehaviour
         AttackEffectsManager.GetComponent<AttackEffectsManager>().CallFirstAttackEffect();
         attackEffectDescText.text = CurrentTurnCharacter.GetComponent<Unit>().firstAttackEffect;
         CurrentTurnCharacter.GetComponent<Unit>().SetDamage(CurrentTurnCharacter.GetComponent<Unit>().firstAttackBP,
-        enemyPrefab.GetComponent<Unit>().defense);
+        EnemyTarget.GetComponent<Unit>().defense);
 
-        bool isDead = enemyPrefab.GetComponent<Unit>().TakeDamage(CurrentTurnCharacter.GetComponent<Unit>().damage);
+        bool isDead = EnemyTarget.GetComponent<Unit>().TakeDamage(CurrentTurnCharacter.GetComponent<Unit>().damage);
 
         actionText.text = CurrentTurnCharacter.GetComponent<Unit>().unitName + " used " + "'" + CurrentTurnCharacter.GetComponent<Unit>().firstAttackName
-        + "'" + " on " + enemyPrefab.GetComponent<Unit>().unitName + " for " + CurrentTurnCharacter.GetComponent<Unit>().damage + " Damage!";
+        + "'" + " on " + EnemyTarget.GetComponent<Unit>().unitName + " for " + CurrentTurnCharacter.GetComponent<Unit>().damage + " Damage!";
 
-        enemyHUD.SetHP(enemyPrefab.GetComponent<Unit>().currentHP.ToString());
+        enemyHUD.SetHP(EnemyTarget.GetComponent<Unit>().currentHP.ToString());
 
         yield return new WaitForSeconds(2f);
 
@@ -367,14 +408,14 @@ public class BattleSystem : MonoBehaviour
         AttackEffectsManager.GetComponent<AttackEffectsManager>().CallSecondAttackEffect();
         attackEffectDescText.text = CurrentTurnCharacter.GetComponent<Unit>().secondAttackEffect;
         CurrentTurnCharacter.GetComponent<Unit>().SetDamage(CurrentTurnCharacter.GetComponent<Unit>().secondAttackBP,
-        enemyPrefab.GetComponent<Unit>().defense);
+        EnemyTarget.GetComponent<Unit>().defense);
 
-        bool isDead = enemyPrefab.GetComponent<Unit>().TakeDamage(CurrentTurnCharacter.GetComponent<Unit>().damage);
+        bool isDead = EnemyTarget.GetComponent<Unit>().TakeDamage(CurrentTurnCharacter.GetComponent<Unit>().damage);
 
         actionText.text = CurrentTurnCharacter.GetComponent<Unit>().unitName + " used " + "'" + CurrentTurnCharacter.GetComponent<Unit>().secondAttackName
-        + "'" + " on " + enemyPrefab.GetComponent<Unit>().unitName + " for " + CurrentTurnCharacter.GetComponent<Unit>().damage + " Damage!";
+        + "'" + " on " + EnemyTarget.GetComponent<Unit>().unitName + " for " + CurrentTurnCharacter.GetComponent<Unit>().damage + " Damage!";
 
-        enemyHUD.SetHP(enemyPrefab.GetComponent<Unit>().currentHP.ToString());
+        enemyHUD.SetHP(EnemyTarget.GetComponent<Unit>().currentHP.ToString());
 
         yield return new WaitForSeconds(2f);
 
@@ -390,14 +431,14 @@ public class BattleSystem : MonoBehaviour
         AttackEffectsManager.GetComponent<AttackEffectsManager>().CallThirdAttackEffect();
         attackEffectDescText.text = CurrentTurnCharacter.GetComponent<Unit>().thirdAttackEffect;
         CurrentTurnCharacter.GetComponent<Unit>().SetDamage(CurrentTurnCharacter.GetComponent<Unit>().thirdAttackBP,
-        enemyPrefab.GetComponent<Unit>().defense);
+        EnemyTarget.GetComponent<Unit>().defense);
 
-        bool isDead = enemyPrefab.GetComponent<Unit>().TakeDamage(CurrentTurnCharacter.GetComponent<Unit>().damage);
+        bool isDead = EnemyTarget.GetComponent<Unit>().TakeDamage(CurrentTurnCharacter.GetComponent<Unit>().damage);
 
         actionText.text = CurrentTurnCharacter.GetComponent<Unit>().unitName + " used " + "'" + CurrentTurnCharacter.GetComponent<Unit>().thirdAttackName
-        + "'" + " on " + enemyPrefab.GetComponent<Unit>().unitName + " for " + CurrentTurnCharacter.GetComponent<Unit>().damage + " Damage!";
+        + "'" + " on " + EnemyTarget.GetComponent<Unit>().unitName + " for " + CurrentTurnCharacter.GetComponent<Unit>().damage + " Damage!";
 
-        enemyHUD.SetHP(enemyPrefab.GetComponent<Unit>().currentHP.ToString());
+        enemyHUD.SetHP(EnemyTarget.GetComponent<Unit>().currentHP.ToString());
 
         yield return new WaitForSeconds(2f);
 
@@ -415,14 +456,14 @@ public class BattleSystem : MonoBehaviour
         AttackEffectsManager.GetComponent<AttackEffectsManager>().CallFourthAttackEffect();
         attackEffectDescText.text = CurrentTurnCharacter.GetComponent<Unit>().fourthAttackEffect;
         CurrentTurnCharacter.GetComponent<Unit>().SetDamage(CurrentTurnCharacter.GetComponent<Unit>().fourthAttackBP,
-        enemyPrefab.GetComponent<Unit>().defense);
+        EnemyTarget.GetComponent<Unit>().defense);
 
-        bool isDead = enemyPrefab.GetComponent<Unit>().TakeDamage(CurrentTurnCharacter.GetComponent<Unit>().damage);
+        bool isDead = EnemyTarget.GetComponent<Unit>().TakeDamage(CurrentTurnCharacter.GetComponent<Unit>().damage);
 
         actionText.text = CurrentTurnCharacter.GetComponent<Unit>().unitName + " used " + "'" + CurrentTurnCharacter.GetComponent<Unit>().fourthAttackName
-        + "'" + " on " + enemyPrefab.GetComponent<Unit>().unitName + " for " + CurrentTurnCharacter.GetComponent<Unit>().damage + " Damage!";
+        + "'" + " on " + EnemyTarget.GetComponent<Unit>().unitName + " for " + CurrentTurnCharacter.GetComponent<Unit>().damage + " Damage!";
 
-        enemyHUD.SetHP(enemyPrefab.GetComponent<Unit>().currentHP.ToString());
+        enemyHUD.SetHP(EnemyTarget.GetComponent<Unit>().currentHP.ToString());
 
         yield return new WaitForSeconds(2f);
 
@@ -432,9 +473,6 @@ public class BattleSystem : MonoBehaviour
             EndBattle();
         }
     }
-    
-
-    // ========================================================================================================================================== //
 
     public void AttackButton()
     {
@@ -451,13 +489,14 @@ public class BattleSystem : MonoBehaviour
         if (CurrentTurnCharacter.GetComponent<Unit>().firstAttackCharged == true &&
         currentAP >= CurrentTurnCharacter.GetComponent<Unit>().firstAttackCost)
         {
-            firstAttackAP(); 
+            firstAttackAP();
             StartCoroutine(PlayerFirstAttack());
         }
         else
 
             if (Party.GetComponent<PartyScript>().currentAP < CurrentTurnCharacter.GetComponent<Unit>().firstAttackCost)
         {
+            CurrentTurnCharacter.GetComponent<Unit>().firstAttackReady = -1;
             actionText.text = CurrentTurnCharacter.GetComponent<Unit>().unitName + "Can't Afford " + CurrentTurnCharacter.GetComponent<Unit>().firstAttackName;
             return;
         }
@@ -671,4 +710,33 @@ public class BattleSystem : MonoBehaviour
     public void secondAttackAP() { currentAP = currentAP - CurrentTurnCharacter.GetComponent<Unit>().secondAttackCost; }
     public void thirdAttackAP() { currentAP = currentAP - CurrentTurnCharacter.GetComponent<Unit>().thirdAttackCost; }
     public void fourthAttackAP() { currentAP = currentAP - CurrentTurnCharacter.GetComponent<Unit>().fourthAttackCost; }
+
+    public void onTargetEnemy(Text nameText)
+    {
+        if(nameText.text == enemyPrefab.GetComponent<Unit>().unitName)
+        {
+            EnemyTarget = enemyPrefab; 
+        }
+        if (nameText.text == enemyPrefab2.GetComponent<Unit>().unitName)
+        {
+            EnemyTarget = enemyPrefab2;
+        }
+        if (nameText.text == enemyPrefab3.GetComponent<Unit>().unitName)
+        {
+            EnemyTarget = enemyPrefab3;
+        }
+    }
+
+    public void onEnemy1Text()
+    {
+        onTargetEnemy(enemyNameText1);
+    }
+    public void onEnemy2Text()
+    {
+        onTargetEnemy(enemyNameText2);
+    }
+    public void onEnemy3Text()
+    {
+        onTargetEnemy(enemyNameText3);
+    }
 }

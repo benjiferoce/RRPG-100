@@ -18,6 +18,12 @@ public class HPManagerScript : MonoBehaviour
     public Text nameText3;
 
     public Text enemyNameText1;
+    public Text enemyNameText2;
+    public Text enemyNameText3;
+
+    public Text enemyHPText1;
+    public Text enemyHPText2;
+    public Text enemyHPText3; 
 
     void Update()
     {
@@ -30,5 +36,11 @@ public class HPManagerScript : MonoBehaviour
         nameText3.text = _battleSystem.GetComponent<BattleSystem>().player3Prefab.GetComponent<Unit>().unitName;
 
         enemyNameText1.text = _battleSystem.GetComponent<BattleSystem>().enemyPrefab.GetComponent<Unit>().unitName;
+        enemyNameText2.text = _battleSystem.GetComponent<BattleSystem>().enemyPrefab2.GetComponent<Unit>().unitName;
+        enemyNameText3.text = _battleSystem.GetComponent<BattleSystem>().enemyPrefab3.GetComponent<Unit>().unitName;
+
+        enemyHPText1.text = _battleSystem.GetComponent<BattleSystem>().enemyPrefab.GetComponent<Unit>().currentHP.ToString();
+        enemyHPText2.text = _battleSystem.GetComponent<BattleSystem>().enemyPrefab2.GetComponent<Unit>().currentHP.ToString();
+        enemyHPText3.text = _battleSystem.GetComponent<BattleSystem>().enemyPrefab3.GetComponent<Unit>().currentHP.ToString();
     }
 }
