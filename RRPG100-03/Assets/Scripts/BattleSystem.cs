@@ -18,6 +18,7 @@ public class BattleSystem : MonoBehaviour
     public GameObject playerPrefab;
     public GameObject player2Prefab;
     public GameObject player3Prefab;
+    public GameObject playerReservePrefab; 
     public GameObject enemyPrefab;
     public GameObject enemyPrefab2;
     public GameObject enemyPrefab3;
@@ -68,7 +69,12 @@ public class BattleSystem : MonoBehaviour
 
     Unit playerUnit;
     Unit enemyUnit;
-
+    public GameObject playerGO;
+    public GameObject player2GO;
+    public GameObject player3GO;
+    public GameObject enemyGO;
+    public GameObject enemy2GO;
+    public GameObject enemy3GO;
 
     public BattleState state;
 
@@ -86,6 +92,7 @@ public class BattleSystem : MonoBehaviour
         playerPrefab = Party.GetComponent<PartyScript>().Character1;
         player2Prefab = Party.GetComponent<PartyScript>().Character2;
         player3Prefab = Party.GetComponent<PartyScript>().Character3;
+        playerReservePrefab = Party.GetComponent<PartyScript>().CharacterReserve;
 
         playerPrefab.GetComponent<Unit>().damage = 0;
         player2Prefab.GetComponent<Unit>().damage = 0;
@@ -121,7 +128,6 @@ public class BattleSystem : MonoBehaviour
         UpdateTurnNumbers(enemyPrefab);
         UpdateTurnNumbers(enemyPrefab2);
         UpdateTurnNumbers(enemyPrefab3);
-
     }
     void Update()
     {
@@ -166,12 +172,12 @@ public class BattleSystem : MonoBehaviour
     }
     IEnumerator SetupBattle()       // Sets Starting HP, Instantiates players at battlestations, and sets the player HUDs
     {
-        GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
-        GameObject player2GO = Instantiate(player2Prefab, player2BattleStation);
-        GameObject player3GO = Instantiate(player3Prefab, player3BattleStation);
-        GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
-        GameObject enemy2GO = Instantiate(enemyPrefab2, enemyBattleStation2);
-        GameObject enemy3GO = Instantiate(enemyPrefab3, enemyBattleStation3);
+        playerGO = Instantiate(playerPrefab, playerBattleStation);
+        player2GO = Instantiate(player2Prefab, player2BattleStation);
+        player3GO = Instantiate(player3Prefab, player3BattleStation);
+        enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
+        enemy2GO = Instantiate(enemyPrefab2, enemyBattleStation2);
+        enemy3GO = Instantiate(enemyPrefab3, enemyBattleStation3);
         enemyUnit = enemyGO.GetComponent<Unit>();
         SortTurns();
         for(int i = 0; i < characterList.Count; ++i)
@@ -738,5 +744,48 @@ public class BattleSystem : MonoBehaviour
     public void onEnemy3Text()
     {
         onTargetEnemy(enemyNameText3);
+    }
+
+    public void SwapCharacter()
+    {
+        if (state == BattleState.PLAYERTURN)
+        {
+            for(int i = 0; i < characterList.Count; ++i)
+            {
+                if(CurrentTurnCharacter.GetComponent<Unit>().unitName == characterList[i].GetComponent<Unit>().unitName)
+                {
+                    characterList.Remove(characterList[i]);
+
+                    if(CurrentTurnCharacter.GetComponent<Unit>().unitName == playerGO.GetComponent<Unit>().unitName)
+                    {
+                        GameObject.Destroy(playerGO);
+                        GameObject playerG0 = Instantiate(playerReservePrefab, playerBattleStation);
+                        
+                    }
+                    if (CurrentTurnCharacter.GetComponent<Unit>().unitName == player2GO.GetComponent<Unit>().unitName)
+                    {
+                        GameObject.Destroy(player2GO);
+                        GameObject playerG0 = Instantiate(playerReservePrefab, player2BattleStation);
+                    }
+                    if (CurrentTurnCharacter.GetComponent<Unit>().unitName == player3GO.GetComponent<Unit>().unitName)
+                    {
+                        GameObject.Destroy(player3GO);
+                        GameObject playerG0 = Instantiate(playerReservePrefab, player3BattleStation);
+                    }
+
+                    for(int j = 0; j < characterList.Count; ++i)
+                    {
+                        characterList.Remove(characterList[j]);
+                    }
+                }
+            }
+            SortTurns();
+            UpdateTurnNumbers(playerPrefab);
+            UpdateTurnNumbers(player2Prefab);
+            UpdateTurnNumbers(player3Prefab);
+            UpdateTurnNumbers(enemyPrefab);
+            UpdateTurnNumbers(enemyPrefab2);
+            UpdateTurnNumbers(enemyPrefab3);
+        } 
     }
 }
