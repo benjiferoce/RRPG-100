@@ -105,7 +105,7 @@ MonoBehaviour:
   defense: 30
   multiplier: 0
   maxHP: 50
-  currentHP: 50
+  currentHP: 0
   speed: 65
   charType: Player
   turnNum: 0
@@ -202,6 +202,7 @@ MonoBehaviour:
   xBonus: 0
   bonReq: 3
   typeSyng: 0
+  TargetEnemy: {fileID: 0}
 --- !u!114 &6356452813870737774
 MonoBehaviour:
   m_ObjectHideFlags: 0

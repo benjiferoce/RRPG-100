@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -1402456093784993053}
   m_Layer: 0
   m_Name: Curtis Ice Blower
-  m_TagString: Untagged
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,7 +110,7 @@ MonoBehaviour:
   charType: Player
   turnNum: 0
   isTurn: 0
-  damage: 0
+  damage: 6
   block: 8
   dodge: 3
   style: Ranged
@@ -126,22 +126,42 @@ MonoBehaviour:
   firstAttackCost: 0
   firstAttackBP: 2
   firstAttackType: Ranged
+  firstAttackStateIcon: {fileID: 0}
   firstAttackEffect: Basic Attack
+  firstAttackTurnDelay: 0
+  firstAttackReady: 0
+  firstAttackEffectDuration: 0
+  firstAttackCharged: 1
   secondAttackName: Boomerang Tail
   secondAttackCost: 3
   secondAttackBP: 2
   secondAttackType: Ranged
+  secondAttackStateIcon: {fileID: 0}
   secondAttackEffect: Hits All Enemies
+  secondAttackTurnDelay: 0
+  secondAttackReady: 0
+  secondAttackEffectDuration: 0
+  secondAttackCharged: 0
   thirdAttackName: Double Ice Spit
   thirdAttackCost: 4
   thirdAttackBP: 2
   thirdAttackType: Ranged
+  thirdAttackStateIcon: {fileID: 0}
   thirdAttackEffect: Hits 2 enemies + cold chance twice
+  thirdAttackTurnDelay: 0
+  thirdAttackReady: 0
+  thirdAttackEffectDuration: 0
+  thirdAttackCharged: 0
   fourthAttackName: Curt-alanche
   fourthAttackCost: 5
   fourthAttackBP: 4
   fourthAttackType: Ranged
+  fourthAttackStateIcon: {fileID: 0}
   fourthAttackEffect: Hits all enemies
+  fourthAttackTurnDelay: 0
+  fourthAttackReady: 0
+  fourthAttackEffectDuration: 0
+  fourthAttackCharged: 0
   bonusDamage: 0
   PassiveItem1: {fileID: 0}
   PassiveItem2: {fileID: 0}

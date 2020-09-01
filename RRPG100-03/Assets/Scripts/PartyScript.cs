@@ -101,4 +101,12 @@ public class PartyScript : MonoBehaviour
         unit.fourthAttackCharged = false;
         unit.fourthAttackReady = -1; 
     }
+
+    public void SwapCharacterCombat(GameObject _Character1, GameObject _Character2, GameObject _Character3, GameObject _CharacterReserve)
+    {
+        Character1 = _Character1;
+        Character2 = _Character2;
+        Character3 = _Character3;
+        CharacterReserve = _CharacterReserve; 
+    }
 }

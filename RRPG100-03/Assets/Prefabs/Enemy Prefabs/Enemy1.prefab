@@ -103,7 +103,7 @@ MonoBehaviour:
   multiplier: 0
   maxHP: 50
   currentHP: 50
-  speed: 55
+  speed: 60
   charType: Enemy
   turnNum: 1
   isTurn: 0

@@ -347,7 +347,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &102732246
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3721,6 +3721,10 @@ MonoBehaviour:
   partyMeminfo1: {fileID: 1163925504}
   partyMemInfo2: {fileID: 487683764}
   partyMemInfo3: {fileID: 1579022110}
+  attackButt1: {fileID: 3996722320470166398}
+  attackButt2: {fileID: 3996722320035228689}
+  attackButt3: {fileID: 3996722319551336027}
+  attackButt4: {fileID: 3996722319036297221}
 --- !u!4 &1199462101
 Transform:
   m_ObjectHideFlags: 0
@@ -8532,7 +8536,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &3996722319551336024
 CanvasRenderer:
   m_ObjectHideFlags: 0

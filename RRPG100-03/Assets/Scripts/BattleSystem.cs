@@ -18,7 +18,8 @@ public class BattleSystem : MonoBehaviour
     public GameObject playerPrefab;
     public GameObject player2Prefab;
     public GameObject player3Prefab;
-    public GameObject playerReservePrefab; 
+    public GameObject playerReservePrefab;
+    //public GameObject TempPlayer;
     public GameObject enemyPrefab;
     public GameObject enemyPrefab2;
     public GameObject enemyPrefab3;
@@ -39,7 +40,7 @@ public class BattleSystem : MonoBehaviour
     public BattleHUD playerAttacksHUD;
     public GameObject AttacksHUD;
 
-    public GameObject BattleHUD; 
+    public GameObject BattleHUD;
 
     public int startingAP;
     public int currentAP;
@@ -53,15 +54,17 @@ public class BattleSystem : MonoBehaviour
     public Text enemyHPText;
     public Text attackEffectDescText;
 
-    public GameObject EnemyTarget; 
+    public GameObject EnemyTarget;
 
-    public Text enemyNameText1, enemyNameText2, enemyNameText3; 
+    public Text enemyNameText1, enemyNameText2, enemyNameText3;
 
     public bool chooseAttack;
     public GameObject AttackEffectsManager;
 
     public int turn = 0;
     public int turnCount;
+
+    //public bool canSwapCharacter = true; 
 
     public List<GameObject> characterList = new List<GameObject>();
     public List<GameObject> partyList = new List<GameObject>();
@@ -82,10 +85,11 @@ public class BattleSystem : MonoBehaviour
 
     bool mem1InfoButt, mem2InfoButt, mem3InfoButt;
     public GameObject partyMeminfo1, partyMemInfo2, partyMemInfo3;
+    public GameObject attackButt1, attackButt2, attackButt3, attackButt4;
 
     void Start()
     {
-        EnemyTarget = enemyPrefab; 
+        EnemyTarget = enemyPrefab;
         BattleHUD.GetComponent<BattleHUD>().SetTagText();
 
         turnCount = 0;
@@ -151,16 +155,19 @@ public class BattleSystem : MonoBehaviour
         if (playerPrefab.GetComponent<Unit>().currentHP <= 0)
         {
             turnText.text = playerPrefab.GetComponent<Unit>().unitName + "Has Been Killed!";
+            OnEndTurnButton();
             //ResortTurns(playerPrefab);
         }
         if (player2Prefab.GetComponent<Unit>().currentHP <= 0)
         {
             turnText.text = player2Prefab.GetComponent<Unit>().unitName + "Has Been Killed!";
+            OnEndTurnButton();
             //ResortTurns(player2Prefab);
         }
         if (player3Prefab.GetComponent<Unit>().currentHP <= 0)
         {
             turnText.text = player3Prefab.GetComponent<Unit>().unitName + "Has Been Killed!";
+            OnEndTurnButton();
             //ResortTurns(player3Prefab);
         }
 
@@ -180,9 +187,9 @@ public class BattleSystem : MonoBehaviour
         enemy3GO = Instantiate(enemyPrefab3, enemyBattleStation3);
         enemyUnit = enemyGO.GetComponent<Unit>();
         SortTurns();
-        for(int i = 0; i < characterList.Count; ++i)
+        for (int i = 0; i < characterList.Count; ++i)
         {
-            if(characterList[i].GetComponent<Unit>().charType == "Enemy")
+            if (characterList[i].GetComponent<Unit>().charType == "Enemy")
             {
                 enemyList.Add(characterList[i]);
             }
@@ -290,6 +297,7 @@ public class BattleSystem : MonoBehaviour
             setPartyAP();
         }
         if (state != BattleState.PLAYERTURN) return;
+        ResetButtons(attackButt1, attackButt2, attackButt3, attackButt4);
         turn = turn + 1;
         turnCount = turnCount + 1;
         attackEffectDescText.text = " ";
@@ -322,9 +330,11 @@ public class BattleSystem : MonoBehaviour
 
     void EnemyTurn()
     {
-        if(turn + 1 == characterList.Count)
+       // UnityEngine.Debug.Log(CurrentTurnCharacter.GetComponent<Unit>().unitName);
+        if (turn + 1 == characterList.Count)
         {
             setPartyAP();
+             
         }
         int playerToAttack = UnityEngine.Random.Range(0, 3);
 
@@ -336,6 +346,7 @@ public class BattleSystem : MonoBehaviour
             {
 
                 playerPrefab.GetComponent<Unit>().TakeDamage(CurrentTurnCharacter.GetComponent<Unit>().damage);
+                UnityEngine.Debug.Log(CurrentTurnCharacter.GetComponent<Unit>().unitName + CurrentTurnCharacter.GetComponent<Unit>().damage);
                 actionText.text = CurrentTurnCharacter.GetComponent<Unit>().unitName + " attacked " + playerPrefab.GetComponent<Unit>().unitName + " for " + enemyUnit.damage + " damage!";
                 //playerHUD.SetHP(playerPrefab.GetComponent<Unit>().currentHP.ToString());
                 turn = turn + 1;
@@ -353,6 +364,7 @@ public class BattleSystem : MonoBehaviour
             {
 
                 player2Prefab.GetComponent<Unit>().TakeDamage(CurrentTurnCharacter.GetComponent<Unit>().damage);
+                UnityEngine.Debug.Log(CurrentTurnCharacter.GetComponent<Unit>().unitName + CurrentTurnCharacter.GetComponent<Unit>().damage);
                 actionText.text = CurrentTurnCharacter.GetComponent<Unit>().unitName + " attacked " + player2Prefab.GetComponent<Unit>().unitName + " for " + enemyUnit.damage + " damage!";
                 //playerHUD2.SetHP(player2Prefab.GetComponent<Unit>().currentHP.ToString());
                 turn = turn + 1;
@@ -370,6 +382,7 @@ public class BattleSystem : MonoBehaviour
             {
 
                 player3Prefab.GetComponent<Unit>().TakeDamage(CurrentTurnCharacter.GetComponent<Unit>().damage);
+                UnityEngine.Debug.Log(CurrentTurnCharacter.GetComponent<Unit>().unitName + CurrentTurnCharacter.GetComponent<Unit>().damage);
                 actionText.text = CurrentTurnCharacter.GetComponent<Unit>().unitName + " attacked " + player3Prefab.GetComponent<Unit>().unitName + " for " + enemyUnit.damage + " damage!";
                 // playerHUD3.SetHP(player3Prefab.GetComponent<Unit>().currentHP.ToString());
                 turn = turn + 1;
@@ -397,6 +410,7 @@ public class BattleSystem : MonoBehaviour
         + "'" + " on " + EnemyTarget.GetComponent<Unit>().unitName + " for " + CurrentTurnCharacter.GetComponent<Unit>().damage + " Damage!";
 
         enemyHUD.SetHP(EnemyTarget.GetComponent<Unit>().currentHP.ToString());
+        attackButt1.GetComponent<Button>().interactable = false;
 
         yield return new WaitForSeconds(2f);
 
@@ -422,6 +436,7 @@ public class BattleSystem : MonoBehaviour
         + "'" + " on " + EnemyTarget.GetComponent<Unit>().unitName + " for " + CurrentTurnCharacter.GetComponent<Unit>().damage + " Damage!";
 
         enemyHUD.SetHP(EnemyTarget.GetComponent<Unit>().currentHP.ToString());
+        attackButt2.GetComponent<Button>().interactable = false;
 
         yield return new WaitForSeconds(2f);
 
@@ -445,6 +460,7 @@ public class BattleSystem : MonoBehaviour
         + "'" + " on " + EnemyTarget.GetComponent<Unit>().unitName + " for " + CurrentTurnCharacter.GetComponent<Unit>().damage + " Damage!";
 
         enemyHUD.SetHP(EnemyTarget.GetComponent<Unit>().currentHP.ToString());
+        attackButt3.GetComponent<Button>().interactable = false;
 
         yield return new WaitForSeconds(2f);
 
@@ -470,6 +486,7 @@ public class BattleSystem : MonoBehaviour
         + "'" + " on " + EnemyTarget.GetComponent<Unit>().unitName + " for " + CurrentTurnCharacter.GetComponent<Unit>().damage + " Damage!";
 
         enemyHUD.SetHP(EnemyTarget.GetComponent<Unit>().currentHP.ToString());
+        attackButt4.GetComponent<Button>().interactable = false;
 
         yield return new WaitForSeconds(2f);
 
@@ -688,7 +705,7 @@ public class BattleSystem : MonoBehaviour
             else
             {
                 CurrentTurnCharacter.GetComponent<Unit>().thirdAttackCharged = true;
-                CurrentTurnCharacter.GetComponent<Unit>().thirdAttackReady = 0; 
+                CurrentTurnCharacter.GetComponent<Unit>().thirdAttackReady = 0;
             }
         }
     }
@@ -719,9 +736,9 @@ public class BattleSystem : MonoBehaviour
 
     public void onTargetEnemy(Text nameText)
     {
-        if(nameText.text == enemyPrefab.GetComponent<Unit>().unitName)
+        if (nameText.text == enemyPrefab.GetComponent<Unit>().unitName)
         {
-            EnemyTarget = enemyPrefab; 
+            EnemyTarget = enemyPrefab;
         }
         if (nameText.text == enemyPrefab2.GetComponent<Unit>().unitName)
         {
@@ -746,46 +763,75 @@ public class BattleSystem : MonoBehaviour
         onTargetEnemy(enemyNameText3);
     }
 
-    public void SwapCharacter()
+    void ResetButtons(GameObject Butt1, GameObject Butt2, GameObject Butt3, GameObject Butt4)
     {
-        if (state == BattleState.PLAYERTURN)
+        Butt1.GetComponent<Button>().interactable = true;
+        Butt2.GetComponent<Button>().interactable = true;
+        Butt3.GetComponent<Button>().interactable = true;
+        Butt4.GetComponent<Button>().interactable = true;
+    }
+    /*
+    public void SwapCharacter()                 Character swapping method, leave commented out. May not be implemented - BWW
+    {
+        if (canSwapCharacter == true)
         {
-            for(int i = 0; i < characterList.Count; ++i)
+            if (state == BattleState.PLAYERTURN)
             {
-                if(CurrentTurnCharacter.GetComponent<Unit>().unitName == characterList[i].GetComponent<Unit>().unitName)
+                for (int i = 0; i < characterList.Count; ++i)
                 {
-                    characterList.Remove(characterList[i]);
-
-                    if(CurrentTurnCharacter.GetComponent<Unit>().unitName == playerGO.GetComponent<Unit>().unitName)
+                    if (CurrentTurnCharacter.GetComponent<Unit>().unitName == characterList[i].GetComponent<Unit>().unitName)
                     {
-                        GameObject.Destroy(playerGO);
-                        GameObject playerG0 = Instantiate(playerReservePrefab, playerBattleStation);
-                        
-                    }
-                    if (CurrentTurnCharacter.GetComponent<Unit>().unitName == player2GO.GetComponent<Unit>().unitName)
-                    {
-                        GameObject.Destroy(player2GO);
-                        GameObject playerG0 = Instantiate(playerReservePrefab, player2BattleStation);
-                    }
-                    if (CurrentTurnCharacter.GetComponent<Unit>().unitName == player3GO.GetComponent<Unit>().unitName)
-                    {
-                        GameObject.Destroy(player3GO);
-                        GameObject playerG0 = Instantiate(playerReservePrefab, player3BattleStation);
-                    }
-
-                    for(int j = 0; j < characterList.Count; ++i)
-                    {
-                        characterList.Remove(characterList[j]);
+                        characterList.Clear();
+                        if (CurrentTurnCharacter.GetComponent<Unit>().unitName == playerGO.GetComponent<Unit>().unitName)
+                        {
+                            playerReservePrefab.GetComponent<Unit>().currentHP = playerReservePrefab.GetComponent<Unit>().maxHP; 
+                            GameObject.Destroy(playerGO);
+                            playerGO = Instantiate(playerReservePrefab, playerBattleStation);
+                            TempPlayer = playerPrefab;
+                            playerPrefab = playerReservePrefab;
+                            playerReservePrefab = TempPlayer;
+                            SortTurns();
+                            characterList.Remove(characterList[0]);
+                            Party.GetComponent<PartyScript>().SwapCharacterCombat(playerPrefab, player2Prefab, player3Prefab, playerReservePrefab);
+                            canSwapCharacter = false; 
+                        }
+                        if (CurrentTurnCharacter.GetComponent<Unit>().unitName == player2GO.GetComponent<Unit>().unitName)
+                        {
+                            playerReservePrefab.GetComponent<Unit>().currentHP = playerReservePrefab.GetComponent<Unit>().maxHP;
+                            GameObject.Destroy(player2GO);
+                            player2GO = Instantiate(playerReservePrefab, player2BattleStation);
+                            TempPlayer = player2Prefab;
+                            player2Prefab = playerReservePrefab;
+                            playerReservePrefab = TempPlayer;
+                            SortTurns();
+                            characterList.Remove(characterList[0]);
+                            Party.GetComponent<PartyScript>().SwapCharacterCombat(playerPrefab, player2Prefab, player3Prefab, playerReservePrefab);
+                            canSwapCharacter = false;
+                        }
+                        if (CurrentTurnCharacter.GetComponent<Unit>().unitName == player3GO.GetComponent<Unit>().unitName)
+                        {
+                            playerReservePrefab.GetComponent<Unit>().currentHP = playerReservePrefab.GetComponent<Unit>().maxHP;
+                            GameObject.Destroy(player3GO);
+                            player3GO = Instantiate(playerReservePrefab, player3BattleStation);
+                            TempPlayer = player3Prefab;
+                            player3Prefab = playerReservePrefab;
+                            playerReservePrefab = TempPlayer;
+                            SortTurns();
+                            characterList.Remove(characterList[0]);
+                            Party.GetComponent<PartyScript>().SwapCharacterCombat(playerPrefab, player2Prefab, player3Prefab, playerReservePrefab);
+                            canSwapCharacter = false;
+                        }
                     }
                 }
+                UpdateTurnNumbers(playerPrefab);
+                UpdateTurnNumbers(player2Prefab);
+                UpdateTurnNumbers(player3Prefab);
+                UpdateTurnNumbers(enemyPrefab);
+                UpdateTurnNumbers(enemyPrefab2);
+                UpdateTurnNumbers(enemyPrefab3);
+                OnEndTurnButton();
             }
-            SortTurns();
-            UpdateTurnNumbers(playerPrefab);
-            UpdateTurnNumbers(player2Prefab);
-            UpdateTurnNumbers(player3Prefab);
-            UpdateTurnNumbers(enemyPrefab);
-            UpdateTurnNumbers(enemyPrefab2);
-            UpdateTurnNumbers(enemyPrefab3);
-        } 
+        }
     }
+    */
 }
