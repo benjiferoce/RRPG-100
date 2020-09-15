@@ -1218,6 +1218,16 @@ MonoBehaviour:
   apSlider: {fileID: 589074192}
   partyGold: 0
   _synergyManager: {fileID: 1184314886}
+  synergy1: 
+  synergy2: 
+  synergy3: 
+  synergy4: 
+  synergy5: 
+  syn1Bonus: 0
+  syn2Bonus: 0
+  syn3Bonus: 0
+  syn4Bonus: 0
+  syn5Bonus: 0
 --- !u!4 &339556899
 Transform:
   m_ObjectHideFlags: 0
@@ -1450,6 +1460,8 @@ MonoBehaviour:
   hpText: {fileID: 441233823}
   _BattleSystem: {fileID: 0}
   _party: {fileID: 0}
+  _Synergy: {fileID: 0}
+  synergyDisplay: 
 --- !u!114 &441233823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2655,6 +2667,8 @@ MonoBehaviour:
   hpText: {fileID: 843364754}
   _BattleSystem: {fileID: 0}
   _party: {fileID: 0}
+  _Synergy: {fileID: 0}
+  synergyDisplay: 
 --- !u!114 &843364754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3493,6 +3507,19 @@ GameObject:
   - component: {fileID: 1184314888}
   - component: {fileID: 1184314887}
   - component: {fileID: 1184314889}
+  - component: {fileID: 1184314890}
+  - component: {fileID: 1184314903}
+  - component: {fileID: 1184314902}
+  - component: {fileID: 1184314901}
+  - component: {fileID: 1184314900}
+  - component: {fileID: 1184314899}
+  - component: {fileID: 1184314898}
+  - component: {fileID: 1184314897}
+  - component: {fileID: 1184314896}
+  - component: {fileID: 1184314895}
+  - component: {fileID: 1184314894}
+  - component: {fileID: 1184314893}
+  - component: {fileID: 1184314892}
   m_Layer: 0
   m_Name: Synergy Manager
   m_TagString: SynergyManager
@@ -3517,10 +3544,14 @@ MonoBehaviour:
   Tags3: []
   AllTags: []
   _party: {fileID: 339556897}
+  synergyList: []
+  synergyBonus: 
+  synergyCount: 0
+  _battleSystem: {fileID: 1199462099}
   bonus: 0
+  battleHUD: {fileID: 1621392339}
   synergyText: {fileID: 1988072886}
   synergyDesc: {fileID: 2046031216}
-  synergy: []
 --- !u!4 &1184314888
 Transform:
   m_ObjectHideFlags: 0
@@ -3547,15 +3578,232 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7c547cf766518145aa2d1da9b9a482e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _synergy: {fileID: 0}
-  _party: {fileID: 0}
-  _battleHUD: {fileID: 0}
-  tagType: Soft Drink
-  _pTags: []
+  _synergy: {fileID: 1184314886}
+  _party: {fileID: 339556897}
+  _battleHUD: {fileID: 1621392339}
   xBonus: 0
-  bonReq: 1
-  typeSyng: 0
-  TargetEnemy: {fileID: 0}
+  tagType: Soft Drink
+--- !u!114 &1184314890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184314886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 230783735a22156468b88450d82cfe47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _synergy: {fileID: 1184314886}
+  _party: {fileID: 339556897}
+  _battleHUD: {fileID: 1621392339}
+  xBonus: 0
+  tagType: Cold
+--- !u!114 &1184314892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184314886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e1344a062ad6a049bca82e1e398ddf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _synergy: {fileID: 1184314886}
+  _party: {fileID: 339556897}
+  _battleHUD: {fileID: 1621392339}
+  xBonus: 0
+  tagType: Team
+--- !u!114 &1184314893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184314886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17ffc61f0f7340448e427df6766a901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _synergy: {fileID: 1184314886}
+  _party: {fileID: 339556897}
+  _battleHUD: {fileID: 1621392339}
+  xBonus: 0
+  tagType: Sweet
+--- !u!114 &1184314894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184314886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 590458f4fb026644fa6b7c28f1d76126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _synergy: {fileID: 1184314886}
+  _party: {fileID: 339556897}
+  _battleHUD: {fileID: 1621392339}
+  xBonus: 0
+  tagType: Sticky
+--- !u!114 &1184314895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184314886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa0d5e6cdababf4fa9f3eee3ca0b293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _synergy: {fileID: 1184314886}
+  _party: {fileID: 339556897}
+  _battleHUD: {fileID: 1621392339}
+  xBonus: 0
+  tagType: Reptile
+--- !u!114 &1184314896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184314886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbc09d863654a0844982b9f0e44e2fe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _synergy: {fileID: 1184314886}
+  _party: {fileID: 339556897}
+  _battleHUD: {fileID: 1621392339}
+  xBonus: 0
+  tagType: Plaid
+--- !u!114 &1184314897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184314886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b62a9232201ea57449e2ab328b021f14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _synergy: {fileID: 1184314886}
+  _party: {fileID: 339556897}
+  _battleHUD: {fileID: 1621392339}
+  xBonus: 0
+  tagType: Gun
+--- !u!114 &1184314898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184314886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8e06194e261d4142bf8942936fd5780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _synergy: {fileID: 1184314886}
+  _party: {fileID: 339556897}
+  _battleHUD: {fileID: 1621392339}
+  xBonus: 0
+  tagType: Fish
+--- !u!114 &1184314899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184314886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d8ea926dde671c4082ab9e6ebcc4085, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _synergy: {fileID: 1184314886}
+  _party: {fileID: 339556897}
+  _battleHUD: {fileID: 1621392339}
+  xBonus: 0
+  tagType: Dog
+--- !u!114 &1184314900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184314886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2645f5bedad6c1543aac8770c3699d53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _synergy: {fileID: 1184314886}
+  _party: {fileID: 339556897}
+  _battleHUD: {fileID: 1621392339}
+  xBonus: 0
+  tagType: Doctor
+--- !u!114 &1184314901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184314886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7915518b60ea5954b96f5966791a8b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _synergy: {fileID: 1184314886}
+  _party: {fileID: 339556897}
+  _battleHUD: {fileID: 1621392339}
+  xBonus: 0
+  tagType: Bird
+--- !u!114 &1184314902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184314886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: add569496fde0e648985d7dcd3b96992, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _synergy: {fileID: 1184314886}
+  _party: {fileID: 339556897}
+  _battleHUD: {fileID: 1621392339}
+  xBonus: 0
+  tagType: Beefy
+--- !u!114 &1184314903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184314886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 812e7fcaebbef934e8afe5e277698341, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _synergy: {fileID: 1184314886}
+  _party: {fileID: 339556897}
+  _battleHUD: {fileID: 1621392339}
+  xBonus: 0
+  tagType: Army
 --- !u!1 &1197486012
 GameObject:
   m_ObjectHideFlags: 0
@@ -3700,6 +3948,7 @@ MonoBehaviour:
   enemyHPText: {fileID: 1591607194}
   attackEffectDescText: {fileID: 983929535}
   EnemyTarget: {fileID: 0}
+  playerTarget: {fileID: 0}
   enemyNameText1: {fileID: 229367499}
   enemyNameText2: {fileID: 1894674534}
   enemyNameText3: {fileID: 1431130043}
@@ -3916,6 +4165,8 @@ MonoBehaviour:
   hpText: {fileID: 0}
   _BattleSystem: {fileID: 0}
   _party: {fileID: 0}
+  _Synergy: {fileID: 0}
+  synergyDisplay: 
 --- !u!1 &1349328474
 GameObject:
   m_ObjectHideFlags: 0
@@ -4479,6 +4730,8 @@ MonoBehaviour:
   hpText: {fileID: 0}
   _BattleSystem: {fileID: 0}
   _party: {fileID: 0}
+  _Synergy: {fileID: 0}
+  synergyDisplay: 
 --- !u!1 &1547894944
 GameObject:
   m_ObjectHideFlags: 0
@@ -4667,6 +4920,8 @@ MonoBehaviour:
   hpText: {fileID: 1591607194}
   _BattleSystem: {fileID: 0}
   _party: {fileID: 0}
+  _Synergy: {fileID: 0}
+  synergyDisplay: 
 --- !u!114 &1591607194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4875,6 +5130,8 @@ MonoBehaviour:
   hpText: {fileID: 0}
   _BattleSystem: {fileID: 0}
   _party: {fileID: 339556897}
+  _Synergy: {fileID: 1184314886}
+  synergyDisplay: 
 --- !u!4 &1621392341
 Transform:
   m_ObjectHideFlags: 0
@@ -4960,6 +5217,8 @@ MonoBehaviour:
   hpText: {fileID: 0}
   _BattleSystem: {fileID: 0}
   _party: {fileID: 0}
+  _Synergy: {fileID: 0}
+  synergyDisplay: 
 --- !u!114 &1659467546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6032,13 +6291,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 150
-    m_Alignment: 1
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 1
+    m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: jhgfjhf
+  m_Text: 
 --- !u!222 &1988072887
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6195,6 +6454,8 @@ MonoBehaviour:
   hpText: {fileID: 0}
   _BattleSystem: {fileID: 0}
   _party: {fileID: 0}
+  _Synergy: {fileID: 0}
+  synergyDisplay: 
 --- !u!114 &2016561916
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -51,5 +51,18 @@ public class DrCarCola : MonoBehaviour
             return;
         }
     }
+
+    public void SetFirstCharSynergy()
+    {
+
+    }
+    public void SetSecondCharSynergy()
+    {
+
+    }
+    public void SetThirdCharSynergy()
+    {
+
+    }
 }
 

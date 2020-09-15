@@ -42,6 +42,8 @@ public class BattleHUD : MonoBehaviour
     public GameObject _party;
 
     bool mem1InfoButt, mem2InfoButt, mem3InfoButt;
+    public GameObject _Synergy;
+    public string synergyDisplay = ""; 
 
     public void SetHUD(Unit unit)
     {
@@ -103,6 +105,15 @@ public class BattleHUD : MonoBehaviour
            + _party.GetComponent<PartyScript>().Character3.GetComponent<Unit>().tag3 + "\n "
            + _party.GetComponent<PartyScript>().Character3.GetComponent<Unit>().tag4 + "\n "
            + _party.GetComponent<PartyScript>().Character3.GetComponent<Unit>().tag5;
+    }
+
+    public void SetPartySynergyText()
+    {
+        foreach (string msg in _Synergy.GetComponent<Synergy>().synergyList)
+        {
+             synergyDisplay = synergyDisplay.ToString() + msg.ToString() + "\n";
+        }
+        partySynergyTxt.text = synergyDisplay;
     }
 
     public void OnParMem1InfButton()

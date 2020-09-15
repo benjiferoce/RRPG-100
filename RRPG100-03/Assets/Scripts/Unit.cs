@@ -25,6 +25,8 @@ public class Unit : MonoBehaviour
     public int block;
     public int dodge;
 
+    public bool dead; 
+
     public string style;
 
     public int APGen;
@@ -32,6 +34,7 @@ public class Unit : MonoBehaviour
     public Sprite CharacterHUDSprite; 
 
     public GameObject _BattleSystem;
+    public GameObject SynergyManager;
 
     public string tag1, tag2, tag3, tag4, tag5;
 
@@ -96,10 +99,20 @@ public class Unit : MonoBehaviour
 
     void Start()
     {
+        dead = false; 
         //damage = 0;
         bonusDamage = 0;
         isTurn = false;
         _BattleSystem = GameObject.FindGameObjectWithTag("BattleSystem");
+        SynergyManager = GameObject.FindGameObjectWithTag("SynergyManager");
+    }
+
+    void Update()
+    {
+        if(currentHP <= 0)
+        {
+            dead = true; 
+        }
     }
     public bool TakeDamage(int dmg) // Modify Current HP based on parameter
     {
@@ -144,5 +157,10 @@ public class Unit : MonoBehaviour
     public void setThirdAttackBP(int newVal) { firstAttackBP = newVal; }
     public void setFourthAttackCost(int newVal) { firstAttackCost = newVal; }
     public void setFourthAttackBP(int newVal) { firstAttackBP = newVal; }
+
+    public void setSynergy(string tag)
+    {
+
+    }
 
 }

@@ -55,6 +55,7 @@ public class BattleSystem : MonoBehaviour
     public Text attackEffectDescText;
 
     public GameObject EnemyTarget;
+    public GameObject playerTarget; 
 
     public Text enemyNameText1, enemyNameText2, enemyNameText3;
 
@@ -135,6 +136,7 @@ public class BattleSystem : MonoBehaviour
     }
     void Update()
     {
+   
         Party.GetComponent<PartyScript>().currentAP = currentAP;
         SetTurn();
 
@@ -336,10 +338,26 @@ public class BattleSystem : MonoBehaviour
             setPartyAP();
              
         }
-        int playerToAttack = UnityEngine.Random.Range(0, 3);
+        int playerToAttack = UnityEngine.Random.Range(0, partyList.Count);
+
+        playerTarget = partyList[playerToAttack];
+
+        playerTarget.GetComponent<Unit>().TakeDamage(CurrentTurnCharacter.GetComponent<Unit>().damage);
+        updatePrefabHP(playerTarget, playerPrefab);
+        updatePrefabHP(playerTarget, player2Prefab);
+        updatePrefabHP(playerTarget, player3Prefab);
+        UnityEngine.Debug.Log(CurrentTurnCharacter.GetComponent<Unit>().unitName + "Damage: " + CurrentTurnCharacter.GetComponent<Unit>().damage);
+        actionText.text = CurrentTurnCharacter.GetComponent<Unit>().unitName + " attacked " + playerTarget.GetComponent<Unit>().unitName + " for " + enemyUnit.damage + " damage!";
+        if(playerTarget.GetComponent<Unit>().dead == true)
+        {
+           // PartyDeath(playerTarget);
+        }
+        //playerHUD.SetHP(playerPrefab.GetComponent<Unit>().currentHP.ToString());
+        turn = turn + 1;
+        turnCount = turnCount + 1;
 
         //Debug.Log("Random Number is" + playerToAttack);
-
+        /*
         if (playerToAttack == 0)
         {
             if (playerPrefab.GetComponent<Unit>().currentHP > 0)
@@ -393,6 +411,7 @@ public class BattleSystem : MonoBehaviour
                 playerToAttack = UnityEngine.Random.Range(0, 3);
             }
         }
+        */
     }
 
     // =============================================================Player Attack Methods=========================================================== //
@@ -770,6 +789,16 @@ public class BattleSystem : MonoBehaviour
         Butt3.GetComponent<Button>().interactable = true;
         Butt4.GetComponent<Button>().interactable = true;
     }
+
+    void updatePrefabHP(GameObject clone, GameObject Prefab)
+    {
+        if(clone.GetComponent<Unit>().unitName == Prefab.GetComponent<Unit>().unitName)
+        {
+            Prefab.GetComponent<Unit>().currentHP = clone.GetComponent<Unit>().currentHP;
+        }
+    }
+
+
     /*
     public void SwapCharacter()                 Character swapping method, leave commented out. May not be implemented - BWW
     {

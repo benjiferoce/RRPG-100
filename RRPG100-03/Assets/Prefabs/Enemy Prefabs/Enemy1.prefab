@@ -110,6 +110,7 @@ MonoBehaviour:
   damage: 10
   block: 2
   dodge: 5
+  dead: 0
   style: 
   APGen: 0
   CharacterHUDSprite: {fileID: 0}

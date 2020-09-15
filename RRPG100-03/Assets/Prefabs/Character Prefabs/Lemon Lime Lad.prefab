@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 2316476932885022671}
   - component: {fileID: 2316476932885022670}
   - component: {fileID: 2278930171947602933}
-  - component: {fileID: 4399926466601547519}
-  - component: {fileID: -3677807757306327355}
   m_Layer: 0
   m_Name: Lemon Lime Lad
   m_TagString: Character
@@ -112,6 +110,7 @@ MonoBehaviour:
   damage: 0
   block: 5
   dodge: 15
+  dead: 0
   style: 
   APGen: 1
   CharacterHUDSprite: {fileID: 21300000, guid: 137ccf0ab14e86a4c938464a5a25d270, type: 3}
@@ -125,22 +124,42 @@ MonoBehaviour:
   firstAttackCost: 0
   firstAttackBP: 2
   firstAttackType: Ranged
+  firstAttackStateIcon: {fileID: 0}
   firstAttackEffect: Basic Attack
+  firstAttackTurnDelay: 0
+  firstAttackReady: -1
+  firstAttackEffectDuration: 0
+  firstAttackCharged: 0
   secondAttackName: Super Squirt
   secondAttackCost: 2
   secondAttackBP: 3
   secondAttackType: 'Ranged '
+  secondAttackStateIcon: {fileID: 0}
   secondAttackEffect: Basic Attack
+  secondAttackTurnDelay: 0
+  secondAttackReady: -1
+  secondAttackEffectDuration: 0
+  secondAttackCharged: 0
   thirdAttackName: Tartify
   thirdAttackCost: 2
   thirdAttackBP: 0
   thirdAttackType: Support
+  thirdAttackStateIcon: {fileID: 0}
   thirdAttackEffect: Lower one enemy's defecne by 10 for 3 turns
+  thirdAttackTurnDelay: 0
+  thirdAttackReady: -1
+  thirdAttackEffectDuration: 0
+  thirdAttackCharged: 0
   fourthAttackName: Sour Burst
   fourthAttackCost: 5
   fourthAttackBP: 2
   fourthAttackType: Ranged
+  fourthAttackStateIcon: {fileID: 0}
   fourthAttackEffect: Hits all enemies, lowers enemy's defence by 10 for 3 turns
+  fourthAttackTurnDelay: 0
+  fourthAttackReady: -1
+  fourthAttackEffectDuration: 0
+  fourthAttackCharged: 0
   bonusDamage: 0
   PassiveItem1: {fileID: 3191526161018986169, guid: 69bf8e00cb71aa24f8645317a8dcd05d,
     type: 3}
@@ -160,27 +179,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _LemonLimeLad: {fileID: 0}
   _BattleSystem: {fileID: 0}
---- !u!114 &4399926466601547519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2316476932885022665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7c547cf766518145aa2d1da9b9a482e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &-3677807757306327355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2316476932885022665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 230783735a22156468b88450d82cfe47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

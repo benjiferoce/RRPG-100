@@ -31,7 +31,9 @@ public class PartyScript : MonoBehaviour
 
     public int partyGold;
 
-    public GameObject _synergyManager; 
+    public GameObject _synergyManager;
+    public string synergy1, synergy2, synergy3, synergy4, synergy5;
+    public int syn1Bonus, syn2Bonus, syn3Bonus, syn4Bonus, syn5Bonus; 
 
     void Start()
     {
@@ -108,5 +110,18 @@ public class PartyScript : MonoBehaviour
         Character2 = _Character2;
         Character3 = _Character3;
         CharacterReserve = _CharacterReserve; 
+    }
+
+    public void SetFirstCharSynergy()
+    {
+        
+    }
+    public void SetSecondCharSynergy()
+    {
+
+    }
+    public void SetThirdCharSynergy()
+    {
+
     }
 }

@@ -59,7 +59,6 @@
      <Compile Include="Assets\Scripts\AttackEffectsManager.cs" />
      <Compile Include="Assets\Scripts\BattleHUD.cs" />
      <Compile Include="Assets\Scripts\BattleSystem.cs" />
-     <Compile Include="Assets\Scripts\Debug.cs" />
      <Compile Include="Assets\Scripts\HPManagerScript.cs" />
      <Compile Include="Assets\Scripts\Item Scripts\BottleOfMilk.cs" />
      <Compile Include="Assets\Scripts\Item Scripts\Item.cs" />
@@ -74,6 +73,7 @@
      <Compile Include="Assets\Scripts\Player Attack Scripts\LemonLimeLad.cs" />
      <Compile Include="Assets\Scripts\Player Attack Scripts\RootBeerBoy.cs" />
      <Compile Include="Assets\Scripts\Synergy.cs" />
+     <Compile Include="Assets\Scripts\SynergyManager.cs" />
      <Compile Include="Assets\Scripts\Tag Scripts\Army.cs" />
      <Compile Include="Assets\Scripts\Tag Scripts\Beefy.cs" />
      <Compile Include="Assets\Scripts\Tag Scripts\Bird.cs" />
@@ -88,7 +88,6 @@
      <Compile Include="Assets\Scripts\Tag Scripts\Sticky.cs" />
      <Compile Include="Assets\Scripts\Tag Scripts\Sweet.cs" />
      <Compile Include="Assets\Scripts\Tag Scripts\Team.cs" />
-     <Compile Include="Assets\Scripts\TurnTracker.cs" />
      <Compile Include="Assets\Scripts\Unit.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Ben Weaver/Documents/RRPG-100/RRPG100-03/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

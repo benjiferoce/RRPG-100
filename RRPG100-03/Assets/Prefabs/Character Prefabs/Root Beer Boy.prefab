@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 8714982713779179619}
   - component: {fileID: 8714982713779179620}
   - component: {fileID: -1250653921623261707}
-  - component: {fileID: -5132299542896704672}
-  - component: {fileID: 6615709425503040378}
   m_Layer: 0
   m_Name: Root Beer Boy
   m_TagString: Character
@@ -112,6 +110,7 @@ MonoBehaviour:
   damage: 0
   block: 12
   dodge: 8
+  dead: 0
   style: 
   APGen: 2
   CharacterHUDSprite: {fileID: 21300000, guid: 737cbe99083a6984a8ef3f68128ff7e0, type: 3}
@@ -125,22 +124,42 @@ MonoBehaviour:
   firstAttackCost: 0
   firstAttackBP: 2
   firstAttackType: Physical
+  firstAttackStateIcon: {fileID: 0}
   firstAttackEffect: Basic Attack
+  firstAttackTurnDelay: 0
+  firstAttackReady: -1
+  firstAttackEffectDuration: 0
+  firstAttackCharged: 0
   secondAttackName: Thick Foam
   secondAttackCost: 2
   secondAttackBP: 0
   secondAttackType: Heal
+  secondAttackStateIcon: {fileID: 0}
   secondAttackEffect: Heal any player by 20
+  secondAttackTurnDelay: 0
+  secondAttackReady: -1
+  secondAttackEffectDuration: 0
+  secondAttackCharged: 0
   thirdAttackName: Caffine Buzz
   thirdAttackCost: 4
   thirdAttackBP: 0
   thirdAttackType: Support
+  thirdAttackStateIcon: {fileID: 0}
   thirdAttackEffect: Raise team's speed by 10 for 3 turns
+  thirdAttackTurnDelay: 0
+  thirdAttackReady: -1
+  thirdAttackEffectDuration: 0
+  thirdAttackCharged: 0
   fourthAttackName: Foam Over
   fourthAttackCost: 6
   fourthAttackBP: 0
   fourthAttackType: Heal
+  fourthAttackStateIcon: {fileID: 0}
   fourthAttackEffect: Heal all players by 20
+  fourthAttackTurnDelay: 0
+  fourthAttackReady: -1
+  fourthAttackEffectDuration: 0
+  fourthAttackCharged: 0
   bonusDamage: 0
   PassiveItem1: {fileID: 3191526161018986169, guid: 69bf8e00cb71aa24f8645317a8dcd05d,
     type: 3}
@@ -160,27 +179,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _RootBeerBoy: {fileID: 0}
   _BattleSystem: {fileID: 0}
---- !u!114 &-5132299542896704672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8714982713779179621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7c547cf766518145aa2d1da9b9a482e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6615709425503040378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8714982713779179621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d17ffc61f0f7340448e427df6766a901, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

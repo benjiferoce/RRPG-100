@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5783924962296517004}
   - component: {fileID: 5783924962296517041}
   - component: {fileID: 5783924962296517006}
-  - component: {fileID: 285539892797460753}
-  - component: {fileID: 162338309247305730}
-  - component: {fileID: -1402456093784993053}
+  - component: {fileID: -2022776753615088410}
+  - component: {fileID: -869682780564038426}
+  - component: {fileID: -7338434087828020837}
   m_Layer: 0
   m_Name: Curtis Ice Blower
   m_TagString: Character
@@ -113,6 +113,7 @@ MonoBehaviour:
   damage: 6
   block: 8
   dodge: 3
+  dead: 0
   style: Ranged
   APGen: 2
   CharacterHUDSprite: {fileID: 0}
@@ -178,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a3a0ccc30aa4ac45a67879eadab83f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &285539892797460753
+--- !u!114 &-2022776753615088410
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aa0d5e6cdababf4fa9f3eee3ca0b293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &162338309247305730
+--- !u!114 &-869682780564038426
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,7 +203,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 230783735a22156468b88450d82cfe47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-1402456093784993053
+  _synergy: {fileID: 0}
+  _party: {fileID: 0}
+  _battleHUD: {fileID: 0}
+  tagType: Cold
+  _pTags: []
+  xBonus: 0
+  bonReq: 1
+  typeSyng: 0
+  TargetEnemy: {fileID: 0}
+  synString: 
+--- !u!114 &-7338434087828020837
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
