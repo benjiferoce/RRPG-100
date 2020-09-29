@@ -32,8 +32,7 @@ public class PartyScript : MonoBehaviour
     public int partyGold;
 
     public GameObject _synergyManager;
-    public string synergy1, synergy2, synergy3, synergy4, synergy5;
-    public int syn1Bonus, syn2Bonus, syn3Bonus, syn4Bonus, syn5Bonus; 
+    public List<GameObject> ActiveSynergys = new List<GameObject>();
 
     void Start()
     {

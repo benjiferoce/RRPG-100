@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 5971964222487204754}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -79.56, y: -8.28, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -118,6 +118,7 @@ MonoBehaviour:
   APGen: 1
   CharacterHUDSprite: {fileID: 21300000, guid: fb4733290a66a8f4b96f1765fce4f450, type: 3}
   _BattleSystem: {fileID: 0}
+  SynergyManager: {fileID: 0}
   tag1: Soft Drink
   tag2: Gun
   tag3: Doctor
@@ -168,6 +169,7 @@ MonoBehaviour:
     type: 3}
   PassiveItem2: {fileID: 0}
   newRun: 1
+  onHit: 0
 --- !u!114 &-4550163128454362625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,13 +200,9 @@ MonoBehaviour:
   _synergy: {fileID: 0}
   _party: {fileID: 0}
   _battleHUD: {fileID: 0}
-  tagType: Soft Drink
-  _pTags: []
+  _battleSystem: {fileID: 0}
   xBonus: 0
-  bonReq: 0
-  typeSyng: 0
-  TargetEnemy: {fileID: 0}
-  synString: 
+  tagType: Soft Drink
 --- !u!114 &1990037339038692403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,6 +215,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b62a9232201ea57449e2ab328b021f14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _synergy: {fileID: 0}
+  _party: {fileID: 0}
+  _battleHUD: {fileID: 0}
+  xBonus: 0
+  tagType: Gun
 --- !u!114 &-8959968930858483101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,3 +232,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2645f5bedad6c1543aac8770c3699d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _synergy: {fileID: 0}
+  _party: {fileID: 0}
+  _battleHUD: {fileID: 0}
+  xBonus: 0
+  tagType: Doctor

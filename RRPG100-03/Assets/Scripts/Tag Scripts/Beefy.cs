@@ -14,13 +14,6 @@ public class Beefy : MonoBehaviour
     public GameObject _battleHUD;
     public int xBonus = 0;
     public string tagType = "Beefy";
-
-    public bool synergySet; 
-
-    void  Start()
-    {
-        synergySet = false; 
-    }
     public void SetSynergy()
     {
         _synergy.GetComponent<Synergy>().synergyList.Add(tagType + " X" + xBonus);

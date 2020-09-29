@@ -57,11 +57,7 @@ public class Synergy : MonoBehaviour
         CleanAllTagsList(Tags3);
         BuildAllTagsList(Tags3);
         CheckTagsForSynergy();
-        synergyList.Sort();
         battleHUD.GetComponent<BattleHUD>().SetPartySynergyText();
-      
-        //AllTags = AllTags.Distinct().ToList();
-        //CleanAllTagsList(AllTags); 
     }
 
     void BuildAllTagsList(List<string> _Tags)
@@ -87,65 +83,138 @@ public class Synergy : MonoBehaviour
         for(int i = 0; i < AllTags.Count; ++i)
         {
             string _tag = AllTags[i];
-            switch (_tag)
-            {
-                case "Soft Drink":
-                    ++GetComponent<SoftDrink>().xBonus;
-                    GetComponent<SoftDrink>().SetSynergy();
-                    break;
-                case "Cold":
-                    ++GetComponent<Cold>().xBonus;
-                    GetComponent<Cold>().SetSynergy();
-                    break;
-                case "Army":
-                    ++GetComponent<Army>().xBonus;
-                    GetComponent<Army>().SetSynergy();
-                    break;
-                case "Beefy":
-                    ++GetComponent<Beefy>().xBonus;
-                    GetComponent<Beefy>().SetSynergy();
-                    break;
-                case "Bird":
-                    ++GetComponent<Bird>().xBonus;
-                    GetComponent<Bird>().SetSynergy();
-                    break;
-                case "Doctor":
-                    ++GetComponent<Doctor>().xBonus;
-                    GetComponent<Doctor>().SetSynergy();
-                    break;
-                case "Dog":
-                    ++GetComponent<Dog>().xBonus;
-                    GetComponent<Dog>().SetSynergy();
-                    break;
-                case "Fish":
-                    ++GetComponent<Fish>().xBonus;
-                    GetComponent<Fish>().SetSynergy();
-                    break;
-                case "Gun":
-                    ++GetComponent<Gun>().xBonus;
-                    GetComponent<Gun>().SetSynergy();
-                    break;
-                case "Plaid":
-                    ++GetComponent<Plaid>().xBonus;
-                    GetComponent<Plaid>().SetSynergy();
-                    break;
-                case "Reptile":
-                    ++GetComponent<Reptile>().xBonus;
-                    GetComponent<Reptile>().SetSynergy();
-                    break;
-                case "Sticky":
-                    ++GetComponent<Sticky>().xBonus;
-                    GetComponent<Sticky>().SetSynergy();
-                    break;
-                case "Sweet":
-                    ++GetComponent<Sweet>().xBonus;
-                    GetComponent<Sweet>().SetSynergy();
-                    break;
-                case "Team":
-                    ++GetComponent<Team>().xBonus;
-                    GetComponent<Team>().SetSynergy();
-                    break;
-            }
+            SetSynergyList(_tag);
+        }
+        AllTags = AllTags.Distinct().ToList();
+        for(int i = 0; i < AllTags.Count; ++i)
+        {
+            string _tag = AllTags[i];
+            SetSynergyBonus(_tag);
+        }
+    }
+
+    public void SetSynergyList(string _tag)
+    {
+        switch (_tag)
+        {
+            case "Soft Drink":
+                ++GetComponent<SoftDrink>().xBonus;
+                //GetComponent<SoftDrink>().SetSynergy();
+                break;
+            case "Cold":
+                ++GetComponent<Cold>().xBonus;
+                //GetComponent<Cold>().SetSynergy();
+                break;
+            case "Army":
+                ++GetComponent<Army>().xBonus;
+                //GetComponent<Army>().SetSynergy();
+                break;
+            case "Beefy":
+                ++GetComponent<Beefy>().xBonus;
+                //GetComponent<Beefy>().SetSynergy();
+                break;
+            case "Bird":
+                ++GetComponent<Bird>().xBonus;
+                //GetComponent<Bird>().SetSynergy();
+                break;
+            case "Doctor":
+                ++GetComponent<Doctor>().xBonus;
+                //GetComponent<Doctor>().SetSynergy();
+                break;
+            case "Dog":
+                ++GetComponent<Dog>().xBonus;
+                //GetComponent<Dog>().SetSynergy();
+                break;
+            case "Fish":
+                ++GetComponent<Fish>().xBonus;
+                //GetComponent<Fish>().SetSynergy();
+                break;
+            case "Gun":
+                ++GetComponent<Gun>().xBonus;
+                //GetComponent<Gun>().SetSynergy();
+                break;
+            case "Plaid":
+                ++GetComponent<Plaid>().xBonus;
+                //GetComponent<Plaid>().SetSynergy();
+                break;
+            case "Reptile":
+                ++GetComponent<Reptile>().xBonus;
+                //GetComponent<Reptile>().SetSynergy();
+                break;
+            case "Sticky":
+                ++GetComponent<Sticky>().xBonus;
+                //GetComponent<Sticky>().SetSynergy();
+                break;
+            case "Sweet":
+                ++GetComponent<Sweet>().xBonus;
+                //GetComponent<Sweet>().SetSynergy();
+                break;
+            case "Team":
+                ++GetComponent<Team>().xBonus;
+                //GetComponent<Team>().SetSynergy();
+                break;
+        }
+    }
+    public void SetSynergyBonus(string _tag)
+    {
+        switch (_tag)
+        {
+            case "Soft Drink":
+                //++GetComponent<SoftDrink>().xBonus;
+                GetComponent<SoftDrink>().SetSynergy();
+                break;
+            case "Cold":
+                //++GetComponent<Cold>().xBonus;
+                GetComponent<Cold>().SetSynergy();
+                break;
+            case "Army":
+                //++GetComponent<Army>().xBonus;
+                GetComponent<Army>().SetSynergy();
+                break;
+            case "Beefy":
+                //++GetComponent<Beefy>().xBonus;
+                GetComponent<Beefy>().SetSynergy();
+                break;
+            case "Bird":
+                //++GetComponent<Bird>().xBonus;
+                GetComponent<Bird>().SetSynergy();
+                break;
+            case "Doctor":
+                //++GetComponent<Doctor>().xBonus;
+                GetComponent<Doctor>().SetSynergy();
+                break;
+            case "Dog":
+                //++GetComponent<Dog>().xBonus;
+                GetComponent<Dog>().SetSynergy();
+                break;
+            case "Fish":
+                //++GetComponent<Fish>().xBonus;
+                GetComponent<Fish>().SetSynergy();
+                break;
+            case "Gun":
+                //++GetComponent<Gun>().xBonus;
+                GetComponent<Gun>().SetSynergy();
+                break;
+            case "Plaid":
+                //++GetComponent<Plaid>().xBonus;
+                GetComponent<Plaid>().SetSynergy();
+                break;
+            case "Reptile":
+                //++GetComponent<Reptile>().xBonus;
+                GetComponent<Reptile>().SetSynergy();
+                break;
+            case "Sticky":
+                //++GetComponent<Sticky>().xBonus;
+                GetComponent<Sticky>().SetSynergy();
+                break;
+            case "Sweet":
+                //++GetComponent<Sweet>().xBonus;
+                GetComponent<Sweet>().SetSynergy();
+                break;
+            case "Team":
+                //++GetComponent<Team>().xBonus;
+                GetComponent<Team>().SetSynergy();
+                break;
         }
     }
 }

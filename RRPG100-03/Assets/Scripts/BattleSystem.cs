@@ -450,6 +450,10 @@ public class BattleSystem : MonoBehaviour
         EnemyTarget.GetComponent<Unit>().defense);
 
         bool isDead = EnemyTarget.GetComponent<Unit>().TakeDamage(CurrentTurnCharacter.GetComponent<Unit>().damage);
+        if(CurrentTurnCharacter.GetComponent<Unit>().damage >= 0)
+        {
+            CurrentTurnCharacter.GetComponent<Unit>().onHit = true;
+        }
 
         actionText.text = CurrentTurnCharacter.GetComponent<Unit>().unitName + " used " + "'" + CurrentTurnCharacter.GetComponent<Unit>().secondAttackName
         + "'" + " on " + EnemyTarget.GetComponent<Unit>().unitName + " for " + CurrentTurnCharacter.GetComponent<Unit>().damage + " Damage!";

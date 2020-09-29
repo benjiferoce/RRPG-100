@@ -95,10 +95,12 @@ public class Unit : MonoBehaviour
     public GameObject PassiveItem1;
     public GameObject PassiveItem2;
 
-    public bool newRun; 
+    public bool newRun;
+    public bool onHit; 
 
     void Start()
     {
+        onHit = false; 
         dead = false; 
         //damage = 0;
         bonusDamage = 0;

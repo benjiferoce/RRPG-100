@@ -12,11 +12,11 @@ public class SoftDrink : MonoBehaviour
     public GameObject _synergy;
     public GameObject _party;
     public GameObject _battleHUD;
+    public GameObject _battleSystem; 
     public int xBonus = 0; 
     public string tagType = "Soft Drink";
-
     public void SetSynergy()
-    { 
+    {
         _synergy.GetComponent<Synergy>().synergyList.Add(tagType + " X" + xBonus);
     }
 }

@@ -564,7 +564,7 @@ MonoBehaviour:
   m_StartGridSize: 16
   m_LastFolders: []
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\Ben Weaver\Documents\RRPG-100\RRPG100_Demo
+  m_LastProjectPath: C:\Users\Ben Weaver\Documents\RRPG-100\RRPG100_01
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
@@ -597,8 +597,8 @@ MonoBehaviour:
       m_ResourceFile: 
   m_AssetTreeState:
     scrollPos: {x: 0, y: 60}
-    m_SelectedIDs: 88390000
-    m_LastClickedID: 14728
+    m_SelectedIDs: 76380000
+    m_LastClickedID: 0
     m_ExpandedIDs: ffffffff00000000da38000026390000283900002a3900002c3900002e39000030390000323900003439000036390000383900003a3900003c3900003e3900004039000042390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -624,8 +624,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 88390000
-    m_LastClickedInstanceID: 14728
+    m_SelectedInstanceIDs: 76380000
+    m_LastClickedInstanceID: 14454
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -717,5 +717,5 @@ MonoBehaviour:
     m_ControlHash: 1412526313
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-  m_LastInspectedObjectInstanceID: 14728
+  m_LastInspectedObjectInstanceID: 14454
   m_LastVerticalScrollValue: 0
