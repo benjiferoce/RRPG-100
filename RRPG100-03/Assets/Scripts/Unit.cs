@@ -160,7 +160,7 @@ public class Unit : MonoBehaviour
     public void setFourthAttackCost(int newVal) { firstAttackCost = newVal; }
     public void setFourthAttackBP(int newVal) { firstAttackBP = newVal; }
 
-    public void setSynergy(string tag)
+    public void SetBuff(int _stat, int _newVal, int _duration, int _turn)
     {
 
     }

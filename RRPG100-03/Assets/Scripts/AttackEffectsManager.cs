@@ -35,6 +35,9 @@ public class AttackEffectsManager : MonoBehaviour
             case "CurtiseIceBlower":
                 GetComponent<CurtisIceBlower>().FirstAttackEffect();
                 break;
+            case "AlbinoGator":
+                GetComponent<AlbinoGator>().FirstAttackEffect();
+                break;
         }
     }
 
@@ -53,6 +56,9 @@ public class AttackEffectsManager : MonoBehaviour
                 break;
             case "CurtiseIceBlower":
                 GetComponent<CurtisIceBlower>().SecondAttackEffect();
+                break;
+            case "AlbinoGator":
+                GetComponent<AlbinoGator>().SecondAttackEffect();
                 break;
         }
     }
@@ -73,6 +79,9 @@ public class AttackEffectsManager : MonoBehaviour
             case "CurtiseIceBlower":
                 GetComponent<CurtisIceBlower>().ThirdAttackEffect();
                 break;
+            case "AlbinoGator":
+                GetComponent<AlbinoGator>().ThirdAttackEffect();
+                break;
         }
     }
 
@@ -91,6 +100,9 @@ public class AttackEffectsManager : MonoBehaviour
                 break;
             case "CurtiseIceBlower":
                 GetComponent<CurtisIceBlower>().FourthAttackEffect();
+                break;
+            case "AlbinoGator":
+                GetComponent<AlbinoGator>().FourthAttackEffect();
                 break;
         }
     }

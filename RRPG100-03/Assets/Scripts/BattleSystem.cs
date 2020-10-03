@@ -84,6 +84,9 @@ public class BattleSystem : MonoBehaviour
 
     public int agents;
 
+    public Text CombatInfoText;
+    public Text TargetEnemyText; 
+
     bool mem1InfoButt, mem2InfoButt, mem3InfoButt;
     public GameObject partyMeminfo1, partyMemInfo2, partyMemInfo3;
     public GameObject attackButt1, attackButt2, attackButt3, attackButt4;
@@ -133,9 +136,13 @@ public class BattleSystem : MonoBehaviour
         UpdateTurnNumbers(enemyPrefab);
         UpdateTurnNumbers(enemyPrefab2);
         UpdateTurnNumbers(enemyPrefab3);
+
     }
     void Update()
     {
+        CombatInfoText.text = "Turn: " + turn.ToString() + "\n"
+                              + "Turn #: " + turnCount.ToString() + "\n";
+        TargetEnemyText.text = "Target: " + EnemyTarget.GetComponent<Unit>().unitName; 
    
         Party.GetComponent<PartyScript>().currentAP = currentAP;
         SetTurn();
@@ -181,12 +188,12 @@ public class BattleSystem : MonoBehaviour
     }
     IEnumerator SetupBattle()       // Sets Starting HP, Instantiates players at battlestations, and sets the player HUDs
     {
-        playerGO = Instantiate(playerPrefab, playerBattleStation);
-        player2GO = Instantiate(player2Prefab, player2BattleStation);
-        player3GO = Instantiate(player3Prefab, player3BattleStation);
-        enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
-        enemy2GO = Instantiate(enemyPrefab2, enemyBattleStation2);
-        enemy3GO = Instantiate(enemyPrefab3, enemyBattleStation3);
+        playerGO = Instantiate(playerPrefab, playerBattleStation.transform.position, Quaternion.identity);
+        player2GO = Instantiate(player2Prefab, player2BattleStation.transform.position, Quaternion.identity);
+        player3GO = Instantiate(player3Prefab, player3BattleStation.transform.position, Quaternion.identity);
+        enemyGO = Instantiate(enemyPrefab, enemyBattleStation.transform.position, Quaternion.identity);
+        enemy2GO = Instantiate(enemyPrefab2, enemyBattleStation2.transform.position, Quaternion.identity);
+        enemy3GO = Instantiate(enemyPrefab3, enemyBattleStation3.transform.position, Quaternion.identity);
         enemyUnit = enemyGO.GetComponent<Unit>();
         SortTurns();
         for (int i = 0; i < characterList.Count; ++i)
