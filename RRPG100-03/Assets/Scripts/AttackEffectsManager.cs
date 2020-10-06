@@ -38,6 +38,10 @@ public class AttackEffectsManager : MonoBehaviour
             case "AlbinoGator":
                 GetComponent<AlbinoGator>().FirstAttackEffect();
                 break;
+            case "PatricksPile":
+                GetComponent<PatricksPile>().FirstAttackEffect();
+                break;
+
         }
     }
 
@@ -59,6 +63,9 @@ public class AttackEffectsManager : MonoBehaviour
                 break;
             case "AlbinoGator":
                 GetComponent<AlbinoGator>().SecondAttackEffect();
+                break;
+            case "PatricksPile":
+                GetComponent<PatricksPile>().SecondAttackEffect();
                 break;
         }
     }
@@ -82,6 +89,9 @@ public class AttackEffectsManager : MonoBehaviour
             case "AlbinoGator":
                 GetComponent<AlbinoGator>().ThirdAttackEffect();
                 break;
+            case "PatricksPile":
+                GetComponent<PatricksPile>().ThirdAttackEffect();
+                break;
         }
     }
 
@@ -103,6 +113,9 @@ public class AttackEffectsManager : MonoBehaviour
                 break;
             case "AlbinoGator":
                 GetComponent<AlbinoGator>().FourthAttackEffect();
+                break;
+            case "PatricksPile":
+                GetComponent<PatricksPile>().FourthAttackEffect();
                 break;
         }
     }

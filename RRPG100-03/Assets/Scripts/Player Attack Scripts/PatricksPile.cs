@@ -1,18 +1,46 @@
-﻿using System.Collections;
+﻿// email: benjiferoce@gmail.com | GitHub: https://github.com/benjiferoce
+// Copyright 2020, Benjamin Weaver, All rights reserved
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PatricksPile : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject _PatricksPile;
+    public GameObject _BattleSystem;
+    public Text ActionText;
+
     void Start()
     {
-        
+        _BattleSystem = GameObject.FindGameObjectWithTag("BattleSystem");
+        ActionText = GameObject.FindGameObjectWithTag("ActionText").GetComponent<Text>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        _BattleSystem = GameObject.FindGameObjectWithTag("BattleSystem");
+        ActionText = GameObject.FindGameObjectWithTag("ActionText").GetComponent<Text>();
+    }
+    public void FirstAttackEffect()
+    {
+
+    }
+
+    public void SecondAttackEffect()
+    {
+
+    }
+
+    public void ThirdAttackEffect()
+    {
+
+
+    }
+
+    public void FourthAttackEffect()
+    {
+
     }
 }

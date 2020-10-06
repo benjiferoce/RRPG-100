@@ -38,6 +38,8 @@ public class Unit : MonoBehaviour
 
     public string tag1, tag2, tag3, tag4, tag5;
 
+    public List<Effect> ActiveEffects = new List<Effect>();
+
 
     // First Attack Stats
     public string firstAttackName;
@@ -160,7 +162,7 @@ public class Unit : MonoBehaviour
     public void setFourthAttackCost(int newVal) { firstAttackCost = newVal; }
     public void setFourthAttackBP(int newVal) { firstAttackBP = newVal; }
 
-    public void SetBuff(int _stat, int _newVal, int _duration, int _turn)
+    public void AddEffect(int _stat, int _newVal, int _duration, int _turn)
     {
 
     }

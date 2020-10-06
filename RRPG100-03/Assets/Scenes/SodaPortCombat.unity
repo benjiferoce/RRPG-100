@@ -1366,9 +1366,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Character1: {fileID: 5905965395541170020, guid: 10d758d040b9aaa4b995aca908318979,
     type: 3}
-  Character2: {fileID: 5971964222487204754, guid: 980684c53bdd1b24ab43f643e65a0288,
+  Character2: {fileID: 5783924962296517005, guid: b12ae70323f52154a98be2cff25e5a57,
     type: 3}
-  Character3: {fileID: 8714982713779179621, guid: 17e604e797ea1e44383474495982f40b,
+  Character3: {fileID: 7810671179997371049, guid: f9c791c4102e3834188a1f6a406421a0,
     type: 3}
   CharacterReserve: {fileID: 5783924962296517005, guid: b12ae70323f52154a98be2cff25e5a57,
     type: 3}
@@ -6161,6 +6161,7 @@ GameObject:
   - component: {fileID: 1724369592}
   - component: {fileID: 1724369599}
   - component: {fileID: 1724369600}
+  - component: {fileID: 1724369601}
   m_Layer: 0
   m_Name: AttackEffectsManager
   m_TagString: Untagged
@@ -6331,6 +6332,21 @@ MonoBehaviour:
   _AlbinoGator: {fileID: 0}
   _BattleSystem: {fileID: 0}
   ActionText: {fileID: 0}
+--- !u!114 &1724369601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724369591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 554c21be0cfdc224ea61e8541a9c5c78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _PatricksPile: {fileID: 0}
+  _BattleSystem: {fileID: 0}
+  ActionText: {fileID: 0}
 --- !u!1 &1727062038
 GameObject:
   m_ObjectHideFlags: 0
@@ -6468,6 +6484,56 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1761178412
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1761178414}
+  - component: {fileID: 1761178413}
+  m_Layer: 0
+  m_Name: EffectManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1761178413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761178412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1c23482c5cd06b44bcf3e3fc8f6dbba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _BattleSystem: {fileID: 0}
+  _Agent: {fileID: 0}
+  duration: 0
+  startTurn: 0
+  endTurn: 0
+  buff: 0
+  active: 0
+--- !u!4 &1761178414
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761178412}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -140.51369, y: 37.167355, z: -5942.863}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1789447398
 GameObject:
   m_ObjectHideFlags: 0
