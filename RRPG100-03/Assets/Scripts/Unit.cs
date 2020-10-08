@@ -115,7 +115,7 @@ public class Unit : MonoBehaviour
     {
         if(currentHP <= 0)
         {
-            dead = true; 
+            this.gameObject.SetActive(false);
         }
     }
     public bool TakeDamage(int dmg) // Modify Current HP based on parameter

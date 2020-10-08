@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6643483576499595388
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6643483576499595386}
+  - component: {fileID: 6643483576499595387}
+  m_Layer: 0
+  m_Name: SodaPortBattleSystem
+  m_TagString: BattleSystem
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6643483576499595386
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6643483576499595388}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -113.77299, y: 71.59961, z: -354.99756}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6643483576499595387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6643483576499595388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6be7cee15ee51294b813283e2f7a269b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Party: {fileID: 0}
+  CurrentTurnCharacter: {fileID: 0}
+  playerPrefab: {fileID: 0}
+  player2Prefab: {fileID: 0}
+  player3Prefab: {fileID: 0}
+  enemyPrefab: {fileID: 933375303812935385, guid: 4110029a637c96648b707dcbcd366861,
+    type: 3}
+  playerBattleStation: {fileID: 0}
+  player2BattleStation: {fileID: 0}
+  player3BattleStation: {fileID: 0}
+  enemyBattleStation: {fileID: 0}
+  playerHUD: {fileID: 0}
+  playerHUD2: {fileID: 0}
+  playerHUD3: {fileID: 0}
+  enemyHUD: {fileID: 0}
+  playerAttacksHUD: {fileID: 0}
+  AttacksHUD: {fileID: 0}
+  startingAP: 0
+  currentAP: 0
+  maxAP: 0
+  apGen: 0
+  APNum: {fileID: 0}
+  apSlider: {fileID: 0}
+  turnText: {fileID: 0}
+  actionText: {fileID: 0}
+  enemyHPText: {fileID: 0}
+  chooseAttack: 0
+  AttackEffectsManager: {fileID: 0}
+  turn: 0
+  turnCount: 0
+  characterList: []
+  SelectedEnemy: {fileID: 0}
+  EnemySelected: 0
+  state: 0
+  agents: 0

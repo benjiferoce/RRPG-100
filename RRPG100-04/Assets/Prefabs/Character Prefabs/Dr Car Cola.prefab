@@ -1,0 +1,239 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5971964222487204754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5971964222487204756}
+  - component: {fileID: 5971964222487204755}
+  - component: {fileID: 5971964222487204757}
+  - component: {fileID: -4550163128454362625}
+  - component: {fileID: 826134999216863931}
+  - component: {fileID: 1990037339038692403}
+  - component: {fileID: -8959968930858483101}
+  m_Layer: 0
+  m_Name: Dr Car Cola
+  m_TagString: Character
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5971964222487204756
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5971964222487204754}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -79.56, y: -8.28, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &5971964222487204755
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5971964222487204754}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 5a3ec5e997f7c964891bd3b0e1b6ec18, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 15.25, y: 23.786749}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &5971964222487204757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5971964222487204754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e14b5fd57a7f1648b624a39238f3f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitID: DrCarCola
+  unitName: Dr.  Car Cola
+  unitNumber: 0
+  attack: 70
+  defense: 30
+  multiplier: 0
+  maxHP: 50
+  currentHP: 50
+  speed: 65
+  charType: Player
+  turnNum: 0
+  isTurn: 0
+  damage: 0
+  block: 5
+  dodge: 15
+  dead: 0
+  style: 
+  APGen: 1
+  CharacterHUDSprite: {fileID: 21300000, guid: fb4733290a66a8f4b96f1765fce4f450, type: 3}
+  _BattleSystem: {fileID: 0}
+  SynergyManager: {fileID: 0}
+  tag1: Soft Drink
+  tag2: Gun
+  tag3: Doctor
+  tag4: 
+  tag5: 
+  firstAttackName: Pop
+  firstAttackCost: 0
+  firstAttackBP: 2
+  firstAttackType: Ranged
+  firstAttackStateIcon: {fileID: 0}
+  firstAttackEffect: Basic Attack
+  firstAttackTurnDelay: 0
+  firstAttackReady: -1
+  firstAttackEffectDuration: 0
+  firstAttackCharged: 0
+  secondAttackName: Super Pop
+  secondAttackCost: 2
+  secondAttackBP: 3
+  secondAttackType: Ranged
+  secondAttackStateIcon: {fileID: 0}
+  secondAttackEffect: Basic Attack
+  secondAttackTurnDelay: 0
+  secondAttackReady: -1
+  secondAttackEffectDuration: 0
+  secondAttackCharged: 0
+  thirdAttackName: Fizz Shot
+  thirdAttackCost: 2
+  thirdAttackBP: 5
+  thirdAttackType: Ranged
+  thirdAttackStateIcon: {fileID: 0}
+  thirdAttackEffect: Takes on turn to charge before attacking
+  thirdAttackTurnDelay: 1
+  thirdAttackReady: -1
+  thirdAttackEffectDuration: 0
+  thirdAttackCharged: 0
+  fourthAttackName: Seethe Blast
+  fourthAttackCost: 5
+  fourthAttackBP: 2
+  fourthAttackType: Ranged
+  fourthAttackStateIcon: {fileID: 0}
+  fourthAttackEffect: Bonus damage equal to speed/10
+  fourthAttackTurnDelay: 0
+  fourthAttackReady: -1
+  fourthAttackEffectDuration: 0
+  fourthAttackCharged: 0
+  bonusDamage: 0
+  PassiveItem1: {fileID: 5939349358814500442, guid: 5f808a1db6e6e634b977aec443907533,
+    type: 3}
+  PassiveItem2: {fileID: 0}
+  newRun: 1
+  onHit: 0
+--- !u!114 &-4550163128454362625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5971964222487204754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d83a9bab8e665b6499946dd3d2bcf63d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _DrCarCola: {fileID: 0}
+  _BattleSystem: {fileID: 0}
+  ActionText: {fileID: 0}
+--- !u!114 &826134999216863931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5971964222487204754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c547cf766518145aa2d1da9b9a482e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _synergy: {fileID: 0}
+  _party: {fileID: 0}
+  _battleHUD: {fileID: 0}
+  _battleSystem: {fileID: 0}
+  xBonus: 0
+  tagType: Soft Drink
+--- !u!114 &1990037339038692403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5971964222487204754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b62a9232201ea57449e2ab328b021f14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _synergy: {fileID: 0}
+  _party: {fileID: 0}
+  _battleHUD: {fileID: 0}
+  xBonus: 0
+  tagType: Gun
+--- !u!114 &-8959968930858483101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5971964222487204754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2645f5bedad6c1543aac8770c3699d53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _synergy: {fileID: 0}
+  _party: {fileID: 0}
+  _battleHUD: {fileID: 0}
+  xBonus: 0
+  tagType: Doctor
